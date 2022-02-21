@@ -62,7 +62,7 @@ def fetch_files(oauth_token):
 
 if __name__ == "__main__":
     readme = root / "README.md"
-    releases = fetch_releases(TOKEN)
+    releases = fetch_files(TOKEN)
     print(">>>>>>>\n")
     md = "\nhello,world"
     readme_contents = readme.open().read()
