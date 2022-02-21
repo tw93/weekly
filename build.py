@@ -29,29 +29,25 @@ def formatGMTime(timestamp):
 
 def repository_query(after_cursor=None):
     return """
-query {
-  viewer {
-    repositories(first: 100, privacy: PUBLIC, after:AFTER) {
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
-      nodes {
-        name
-        description
-        url
-        releases(last:1) {
-          totalCount
-          nodes {
-            name
-            publishedAt
-            url
+repository(owner: 'tw93', name:'weekly') {
+    object(expression: "HEAD:") {
+      ... on Tree {
+        entries {
+          name
+          type
+          mode
+
+          object {
+            ... on Blob {
+              byteSize
+              text
+              isBinary
+            }
           }
         }
       }
     }
   }
-}
 """.replace(
         "AFTER", '"{}"'.format(after_cursor) if after_cursor else "null"
     )
