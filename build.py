@@ -27,57 +27,44 @@ def formatGMTime(timestamp):
     dateStr = datetime.datetime.strptime(timestamp, GMT_FORMAT) + datetime.timedelta(hours=8)
     return dateStr.date()
 
-def repository_query(after_cursor=None):
+def repository_get():
     return """
-repository(owner: 'tw93', name:'weekly') {
-    object(expression: "HEAD:") {
-      ... on Tree {
-        entries {
-          name
-          type
-          mode
-          object {
-            ... on Blob {
-              byteSize
-              text
-              isBinary
+      repository(owner: 'tw93', name:'weekly') {
+          object(expression: "HEAD:") {
+            ... on Tree {
+              entries {
+                name
+                type
+                mode
+                object {
+                  ... on Blob {
+                    byteSize
+                    text
+                    isBinary
+                  }
+                }
+              }
             }
           }
-        }
       }
-    }
-  }
-""".replace(
-        "AFTER", '"{}"'.format(after_cursor) if after_cursor else "null"
-    )
+    """
 
 
-def fetch_releases(oauth_token):
-    repos = []
-    releases = []
-    repo_names = set()
-    has_next_page = True
-    after_cursor = None
+def fetch_files(oauth_token):
     data = client.execute(
-      query=repository_query(after_cursor),
+      query = repository_get(),
       headers={"Authorization": "Bearer {}".format(oauth_token)},
     )
     print()
     print(json.dumps(data, indent=4))
     print()
-    return releases
+    return data
 
 if __name__ == "__main__":
     readme = root / "README.md"
     releases = fetch_releases(TOKEN)
-    releases.sort(key=lambda r: r["published_at"], reverse=True)
-    md = "\n".join(
-        [
-            "* <a href='{url}' target='_blank'>{repo} {release}</a> - {published_at}".format(**release)
-            for release in releases[:8]
-        ]
-    )
+    print(">>>>>>>\n")
+    md = "\nhello,world"
     readme_contents = readme.open().read()
     rewritten = replace_chunk(readme_contents, "recent_releases", md)
-
     readme.open("w").write(rewritten)
