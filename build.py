@@ -1,5 +1,5 @@
 import os
-from urllib import quote
+import urllib.parse
 
 readmefile=open('README.md','w')
 dir_ignore=['.git','.github']
@@ -9,6 +9,6 @@ for root, dirs, filenames in os.walk('./md'):
 # write relative link and names to readme.md
 for name in filenames:
     if name.endswith('.md'):
-      readmefile.write('*  [{}]({}/{})\n'.format(name,'md',quote(name)))
+      readmefile.write('*  [{}]({}/{})\n'.format(name,'md', urllib.parse.urlencode(name)))
 
 readmefile.close()
