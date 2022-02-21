@@ -56,6 +56,8 @@ def fetch_files(oauth_token):
       headers={"Authorization": "Bearer {}".format(oauth_token)},
     )
     print()
+    print(">>>>>>>here\n")
+    print(data)
     print(json.dumps(data, indent=4))
     print()
     return data
@@ -63,7 +65,6 @@ def fetch_files(oauth_token):
 if __name__ == "__main__":
     readme = root / "README.md"
     releases = fetch_files(TOKEN)
-    print(">>>>>>>\n")
     md = "\nhello,world"
     readme_contents = readme.open().read()
     rewritten = replace_chunk(readme_contents, "recent_releases", md)
