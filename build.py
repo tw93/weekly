@@ -29,24 +29,20 @@ def formatGMTime(timestamp):
 
 def repository_get():
     return """
-      repository(owner: 'tw93',name: 'weekly') {
-          object(expression: "master:md/") {
-            ... on Tree {
+      repository(owner: "tw93", name: "weekly") {
+      defaultBranchRef {
+        name
+        target {
+          ... on Commit {
+            tree {
               entries {
                 name
-                type
-                mode
-                object {
-                  ... on Blob {
-                    byteSize
-                    text
-                    isBinary
-                  }
-                }
               }
             }
           }
+        }
       }
+    }
     """
 
 
