@@ -9,6 +9,6 @@ for root, dirs, filenames in os.walk('./md'):
 # write relative link and names to readme.md
 for name in filenames:
     if name.endswith('.md'):
-      readmefile.write('*  [{}]({}/{})\n'.format(name,'md', urllib.parse.urlencode(name)))
+      readmefile.write('*  [{}]({}/{})\n'.format(name,'md', urllib.parse.quote(name)))
 
 readmefile.close()
