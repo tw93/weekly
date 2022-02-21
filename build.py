@@ -5,6 +5,7 @@ readmefile=open('README.md','w')
 dir_ignore=['.git','.github']
 readmefile.write("# 潮流前端周刊\n")
 for root, dirs, filenames in os.walk('./md'):
+  filenames.sort()
   print(filenames)
 # write relative link and names to readme.md
 for name in filenames:
