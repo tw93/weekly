@@ -29,8 +29,8 @@ def formatGMTime(timestamp):
 
 def repository_get():
     return """
-      repository(name: 'weekly', owner: 'tw93') {
-          object(expression: "main:") {
+      repository(owner: 'tw93',name: 'weekly') {
+          object(expression: "master:md/") {
             ... on Tree {
               entries {
                 name
