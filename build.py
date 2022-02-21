@@ -36,7 +36,6 @@ repository(owner: 'tw93', name:'weekly') {
           name
           type
           mode
-
           object {
             ... on Blob {
               byteSize
