@@ -19,8 +19,10 @@ for index, name in enumerate(filenames):
     if name.endswith('.md'):
       filepath   = 'https://github.com/tw93/weekly/tree/main/md/' + urllib.parse.quote(name)
       modified = formatTime(os.path.getmtime('md/'+name))
-      itemMd= '* [{}]({}) - {}\n'.format(name, filepath, modified)
-      recentfile.write(itemMd)
+      title = name.split('.md')[0]
+      itemMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
+      if index < 6
+        recentfile.write(itemMd)
       readmefile.write(itemMd)
 
 recentfile.close()
