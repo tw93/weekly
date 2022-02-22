@@ -21,7 +21,7 @@ for index, name in enumerate(filenames):
       modified = formatTime(os.path.getmtime('md/'+name))
       title = name.split('.md')[0]
       itemMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
-      if index < 6
+      if index < 6 :
         recentfile.write(itemMd)
       readmefile.write(itemMd)
 
