@@ -2,10 +2,9 @@ import os
 import datetime
 import urllib.parse
 
-def formatGMTime(timestamp):
+def formatTime(timestamp):
     GMT_FORMAT = '%a, %d %b %Y %H:%M:%S GMT'
-    dateStr = datetime.datetime.strptime(timestamp, GMT_FORMAT) + datetime.timedelta(hours=8)
-    return dateStr.date()
+    return datetime.datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d')
 
 readmefile=open('README.md','w')
 readmefile.write("# 潮流前端周刊\n")
@@ -19,8 +18,10 @@ for index, name in enumerate(filenames):
     print(name)
     if name.endswith('.md'):
       filepath   = 'https://github.com/tw93/weekly/tree/main/md/' + urllib.parse.quote(name)
-      modified = os.path.getmtime('md/'+name)
-      recentfile.write('* [{}]({}) - {}\n'.format(name, filepath, modified))
-      readmefile.write('* [{}]({}/{})\n'.format(name,'md', urllib.parse.quote(name)))
+      modified = formatTime(os.path.getmtime('md/'+name))
+      itemMd= '* [{}]({}) - {}\n'.format(name, filepath, modified)
+      recentfile.write(itemMd)
+      readmefile.write(itemMd)
 
+recentfile.close()
 readmefile.close()
