@@ -15,6 +15,8 @@ for root, dirs, filenames in os.walk('./md'):
   filenames.sort(reverse=True)
 
 for index, name in enumerate(filenames):
+    print(index)
+    print(name)
     if name.endswith('.md'):
       filepath   = 'https://github.com/tw93/weekly/tree/main/md' + urllib.parse.quote(filename)
       modified = formatGMTime(os.path.getmtime(filepath))
