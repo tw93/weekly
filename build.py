@@ -20,10 +20,11 @@ for index, name in enumerate(filenames):
       filepath   = 'https://github.com/tw93/weekly/tree/main/md/' + urllib.parse.quote(name)
       modified = formatTime(os.path.getmtime('md/'+name))
       title = name.split('.md')[0]
-      itemMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
+      recentMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
+      readmeMd= '* [{}]({})\n'.format(title, filepath, modified)
       if index < 6 :
-        recentfile.write(itemMd)
-      readmefile.write(itemMd)
+        recentfile.write(recentMd)
+      readmefile.write(readmeMd)
 
 recentfile.close()
 readmefile.close()
