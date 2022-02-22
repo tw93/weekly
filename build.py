@@ -19,7 +19,7 @@ for index, name in enumerate(filenames):
     print(name)
     if name.endswith('.md'):
       filepath   = 'https://github.com/tw93/weekly/tree/main/md/' + urllib.parse.quote(name)
-      modified = formatGMTime(os.path.getmtime('md/'+name))
+      modified = os.path.getmtime('md/'+name)
       recentfile.write('* [{}]({}) - {}\n'.format(name, filepath, modified))
       readmefile.write('* [{}]({}/{})\n'.format(name,'md', urllib.parse.quote(name)))
 
