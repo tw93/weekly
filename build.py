@@ -17,7 +17,6 @@ if __name__ == "__main__":
   for index, name in enumerate(filenames):
       if name.endswith('.md'):
         filepath   = 'https://github.com/tw93/weekly/tree/main/md/' + urllib.parse.quote(name)
-        print(os.path.getctime('md/'+name))
         modified = formatTime(os.path.getctime('md/'+name))
         title = name.split('.md')[0]
         recentMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
