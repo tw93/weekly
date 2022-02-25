@@ -4,12 +4,7 @@ import urllib.parse
 
 def formatTime(timestamp):
     GMT_FORMAT = '%a, %d %b %Y %H:%M:%S GMT'
-    dateStr = datetime.datetime.fromtimestamp(timestamp, GMT_FORMAT) + datetime.timedelta(hours=8)
-    return dateStr.date()
-
-# def formatTime(timestamp):
-#     GMT_FORMAT = '%a, %d %b %Y %H:%M:%S GMT'
-#     return datetime.datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d')
+    return datetime.datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d')
 
 if __name__ == "__main__":
   readmefile=open('README.md','w')
