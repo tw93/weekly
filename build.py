@@ -18,7 +18,7 @@ for index, name in enumerate(filenames):
     print(name)
     if name.endswith('.md'):
       filepath   = 'https://github.com/tw93/weekly/tree/main/md/' + urllib.parse.quote(name)
-      modified = formatTime(os.path.getmtime('md/'+name))
+      modified = formatTime(os.path.getctime('md/'+name))
       title = name.split('.md')[0]
       recentMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
       readmeMd= '* [{}]({})\n'.format(title, filepath, modified)
