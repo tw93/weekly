@@ -2,7 +2,7 @@ import os
 import datetime
 import urllib.parse
 
-def formatGMTime(timestamp):
+def formatTime(timestamp):
     GMT_FORMAT = '%a, %d %b %Y %H:%M:%S GMT'
     dateStr = datetime.datetime.fromtimestamp(timestamp, GMT_FORMAT) + datetime.timedelta(hours=8)
     return dateStr.date()
