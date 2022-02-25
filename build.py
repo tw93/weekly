@@ -4,8 +4,12 @@ import urllib.parse
 
 def formatGMTime(timestamp):
     GMT_FORMAT = '%a, %d %b %Y %H:%M:%S GMT'
-    dateStr = datetime.datetime.strptime(timestamp, GMT_FORMAT) + datetime.timedelta(hours=8)
+    dateStr = datetime.datetime.fromtimestamp(timestamp, GMT_FORMAT) + datetime.timedelta(hours=8)
     return dateStr.date()
+
+# def formatTime(timestamp):
+#     GMT_FORMAT = '%a, %d %b %Y %H:%M:%S GMT'
+#     return datetime.datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d')
 
 if __name__ == "__main__":
   readmefile=open('README.md','w')
@@ -19,7 +23,7 @@ if __name__ == "__main__":
       if name.endswith('.md'):
         filepath   = 'https://github.com/tw93/weekly/tree/main/md/' + urllib.parse.quote(name)
         print(os.path.getctime('md/'+name))
-        modified = formatGMTime(os.path.getctime('md/'+name))
+        modified = formatTime(os.path.getctime('md/'+name))
         title = name.split('.md')[0]
         recentMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
         readmeMd= '* [{}]({})\n'.format(title, filepath, modified)
