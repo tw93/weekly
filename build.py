@@ -17,12 +17,12 @@ if __name__ == "__main__":
   for index, name in enumerate(filenames):
       if name.endswith('.md'):
         filepath   = 'https://github.com/tw93/weekly/tree/main/md/' + urllib.parse.quote(name)
-        modified = formatTime(os.path.getctime('md/'+name))
+        # modified = formatTime(os.path.getctime('md/'+name))
         title = name.split('.md')[0]
-        recentMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
-        readmeMd= '* [{}]({})\n'.format(title, filepath, modified)
+        # recentMd= '* [{}]({}) - {}\n'.format(title, filepath, modified)
+        readmeMd= '* [{}]({})\n'.format(title, filepath)
         if index < 6 :
-          recentfile.write(recentMd)
+          recentfile.write(readmeMd)
         readmefile.write(readmeMd)
 
   recentfile.close()
