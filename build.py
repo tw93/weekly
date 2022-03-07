@@ -5,6 +5,7 @@ import urllib.parse
 
 def fetch_ci_time(filePath):
     entries = httpx.get("https://api.github.com/repos/tw93/weekly/commits?path=" + filePath + "&page=1&per_page=1")
+    print(entries)
     return time.strptime(entries[0].commit.committer.date,"%Y-%m-%d")
 
 
@@ -22,10 +23,11 @@ if __name__ == "__main__":
         url   = 'https://github.com/tw93/weekly/tree/main' + filepath
         modified = fetch_ci_time(filepath)
         title = name.split('.md')[0]
-        md= '* [{}]({}) - {}\n'.format(title, url, modified)
+        # recentMd= '* [{}]({}) - {}\n'.format(title, url, modified)
+        readmeMd= '* [{}]({})\n'.format(title, url)
         if index < 6 :
-          recentfile.write(md)
-        readmefile.write(md)
+          recentfile.write(readmeMd)
+        readmefile.write(readmeMd)
 
   recentfile.close()
   readmefile.close()
