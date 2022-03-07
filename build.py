@@ -3,16 +3,10 @@ import httpx
 import urllib.parse
 import datetime
 
-
 def fetch_ci_time(filePath):
     entries = httpx.get("https://api.github.com/repos/tw93/weekly/commits?path=" + filePath + "&page=1&per_page=1")
-    print(entries.json())
-    if entries.json()[0]:
-      ciTime= entries.json()[0]["commit"]["committer"]["date"]
-      print(filePath)
-      print(ciTime)
-      return 1
-
+    ciTime= entries.json()[0]["commit"]["committer"]["date"]
+    return datetime.datetime.strptime(ciTime,"%Y-%m-%d")
 
 if __name__ == "__main__":
   readmefile=open('README.md','w')
@@ -26,12 +20,12 @@ if __name__ == "__main__":
       if name.endswith('.md'):
         filepath = "/md/" + urllib.parse.quote(name)
         url   = 'https://github.com/tw93/weekly/tree/main' + filepath
-        modified = fetch_ci_time(filepath)
         title = name.split('.md')[0]
-        # recentMd= '* [{}]({}) - {}\n'.format(title, url, modified)
         readmeMd= '* [{}]({})\n'.format(title, url)
         if index < 6 :
-          recentfile.write(readmeMd)
+          modified = fetch_ci_time(filepath)
+          recentMd= '* [{}]({}) - {}\n'.format(title, url, modified)
+          recentfile.write(recentMd)
         readmefile.write(readmeMd)
 
   recentfile.close()
