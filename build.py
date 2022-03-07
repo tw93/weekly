@@ -5,8 +5,9 @@ import urllib.parse
 
 def fetch_ci_time(filePath):
     entries = httpx.get("https://api.github.com/repos/tw93/weekly/commits?path=" + filePath + "&page=1&per_page=1")
-    print(entries)
-    return time.strptime(entries[0].commit.committer.date,"%Y-%m-%d")
+    print(entries.json())
+    return 1
+    # return time.strptime(entries.json()[0].commit.committer.date,"%Y-%m-%d")
 
 
 if __name__ == "__main__":
