@@ -5,6 +5,7 @@ import datetime
 
 def fetch_ci_time(filePath):
     entries = httpx.get("https://api.github.com/repos/tw93/weekly/commits?path=" + filePath + "&page=1&per_page=1")
+    print(entries.json()[0])
     ciTime= entries.json()[0]["commit"]["committer"]["date"]
     return datetime.datetime.strptime(ciTime,"%Y-%m-%d")
 
