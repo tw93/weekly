@@ -1,4 +1,5 @@
 # 潮流前端周刊
+* [#79-笼子里的鸟](https://github.com/tw93/weekly/tree/main/md/%2379-%E7%AC%BC%E5%AD%90%E9%87%8C%E7%9A%84%E9%B8%9F.md)
 * [#78-佛头](https://github.com/tw93/weekly/tree/main/md/%2378-%E4%BD%9B%E5%A4%B4.md)
 * [#77-缙云烧饼](https://github.com/tw93/weekly/tree/main/md/%2377-%E7%BC%99%E4%BA%91%E7%83%A7%E9%A5%BC.md)
 * [#76-咖啡标语](https://github.com/tw93/weekly/tree/main/md/%2376-%E5%92%96%E5%95%A1%E6%A0%87%E8%AF%AD.md)
