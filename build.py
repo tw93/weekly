@@ -23,7 +23,7 @@ if __name__ == "__main__":
         url   = 'https://github.com/tw93/weekly/tree/main' + filepath
         title = name.split('.md')[0]
         readmeMd= '* [{}]({})\n'.format(title, url)
-        if index < 6 :
+        if index < 5 :
           modified = fetch_ci_time(filepath)
           recentMd= '* [{}]({}) - {}\n'.format(title, url, modified)
           recentfile.write(recentMd)
