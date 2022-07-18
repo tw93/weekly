@@ -1,4 +1,5 @@
 # 潮流前端周刊
+* [#88-大水枪](https://github.com/tw93/weekly/tree/main/md/%2388-%E5%A4%A7%E6%B0%B4%E6%9E%AA.md)
 * [#87-太湖湾音乐节](https://github.com/tw93/weekly/tree/main/md/%2387-%E5%A4%AA%E6%B9%96%E6%B9%BE%E9%9F%B3%E4%B9%90%E8%8A%82.md)
 * [#86-炒饭配烤串](https://github.com/tw93/weekly/tree/main/md/%2386-%E7%82%92%E9%A5%AD%E9%85%8D%E7%83%A4%E4%B8%B2.md)
 * [#85-烟雨任平生](https://github.com/tw93/weekly/tree/main/md/%2385-%E7%83%9F%E9%9B%A8%E4%BB%BB%E5%B9%B3%E7%94%9F.md)
