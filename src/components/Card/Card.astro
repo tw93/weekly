@@ -13,7 +13,11 @@ const { pic, desc, date } = post.frontmatter;
   href={post.url}
   class="pb-3 md:mt-5 mt-6 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 w-96"
 >
-  <img src={`${pic}?x-oss-process=image/resize,w_600`} class="block md:w-80 md:h-48 w-96 h-52 rounded-t-md" />
+  <img
+    data-placeholder-background="linear-gradient(to bottom, #ece9e6, #ffffff)"
+    data-src={`${pic}?x-oss-process=image/resize,w_500`}
+    class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
+  />
   <div
     class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3"
   >

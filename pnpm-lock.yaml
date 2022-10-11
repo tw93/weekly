@@ -9,8 +9,10 @@ specifiers:
   '@docsearch/react': ^3.0.0
   '@tailwindcss/line-clamp': ^0.4.0
   '@tailwindcss/typography': ^0.5.2
+  '@types/lozad': ^1.16.1
   astro: ^1.3.0
   dayjs: ^1.11.5
+  lozad: ^1.16.0
   node-html-parser: ^6.1.1
   react: ^18.0.0
   react-dom: ^18.0.0
@@ -23,6 +25,7 @@ dependencies:
   '@docsearch/react': 3.2.1_ftygaz6e6e5e4cecsqmsnm4myu
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.1.8
   astro: 1.3.0
+  lozad: 1.16.0
   node-html-parser: 6.1.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -32,6 +35,7 @@ devDependencies:
   '@astrojs/react': 1.1.4_biqbaboplfbrettd7655fr4n2y
   '@astrojs/tailwind': 2.0.1_tailwindcss@3.1.8
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.1.8
+  '@types/lozad': 1.16.1
   dayjs: 1.11.5
 
 packages:
@@ -734,6 +738,10 @@ packages:
   /@types/json5/0.0.30:
     resolution: {integrity: sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==}
     dev: false
+
+  /@types/lozad/1.16.1:
+    resolution: {integrity: sha512-wmGW368y1zu9ark/7fMNHdZ/c3wGV7fxoEqtK+V3Dsv2QGQQp34D9elDowuW12zZwxjO9NkNUorqg+D9j1VRGQ==}
+    dev: true
 
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
@@ -2289,6 +2297,10 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+
+  /lozad/1.16.0:
+    resolution: {integrity: sha512-JBr9WjvEFeKoyim3svo/gsQPTkgG/mOHJmDctZ/+U9H3ymUuvEkqpn8bdQMFsvTMcyRJrdJkLv0bXqGm0sP72w==}
+    dev: false
 
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}

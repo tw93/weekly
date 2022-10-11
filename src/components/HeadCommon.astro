@@ -7,22 +7,29 @@ import '../styles/index.css';
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 
-<link rel="icon" type="image/svg+xml" href="https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png" />
-<link rel="alternate icon" type="image/x-icon" href="https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png" />
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href="https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png"
+/>
+<link
+  rel="alternate icon"
+  type="image/x-icon"
+  href="https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png"
+/>
 
 <link rel="sitemap" href="/sitemap.xml" />
 
 <!-- Preload Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap"
-  rel="stylesheet"
-/>
 <link
   rel="stylesheet"
   href="https://gw.alipayobjects.com/os/k/webfont/style.css"
 />
+
+<script
+  type="text/javascript"
+  src="https://gw.alipayobjects.com/os/k/3j/lozad.min.js"
+></script>
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
@@ -36,6 +43,10 @@ import '../styles/index.css';
   } else {
     root.classList.remove('theme-dark');
   }
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = lozad();
+    observer.observe();
+  });
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

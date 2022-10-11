@@ -17,6 +17,7 @@
     "@docsearch/react": "^3.0.0",
     "@tailwindcss/line-clamp": "^0.4.0",
     "astro": "^1.3.0",
+    "lozad": "^1.16.0",
     "node-html-parser": "^6.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -26,6 +27,7 @@
     "@astrojs/react": "^1.1.4",
     "@astrojs/tailwind": "^2.0.1",
     "@tailwindcss/typography": "^0.5.2",
+    "@types/lozad": "^1.16.1",
     "dayjs": "^1.11.5"
   }
 }
