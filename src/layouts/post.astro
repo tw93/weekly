@@ -7,7 +7,11 @@ export interface Props {
 }
 const currentPage = new URL(Astro.request.url).pathname;
 const oldTitle = decodeURIComponent(currentPage.split('/posts/')[1]);
-const title = '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
+let title = '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
+if (title.slice(-1) == '/') {
+  title = title.substring(0, title.length - 1);
+}
+
 const { date } = Astro.props.frontmatter;
 ---
 
