@@ -1,6 +1,7 @@
 ---
 import '../styles/heti.min.css';
 import HeadCommon from '../components/HeadCommon.astro';
+import AstroLogo from '../components/Header/AstroLogo.astro';
 import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
 export interface Props {
   title: string;
@@ -24,8 +25,6 @@ const { date } = Astro.props.frontmatter;
     <style>
       body {
         width: 100%;
-        display: grid;
-        grid-template-rows: var(--theme-navbar-height) 1fr;
         --gutter: 0.5rem;
         --doc-padding: 2rem;
       }
@@ -96,6 +95,16 @@ const { date } = Astro.props.frontmatter;
       .gsc-left-header .color-text-secondary {
         display: none;
       }
+      .logo {
+        display: none;
+        margin-top: -0.2em;
+      }
+
+      @media (max-width: 50em) {
+        .logo {
+          display: block;
+        }
+      }
     </style>
     <style is:global>
       .layout > * {
@@ -123,7 +132,10 @@ const { date } = Astro.props.frontmatter;
           class="markdown-body heti md:mx-auto pb-20 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
           id="write"
         >
-          <h1 class="content-title">{title}</h1>
+          <h1 class="content-title flex align-middle">
+            <div class="logo"><AstroLogo size={40} /></div>
+            {title}
+          </h1>
           <slot />
           <p class="text-s">发布日期：{date}</p>
         </div>
