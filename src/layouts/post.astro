@@ -1,0 +1,146 @@
+---
+import '../styles/heti.min.css';
+import HeadCommon from '../components/HeadCommon.astro';
+import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
+export interface Props {
+  title: string;
+}
+const currentPage = new URL(Astro.request.url).pathname;
+const oldTitle = decodeURIComponent(currentPage.split('/posts/')[1]);
+const title = '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
+const { date } = Astro.props.frontmatter;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <HeadCommon />
+    <meta name="generator" content={Astro.generator} />
+    <title>潮流周刊{title}</title>
+    <style>
+      body {
+        width: 100%;
+        display: grid;
+        grid-template-rows: var(--theme-navbar-height) 1fr;
+        --gutter: 0.5rem;
+        --doc-padding: 2rem;
+      }
+
+      .layout {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns:
+          minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
+          minmax(var(--gutter), 1fr);
+        overflow-x: hidden;
+      }
+
+      .grid-sidebar {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        padding: 0;
+      }
+
+      #grid-left {
+        position: fixed;
+        background-color: var(--theme-bg);
+        z-index: 10;
+        display: none;
+      }
+
+      #grid-main {
+        padding: 0.8rem var(--gutter) var(--doc-padding) var(--gutter);
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      #grid-right {
+        display: none;
+      }
+
+      @media (min-width: 50em) {
+        .layout {
+          overflow: initial;
+          grid-template-columns: 15rem minmax(0, var(--max-width));
+          gap: 0;
+        }
+
+        #grid-left {
+          display: flex;
+          padding-left: 2rem;
+          position: sticky;
+          grid-column: 1;
+        }
+      }
+
+      @media (min-width: 72em) {
+        .layout {
+          grid-template-columns: 20rem minmax(0, var(--max-width)) 18rem;
+          padding-left: 0;
+          padding-right: 0;
+          margin: 0 auto;
+        }
+
+        #grid-right {
+          grid-column: 3;
+          display: flex;
+        }
+      }
+      .gsc-left-header .color-text-secondary {
+        display: none;
+      }
+    </style>
+    <style is:global>
+      .layout > * {
+        width: 100%;
+        height: 100%;
+      }
+
+      .mobile-sidebar-toggle {
+        overflow: hidden;
+      }
+
+      .mobile-sidebar-toggle #grid-left {
+        display: block;
+        top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout">
+      <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
+        <LeftSidebar currentPage={currentPage} />
+      </aside>
+      <div id="grid-main">
+        <div
+          class="markdown-body heti md:mx-auto pb-20 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
+          id="write"
+        >
+          <h1 class="content-title">{title}</h1>
+          <slot />
+          <p class="text-s">发布日期：{date}</p>
+        </div>
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="tw93/weekly"
+          data-repo-id="R_kgDOG4TsQA"
+          data-category="General"
+          data-category-id="DIC_kwDOG4TsQM4CR4bV"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="https://gw.alipayobjects.com/os/k/app2/comment.css"
+          data-lang="zh-CN"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </div>
+    </main>
+  </body>
+</html>

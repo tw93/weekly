@@ -1,0 +1,176 @@
+---
+const { currentPage } = Astro.props;
+import * as CONFIG from '../../config';
+import AstroLogo from '../Header/AstroLogo.astro';
+
+let allPosts = await Astro.glob('../../pages/posts/*.md');
+allPosts = allPosts.sort((a, b) => {
+  return (
+    parseInt(b.url.split('/posts/')[1].split('-')[0]) -
+    parseInt(a.url.split('/posts/')[1].split('-')[0])
+  );
+});
+
+const currentPageMatch = currentPage.slice(1);
+const sidebarSections = allPosts.reduce((col, item, i) => {
+  const url = item.url;
+  const oldTitle = url.split('/posts/')[1];
+  const title =
+    '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
+  const route = {
+    title,
+    link: url.slice(1),
+  };
+  if (i === 0) {
+    const pesudoSection = { text: '' };
+    col.push({ ...pesudoSection, children: [] });
+  }
+  col[col.length - 1].children.push(route);
+  return col;
+}, []);
+---
+
+<nav aria-labelledby="grid-left" class="pt-6">
+  <div class="logo flex">
+    <a href="/">
+      <AstroLogo size={40} />
+    </a>
+    <a href="/">
+      <h1>{CONFIG.SITE.title}</h1>
+    </a>
+  </div>
+  <ul class="nav-groups">
+    {
+      sidebarSections.map((section) => (
+        <li>
+          <div class="nav-group">
+            <ul>
+              {section.children.map((child) => (
+                <li class="nav-link">
+                  <a
+                    href={`/${child.link}`}
+                    aria-current={`${
+                      decodeURIComponent(currentPageMatch) === child.link
+                        ? 'page'
+                        : 'false'
+                    }`}
+                  >
+                    {child.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    var target = document.querySelector('[aria-current="page"]');
+    if (target && target.offsetTop > window.innerHeight - 100) {
+      document.querySelector('.nav-groups').scrollTop = target.offsetTop - 86;
+    }
+  });
+</script>
+
+<style>
+  nav {
+    width: 100%;
+    margin-right: 1rem;
+  }
+  .nav-groups {
+    height: 100%;
+    padding: 2rem 0;
+    overflow-x: visible;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  .nav-groups > li + li {
+    margin-top: 2rem;
+  }
+
+  .nav-groups > :first-child {
+    padding-top: 0;
+  }
+
+  .nav-groups > :last-child {
+    padding-bottom: 2rem;
+    margin-bottom: var(--theme-navbar-height);
+  }
+
+  .nav-group-title {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0rem 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    margin-top: -0.5rem;
+  }
+
+  .nav-link a {
+    font-size: 1.08rem;
+    margin: 1px;
+    padding: 0.3rem 0.7rem;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+  }
+  .nav-link a:hover,
+  .nav-link a:focus {
+    color: var(--theme-text-accent);
+  }
+
+  .nav-link a[aria-current='page'] {
+    color: var(--theme-text-accent);
+    font-weight: bolder;
+  }
+
+  :global(:root.theme-dark) .nav-link a[aria-current='page'] {
+    color: hsla(var(--color-base-white), 100%, 1);
+  }
+  @media (min-width: 50em) {
+    .nav-groups {
+      padding: 0.8rem 0;
+    }
+  }
+  .logo {
+    display: flex;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: bolder;
+    flex-shrink: 0;
+    font-weight: 600;
+    line-height: 1;
+    color: hsla(var(--color-base-white), 100%, 1);
+    gap: 0.25em;
+    padding: 0.25em 0;
+  }
+
+  .logo a {
+    padding: 0.5em 0.25em;
+    margin: -0.5em -0.25em;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+  }
+
+  .logo a {
+    transition: color 100ms ease-out;
+    color: var(--theme-text);
+  }
+
+  .logo a:hover,
+  .logo a:focus {
+    color: var(--theme-text-accent);
+  }
+
+  .logo h1 {
+    font: inherit;
+    color: inherit;
+    margin: 0;
+  }
+</style>

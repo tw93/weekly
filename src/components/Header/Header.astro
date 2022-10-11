@@ -1,0 +1,124 @@
+---
+import * as CONFIG from '../../config';
+import AstroLogo from './AstroLogo.astro';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+  <nav
+    class="nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 ml-4"
+    title="Top Navigation"
+  >
+    <div class="logo flex">
+      <a href="/">
+        <AstroLogo size={40} />
+      </a>
+      <a href="/">
+        <h1>{CONFIG.SITE.title}</h1>
+      </a>
+    </div>
+    <div style="flex-grow: 1;" class="text-right xl:-mr-2 md:mr-4 mr-6">
+      <HeaderLink href="http://tw93.fun/" target="_blank">Blog</HeaderLink>
+
+      <HeaderLink href="https://twitter.com/HiTw93" target="_blank"
+        >Twitter</HeaderLink
+      >
+
+      <HeaderLink
+        href="https://github.com/tw93"
+        target="_blank"
+        class="lg:inline-block hidden">GitHub</HeaderLink
+      >
+      <HeaderLink href="/rss.xml" target="_blank" class="lg:inline-block hidden"
+        >RSS</HeaderLink
+      >
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    height: var(--theme-navbar-height);
+    width: 100%;
+    background-color: var(--theme-navbar-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    top: 0;
+  }
+
+  .logo {
+    display: flex;
+    overflow: hidden;
+    font-size: 2rem;
+    flex-shrink: 0;
+    font-weight: 600;
+    line-height: 1;
+    color: hsla(var(--color-base-white), 100%, 1);
+    gap: 0.25em;
+  }
+
+  .logo a {
+    padding: 0.5em 0.25em;
+    margin: -0.5em -0.25em;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+  }
+
+  .logo a {
+    transition: color 100ms ease-out;
+    color: var(--theme-text);
+  }
+
+  .logo a:hover,
+  .logo a:focus {
+    color: var(--theme-text-accent);
+  }
+
+  .logo h1 {
+    font: inherit;
+    color: inherit;
+    margin: 0;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+  }
+
+  /** Style Algolia */
+  :root {
+    --docsearch-primary-color: var(--theme-accent);
+    --docsearch-logo-color: var(--theme-text);
+  }
+
+  .search-item {
+    display: none;
+    position: relative;
+    z-index: 10;
+    flex-grow: 1;
+    padding-right: 0.7rem;
+    display: flex;
+    max-width: 200px;
+  }
+  :global(.search-item > *) {
+    flex-grow: 1;
+  }
+  @media (min-width: 50em) {
+    .search-item {
+      max-width: 400px;
+    }
+  }
+</style>
+
+<style is:global>
+  @media (min-width: 1280px) {
+    .xl\:max-w-7xl {
+      max-width: 83rem;
+    }
+  }
+</style>
