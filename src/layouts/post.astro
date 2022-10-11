@@ -136,7 +136,7 @@ const { date } = Astro.props.frontmatter;
       </aside>
       <div id="grid-main">
         <div
-          class="markdown-body heti md:mx-auto pb-20 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
+          class="markdown-body heti md:mx-auto pb-16 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
           id="write"
         >
           <h1 class="content-title flex align-middle">
@@ -144,7 +144,8 @@ const { date } = Astro.props.frontmatter;
             {title}
           </h1>
           <slot />
-          <p class="text-s">发布日期：{date}</p>
+          <hr>
+          <p class="mt-10 text-black">发布日期：{date}</p>
         </div>
         <script
           src="https://giscus.app/client.js"

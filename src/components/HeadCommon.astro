@@ -28,6 +28,11 @@ import '../styles/index.css';
 
 <script
   type="text/javascript"
+  src="https://gw.alipayobjects.com/os/k/h3/heti-addon.min.js"
+></script>
+
+<script
+  type="text/javascript"
   src="https://gw.alipayobjects.com/os/k/3j/lozad.min.js"
 ></script>
 
@@ -46,6 +51,9 @@ import '../styles/index.css';
   document.addEventListener('DOMContentLoaded', function () {
     const observer = lozad();
     observer.observe();
+
+    const heti = new Heti('.heti');
+    heti.autoSpacing();
   });
 </script>
 
