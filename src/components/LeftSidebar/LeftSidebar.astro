@@ -55,7 +55,7 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
                         : 'false'
                     }`}
                   >
-                    {child.title}
+                    {child.title} {decodeURIComponent(currentPageMatch)}  {child.link}
                   </a>
                 </li>
               ))}
