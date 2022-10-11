@@ -11,7 +11,11 @@ allPosts = allPosts.sort((a, b) => {
   );
 });
 
-const currentPageMatch = currentPage.slice(1);
+let currentPageMatch = currentPage.slice(1);
+if (currentPageMatch.slice(-1) == '/') {
+  currentPageMatch = currentPageMatch.substring(0, currentPageMatch.length - 1);
+}
+
 const sidebarSections = allPosts.reduce((col, item, i) => {
   const url = item.url;
   const oldTitle = url.split('/posts/')[1];
@@ -55,7 +59,7 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
                         : 'false'
                     }`}
                   >
-                    {child.title} {decodeURIComponent(currentPageMatch)}  {child.link}
+                    {child.title}
                   </a>
                 </li>
               ))}
