@@ -10,7 +10,7 @@ import HeaderLink from './HeaderLink.astro';
     title="Top Navigation"
   >
     <div class="logo flex">
-      <a href="/">
+      <a href="/" class="logo-image">
         <AstroLogo size={40} />
       </a>
       <a href="/">
@@ -59,12 +59,17 @@ import HeaderLink from './HeaderLink.astro';
     gap: 0.25em;
   }
 
+
   .logo a {
     padding: 0.5em 0.25em;
     margin: -0.5em -0.25em;
     text-decoration: none;
     font-weight: bolder;
     display: block;
+  }
+
+  .logo .logo-image{
+    margin-top: -0.6em;
   }
 
   .logo a {
