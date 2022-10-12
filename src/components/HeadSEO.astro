@@ -1,15 +1,12 @@
 ---
-import { SITE, OPEN_GRAPH } from '../config';
+import { SITE } from '../config';
 export interface Props {
 	content: any;
-	site: any;
 	canonicalURL: URL | string;
 }
 const { content = {}, canonicalURL } = Astro.props;
-const formattedContentTitle = content.title ? `${content.title} 🚀 ${SITE.title}` : SITE.title;
-const imageSrc = content?.image?.src ?? OPEN_GRAPH.image.src;
-const canonicalImageSrc = new URL(imageSrc, Astro.site);
-const imageAlt = content?.image?.alt ?? OPEN_GRAPH.image.alt;
+const formattedContentTitle = content.title ? `${SITE.title}${content.title}` : SITE.title;
+const imageSrc = content?.image ?? SITE.pic;
 ---
 
 <!-- Page Metadata -->
@@ -17,10 +14,11 @@ const imageAlt = content?.image?.alt ?? OPEN_GRAPH.image.alt;
 
 <!-- OpenGraph Tags -->
 <meta property="og:title" content={formattedContentTitle} />
-<meta property="og:type" content="article" />
+<meta name="twitter:image" content={imageSrc} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@hiTw93">
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:image" content={canonicalImageSrc} />
-<meta property="og:image:alt" content={imageAlt} />
+<meta property="og:image" content={imageSrc} />
 <meta name="description" property="og:description" content={content.description ? content.description : SITE.description} />
 <meta property="og:site_name" content={SITE.title} />
 

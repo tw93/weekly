@@ -1,7 +1,10 @@
 ---
 import HeadCommon from '../components/HeadCommon.astro';
+import HeadSEO from '../components/HeadSEO.astro';
 import Card from '../components/Card/Card.astro';
+import Footer from '../components/Footer/Footer.astro';
 import Header from '../components/Header/Header.astro';
+import { SITE } from 'src/config';
 let allPosts = await Astro.glob('./posts/*.md');
 allPosts = allPosts.sort((a, b) => {
   return (
@@ -9,11 +12,14 @@ allPosts = allPosts.sort((a, b) => {
     parseInt(a.url.split('/posts/')[1].split('-')[0])
   );
 });
+
+const content = {};
 ---
 
 <html lang="ch">
   <head>
     <HeadCommon />
+    <HeadSEO canonicalURL={SITE.url} content={content} />
     <title>潮流周刊</title>
   </head>
 
@@ -28,5 +34,6 @@ allPosts = allPosts.sort((a, b) => {
         {allPosts.map((p) => <Card post={p} />)}
       </div>
     </div>
+    <Footer />
   </body>
 </html>

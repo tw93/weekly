@@ -1,6 +1,8 @@
 ---
 import '../styles/heti.min.css';
 import HeadCommon from '../components/HeadCommon.astro';
+import HeadSEO from '../components/HeadSEO.astro';
+import Footer from '../components/Footer/Footer.astro';
 import AstroLogo from '../components/Header/AstroLogo.astro';
 import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
 export interface Props {
@@ -13,15 +15,23 @@ if (title.slice(-1) == '/') {
   title = title.substring(0, title.length - 1);
 }
 
-const { date } = Astro.props.frontmatter;
+const { date, pic, desc } = Astro.props.frontmatter;
+
+const content = {
+  title,
+  image: pic,
+  description: desc,
+};
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ch">
   <head>
     <HeadCommon />
-    <meta name="generator" content={Astro.generator} />
-    <title>潮流周刊{title}</title>
+    <HeadSEO content={content} canonicalURL={currentPage} />
+    <meta name="generator" content={Astro.generator} /><title>
+      潮流周刊{title}
+    </title>
+
     <style>
       body {
         width: 100%;
@@ -125,6 +135,9 @@ const { date } = Astro.props.frontmatter;
         #grid-main {
           margin-top: -7px;
           padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
+        }
+        .heti h1.content-title:first-child {
+          margin-bottom: 12px;
         }
       }
     </style>

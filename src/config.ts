@@ -1,6 +1,8 @@
 export const SITE = {
   title: '潮流周刊',
-  description: '记录 Tw93 潮流前端的日常生活',
+  description: '🩴 记录工程师 Tw93 的不枯燥生活，每周一发布',
+  pic: 'https://cdn.fliggy.com/upic/6M3mwc.png',
+  url: 'https://weekly.tw93.fun/'
 };
 
 export const OPEN_GRAPH = {
