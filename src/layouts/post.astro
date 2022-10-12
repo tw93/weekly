@@ -67,8 +67,12 @@ const { date } = Astro.props.frontmatter;
       @media (min-width: 50em) {
         .layout {
           overflow: initial;
-          grid-template-columns: 15rem minmax(0, var(--max-width));
+          grid-template-columns: 18rem minmax(0, var(--max-width));
           gap: 0;
+        }
+
+        #grid-main {
+          padding: 0.8rem 2rem 4rem 2rem;
         }
 
         #grid-left {
@@ -81,7 +85,7 @@ const { date } = Astro.props.frontmatter;
 
       @media (min-width: 72em) {
         .layout {
-          grid-template-columns: 20rem minmax(0,var(--max-width)) 10rem;
+          grid-template-columns: 20rem minmax(0, var(--max-width)) 10rem;
           padding-left: 0;
           padding-right: 0;
           margin: 0 auto;
