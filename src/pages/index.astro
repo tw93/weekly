@@ -2,6 +2,7 @@
 import HeadCommon from '../components/HeadCommon.astro';
 import HeadSEO from '../components/HeadSEO.astro';
 import Card from '../components/Card/Card.astro';
+import Footer from '../components/Footer/Footer.astro';
 import Header from '../components/Header/Header.astro';
 import { SITE } from 'src/config';
 let allPosts = await Astro.glob('./posts/*.md');
@@ -33,5 +34,6 @@ const content = {};
         {allPosts.map((p) => <Card post={p} />)}
       </div>
     </div>
+    <Footer />
   </body>
 </html>
