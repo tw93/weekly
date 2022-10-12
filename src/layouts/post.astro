@@ -53,7 +53,7 @@ const { date } = Astro.props.frontmatter;
       }
 
       #grid-main {
-        padding: 0.8rem var(--gutter) var(--doc-padding) var(--gutter);
+        padding: 0.8rem var(--gutter) 4rem var(--gutter);
         grid-column: 2;
         display: flex;
         flex-direction: column;
@@ -81,7 +81,7 @@ const { date } = Astro.props.frontmatter;
 
       @media (min-width: 72em) {
         .layout {
-          grid-template-columns: 20rem minmax(0, var(--max-width)) 10rem;
+          grid-template-columns: 20rem minmax(0,var(--max-width)) 10rem;
           padding-left: 0;
           padding-right: 0;
           margin: 0 auto;
@@ -97,19 +97,22 @@ const { date } = Astro.props.frontmatter;
       }
       .logo {
         display: none;
-        margin-top: -0.1em;
-        text-decoration: none;
       }
 
       @media (max-width: 50em) {
         .logo {
           display: block;
+          color: #fff;
+          margin-top: -0.1em;
+          margin-right: 0.2em;
         }
         .logo:active {
           text-decoration: none;
+          border-block-end: none;
+          padding-block-end: none;
         }
         #grid-main {
-          margin-top: -7px;
+          margin-top: -0.3em;
         }
       }
     </style>
@@ -140,11 +143,11 @@ const { date } = Astro.props.frontmatter;
           id="write"
         >
           <h1 class="content-title flex align-middle">
-            <a class="logo inline-block" href="/"><AstroLogo size={38} /></a>
+            <a class="logo inline-block" href="/"><AstroLogo size={40} /></a>
             {title}
           </h1>
           <slot />
-          <hr>
+          <hr />
           <p class="mt-10 text-black">发布日期：{date}</p>
         </div>
         <script
