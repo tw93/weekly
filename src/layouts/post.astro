@@ -38,11 +38,17 @@ const { date } = Astro.props.frontmatter;
         overflow-x: hidden;
       }
 
+      .heti h1.content-title:first-child {
+        margin-block-start: 8px !important;
+        margin-bottom: 16px;
+      }
+
       .grid-sidebar {
         height: 100vh;
         position: sticky;
         top: 0;
         padding: 0;
+        margin-left: -5px;
       }
 
       #grid-left {
@@ -85,7 +91,7 @@ const { date } = Astro.props.frontmatter;
 
       @media (min-width: 72em) {
         .layout {
-          grid-template-columns: 20rem minmax(0, var(--max-width)) 10rem;
+          grid-template-columns: 20rem minmax(0, var(--max-width)) 13rem;
           padding-left: 0;
           padding-right: 0;
           margin: 0 auto;
@@ -101,6 +107,7 @@ const { date } = Astro.props.frontmatter;
       }
       .logo {
         display: none;
+        margin-top: -0.1em;
       }
 
       @media (max-width: 50em) {
@@ -116,7 +123,8 @@ const { date } = Astro.props.frontmatter;
           padding-block-end: none;
         }
         #grid-main {
-          margin-top: -0.3em;
+          margin-top: -7px;
+          padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
         }
       }
     </style>

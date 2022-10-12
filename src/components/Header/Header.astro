@@ -6,10 +6,10 @@ import HeaderLink from './HeaderLink.astro';
 
 <header>
   <nav
-    class="nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 ml-3"
+    class="nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 ml-4"
     title="Top Navigation"
   >
-    <div class="logo flex">
+    <div class="logo flex md:ml-0 ml-4">
       <a href="/" class="logo-image">
         <AstroLogo size={40} />
       </a>
@@ -17,7 +17,7 @@ import HeaderLink from './HeaderLink.astro';
         <h1>{CONFIG.SITE.title}</h1>
       </a>
     </div>
-    <div style="flex-grow: 1;" class="text-right xl:-mr-1  md:mr-4 mr-0">
+    <div style="flex-grow: 1;" class="text-right md:mr-1 mr-0">
       <HeaderLink href="http://tw93.fun/" target="_blank">Blog</HeaderLink>
 
       <HeaderLink href="https://twitter.com/HiTw93" target="_blank"
@@ -58,7 +58,6 @@ import HeaderLink from './HeaderLink.astro';
     gap: 0.25em;
   }
 
-
   .logo a {
     padding: 0.5em 0.25em;
     margin: -0.5em -0.25em;
@@ -67,7 +66,7 @@ import HeaderLink from './HeaderLink.astro';
     display: block;
   }
 
-  .logo .logo-image{
+  .logo .logo-image {
     margin-top: -0.6em;
   }
 
@@ -92,7 +91,7 @@ import HeaderLink from './HeaderLink.astro';
     align-items: center;
     justify-content: flex-end;
     gap: 1em;
-    margin-top: 0.3em;
+    margin: 10px 0 5px;
   }
 
   /** Style Algolia */
@@ -121,9 +120,17 @@ import HeaderLink from './HeaderLink.astro';
 </style>
 
 <style is:global>
-  @media (min-width: 1380px) {
+  @media (min-width: 1412px) {
     .xl\:max-w-7xl {
-      max-width: 83.4rem;
+      max-width: 83.6rem;
     }
+  }
+
+  @media (min-width: 1080px) .lg\:max-w-5xl {
+    max-width: 62.4rem;
+  }
+
+  @media (min-width: 768px) .md\:max-w-2xl {
+    max-width: 41.2rem;
   }
 </style>
