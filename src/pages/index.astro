@@ -1,0 +1,37 @@
+---
+import HeadCommon from '../components/HeadCommon.astro';
+import HeadSEO from '../components/HeadSEO.astro';
+import Card from '../components/Card/Card.astro';
+import Header from '../components/Header/Header.astro';
+import { SITE } from 'src/config';
+let allPosts = await Astro.glob('./posts/*.md');
+allPosts = allPosts.sort((a, b) => {
+  return (
+    parseInt(b.url.split('/posts/')[1].split('-')[0]) -
+    parseInt(a.url.split('/posts/')[1].split('-')[0])
+  );
+});
+
+const content = {};
+---
+
+<html lang="ch">
+  <head>
+    <HeadCommon />
+    <HeadSEO canonicalURL={SITE.url} content={content} />
+    <title>潮流周刊</title>
+  </head>
+
+  <body>
+    <Header />
+    <div
+      class="mx-auto -mt-5 mb-12 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl max-w-xl md:box-border box-content md:px-0 px-3"
+    >
+      <div
+        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 mx-0 md:-mr-5 mr-0"
+      >
+        {allPosts.map((p) => <Card post={p} />)}
+      </div>
+    </div>
+  </body>
+</html>

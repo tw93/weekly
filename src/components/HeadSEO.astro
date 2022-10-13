@@ -1,0 +1,27 @@
+---
+import { SITE } from '../config';
+export interface Props {
+	content: any;
+	canonicalURL: URL | string;
+}
+const { content = {}, canonicalURL } = Astro.props;
+const formattedContentTitle = content.title ? `${SITE.title}${content.title}` : SITE.title;
+const imageSrc = content?.image ?? SITE.pic;
+const iconImage = SITE.iconPic
+---
+
+<!-- Page Metadata -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content={formattedContentTitle} />
+<meta name="twitter:image" content={imageSrc} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@hiTw93">
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:site_name" content={formattedContentTitle}>
+<link rel="shortcut icon" href={iconImage}>
+<meta property="og:image" content={iconImage} />
+<meta name="description" property="og:description" content={content.description ? content.description : SITE.description} />
+<meta property="og:site_name" content={SITE.title} />
+
