@@ -22,10 +22,10 @@ if __name__ == "__main__":
         filepath = urllib.parse.quote(name)
         oldTitle = name.split('.md')[0]
         url   = 'https://weekly.tw93.fun/post/' + oldTitle
-        num = int(oldTitle.split('-')[0])
-        title = '第' + num + '期 - ' + oldTitle.split('-')[1];
+        title = '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
         readmeMd= '* [{}]({})\n'.format(title, url)
         dateList = ["2022-10-10","2022-09-26","2022-09-12","2022-09-05","2022-08-29"]
+        num = int(oldTitle.split('-')[0])
         if index < 5 :
           if num < 100 :
             modified = dateList[99-num]
