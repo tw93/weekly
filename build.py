@@ -22,22 +22,16 @@ if __name__ == "__main__":
         filepath = urllib.parse.quote(name)
         oldTitle = name.split('.md')[0]
         url   = 'https://weekly.tw93.fun/post/' + oldTitle
-        num = oldTitle.split('-')[0]
+        num = int(oldTitle.split('-')[0])
         title = '第' + num + '期 - ' + oldTitle.split('-')[1];
         readmeMd= '* [{}]({})\n'.format(title, url)
+        dateList = ["2022-10-10","2022-09-26","2022-09-12","2022-09-05","2022-08-29"]
         if index < 5 :
-          if num == '99' :
-            modified = "2020-10-10"
-          if num == '98' :
-            modified = "2020-09-26"
-          if num == '97' :
-            modified = "2020-09-19"
-          if num == '96' :
-            modified = "2020-09-12"
-          if num == '95' :
-            modified = "2020-09-05"
+          if num < 100 :
+            modified = dateList[99-num]
           else :
-            modified = fetch_ci_time(filepath)
+            modified = fetch_ci_time('/src/pages/posts' + filepath)
+
           recentMd= '* [{}]({}) - {}\n'.format(title, url, modified)
           recentfile.write(recentMd)
         readmefile.write(readmeMd)
