@@ -1,3 +1,0 @@
-python-graphql-client==0.3.0
-httpx
-datetime
