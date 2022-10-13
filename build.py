@@ -26,7 +26,19 @@ if __name__ == "__main__":
         title = '第' + num + '期 - ' + oldTitle.split('-')[1];
         readmeMd= '* [{}]({})\n'.format(title, url)
         if index < 5 :
-          recentMd= '* [{}]({})\n'.format(title, url)
+          if num == '99' :
+            modified = "2020-10-10"
+          if num == '98' :
+            modified = "2020-09-26"
+          if num == '97' :
+            modified = "2020-09-19"
+          if num == '96' :
+            modified = "2020-09-12"
+          if num == '95' :
+            modified = "2020-09-05"
+          else :
+            modified = fetch_ci_time(filepath)
+          recentMd= '* [{}]({}) - {}\n'.format(title, url, modified)
           recentfile.write(recentMd)
         readmefile.write(readmeMd)
 
