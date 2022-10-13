@@ -21,7 +21,7 @@ if __name__ == "__main__":
       if name.endswith('.md'):
         filepath = urllib.parse.quote(name)
         oldTitle = name.split('.md')[0]
-        url   = 'http://weekly.tw93.fun/post/' + oldTitle
+        url   = 'https://weekly.tw93.fun/post/' + oldTitle
         num = oldTitle.split('-')[0]
         title = '第' + num + '期 - ' + oldTitle.split('-')[1];
         readmeMd= '* [{}]({})\n'.format(title, url)
