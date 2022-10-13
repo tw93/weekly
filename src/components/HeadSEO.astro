@@ -7,6 +7,7 @@ export interface Props {
 const { content = {}, canonicalURL } = Astro.props;
 const formattedContentTitle = content.title ? `${SITE.title}${content.title}` : SITE.title;
 const imageSrc = content?.image ?? SITE.pic;
+const iconImage = SITE.iconPic
 ---
 
 <!-- Page Metadata -->
@@ -18,7 +19,7 @@ const imageSrc = content?.image ?? SITE.pic;
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@hiTw93">
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:image" content={imageSrc} />
+<meta property="og:image" content={iconImage} />
 <meta name="description" property="og:description" content={content.description ? content.description : SITE.description} />
 <meta property="og:site_name" content={SITE.title} />
 

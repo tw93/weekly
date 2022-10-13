@@ -2,6 +2,7 @@ export const SITE = {
   title: '潮流周刊',
   description: '🩴 记录工程师 Tw93 的不枯燥生活，每周一发布',
   pic: 'https://cdn.fliggy.com/upic/6M3mwc.png',
+  iconPic: 'https://cdn.fliggy.com/upic/GoZRtj.png',
   url: 'https://weekly.tw93.fun/'
 };
 
