@@ -5,7 +5,7 @@ export const SITE = {
     keywords: 'Tw93,Weekly,Blog,前端,macOS,MiaoYan,Pack,Swift',
     icon: 'https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png',
     pic: 'https://cdn.fliggy.com/upic/2XFNGI.png',
-    homePage: 'https://weekly.tw93.fun/',
+    homePage: 'https://weekly.tw93.fun',
     blogPage: 'https://tw93.fun/',
     twitterId: 'HiTw93',
     githubId: 'tw93',

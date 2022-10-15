@@ -22,12 +22,13 @@ const content = {
   image: pic,
   description: desc,
 };
+const currentUrl = SITE.homePage + currentPage;
 ---
 
 <html lang="ch">
   <head>
     <HeadCommon />
-    <HeadSEO content={content} pageURL={currentPage} />
+    <HeadSEO content={content} pageURL={currentUrl} />
     <meta name="generator" content={Astro.generator} />
     <title>{SITE.title}{title}</title>
     <style>
