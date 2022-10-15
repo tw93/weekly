@@ -1,5 +1,5 @@
 ---
-import * as CONFIG from '../../config';
+import * as CONFIG from '@/config';
 import AstroLogo from './AstroLogo.astro';
 import HeaderLink from './HeaderLink.astro';
 ---
@@ -18,20 +18,10 @@ import HeaderLink from './HeaderLink.astro';
       </a>
     </div>
     <div style="flex-grow: 1;" class="text-right md:mr-1 mr-0">
-      <HeaderLink href="http://tw93.fun/" target="_blank">Blog</HeaderLink>
-
-      <HeaderLink href="https://twitter.com/HiTw93" target="_blank"
-        >Twitter</HeaderLink
-      >
-
-      <HeaderLink
-        href="https://github.com/tw93"
-        target="_blank"
-        class="lg:inline-block hidden">GitHub</HeaderLink
-      >
-      <HeaderLink href="/rss.xml" target="_blank" class="lg:inline-block hidden"
-        >RSS</HeaderLink
-      >
+      <HeaderLink href={CONFIG.SITE.blogUrl} target="_blank">Blog</HeaderLink>
+      <HeaderLink href=`https://twitter.com/${CONFIG.SITE.twitterId}` target="_blank">Twitter</HeaderLink>
+      <HeaderLink href=`https://github.com/${CONFIG.SITE.githubId}` target="_blank" class="lg:inline-block hidden">GitHub</HeaderLink>
+      <HeaderLink href="/rss.xml" target="_blank" class="lg:inline-block hidden">RSS</HeaderLink>
     </div>
   </nav>
 </header>

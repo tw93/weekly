@@ -2,22 +2,21 @@
 import '../styles/heti.min.css';
 import HeadCommon from '../components/HeadCommon.astro';
 import HeadSEO from '../components/HeadSEO.astro';
-import Footer from '../components/Footer/Footer.astro';
+import Footer from '../components/Footer.astro';
 import AstroLogo from '../components/Header/AstroLogo.astro';
-import LeftSidebar from '../components/LeftSidebar/LeftSidebar.astro';
+import LeftSidebar from '../components/LeftSidebar.astro';
+import { SITE } from '@/config';
+import {parseTitle} from '@/util'
+
 export interface Props {
   title: string;
 }
 const pageUrl = new URL(Astro.request.url);
 const currentPage = pageUrl.pathname;
-const oldTitle = decodeURIComponent(currentPage.split('/posts/')[1]);
-let title = '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
-if (title.slice(-1) == '/') {
-  title = title.substring(0, title.length - 1);
-}
+
+let title = parseTitle(currentPage);
 
 const { date, pic, desc } = Astro.props.frontmatter;
-
 const content = {
   title,
   image: pic,
@@ -29,133 +28,121 @@ const content = {
   <head>
     <HeadCommon />
     <HeadSEO content={content} pageURL={pageUrl} />
-    <meta name="generator" content={Astro.generator} /><title>
-      潮流周刊{title}
-    </title>
-
+    <meta name="generator" content={Astro.generator} />
+    <title>{SITE.title}{title}</title>
     <style>
-      body {
+    body {
         width: 100%;
         --gutter: 0.5rem;
         --doc-padding: 2rem;
-      }
+    }
 
-      .layout {
+    .layout {
         display: grid;
         grid-auto-flow: column;
         grid-template-columns:
-          minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
-          minmax(var(--gutter), 1fr);
+              minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
+              minmax(var(--gutter), 1fr);
         overflow-x: hidden;
-      }
+    }
 
-      .heti h1.content-title:first-child {
+    .heti h1.content-title:first-child {
         margin-block-start: 8px !important;
         margin-bottom: 16px;
-      }
+    }
 
-      .grid-sidebar {
+    .grid-sidebar {
         height: 100vh;
         position: sticky;
         top: 0;
         padding: 0;
         margin-left: -5px;
-      }
+    }
 
-      #grid-left {
+    #grid-left {
         position: fixed;
         background-color: var(--theme-bg);
         z-index: 10;
         display: none;
-      }
+    }
 
-      #grid-main {
+    #grid-main {
         padding: 0.8rem var(--gutter) 4rem var(--gutter);
         grid-column: 2;
         display: flex;
         flex-direction: column;
         height: 100%;
-      }
+    }
 
-      #grid-right {
+    #grid-right {
         display: none;
-      }
+    }
 
-      @media (min-width: 50em) {
+    @media (min-width: 50em) {
         .layout {
-          overflow: initial;
-          grid-template-columns: 18rem minmax(0, var(--max-width));
-          gap: 0;
+            overflow: initial;
+            grid-template-columns: 18rem minmax(0, var(--max-width));
+            gap: 0;
         }
 
         #grid-main {
-          padding: 0.8rem 2rem 4rem 2rem;
+            padding: 0.8rem 2rem 4rem 2rem;
         }
 
         #grid-left {
-          display: flex;
-          padding-left: 2rem;
-          position: sticky;
-          grid-column: 1;
+            display: flex;
+            padding-left: 2rem;
+            position: sticky;
+            grid-column: 1;
         }
-      }
+    }
 
-      @media (min-width: 72em) {
+    @media (min-width: 72em) {
         .layout {
-          grid-template-columns: 20rem minmax(0, var(--max-width)) 13rem;
-          padding-left: 0;
-          padding-right: 0;
-          margin: 0 auto;
+            grid-template-columns: 20rem minmax(0, var(--max-width)) 13rem;
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0 auto;
         }
 
         #grid-right {
-          grid-column: 3;
-          display: flex;
+            grid-column: 3;
+            display: flex;
         }
-      }
-      .gsc-left-header .color-text-secondary {
+    }
+
+    .gsc-left-header .color-text-secondary {
         display: none;
-      }
-      .logo {
+    }
+
+    .logo {
         display: none;
         margin-top: -0.1em;
-      }
+    }
 
-      @media (max-width: 50em) {
+    @media (max-width: 50em) {
         .logo {
-          display: block;
-          color: #fff;
-          margin-top: -0.1em;
-          margin-right: 0.2em;
+            display: block;
+            color: #fff;
+            margin-top: -0.1em;
+            margin-right: 0.2em;
         }
+
         .logo:active {
-          text-decoration: none;
-          border-block-end: none;
-          padding-block-end: none;
+            text-decoration: none;
+            border-block-end: none;
+            padding-block-end: none;
         }
+
         #grid-main {
-          margin-top: -7px;
-          padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
+            margin-top: -7px;
+            padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
         }
+
         .heti h1.content-title:first-child {
-          margin-bottom: 12px;
+            margin-bottom: 12px;
         }
-      }
-    </style>
-    <style is:global>
-      .layout > * {
-        width: 100%;
-        height: 100%;
-      }
-
-      .mobile-sidebar-toggle {
-        overflow: hidden;
-      }
-
-      .mobile-sidebar-toggle #grid-left {
-        display: block;
-        top: 2rem;
-      }
+    }
     </style>
   </head>
   <body>
@@ -178,7 +165,7 @@ const content = {
         </div>
         <script
           src="https://giscus.app/client.js"
-          data-repo="tw93/weekly"
+          data-repo={SITE.repo}
           data-repo-id="R_kgDOG4TsQA"
           data-category="General"
           data-category-id="DIC_kwDOG4TsQM4CR4bV"
@@ -195,5 +182,6 @@ const content = {
         ></script>
       </div>
     </main>
+    <Footer/>
   </body>
 </html>

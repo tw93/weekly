@@ -1,15 +1,11 @@
 ---
 const { currentPage } = Astro.props;
-import * as CONFIG from '../../config';
-import AstroLogo from '../Header/AstroLogo.astro';
+import AstroLogo from './Header/AstroLogo.astro';
+import {SITE} from '@/config';
+import {parseTitle,sortPosts} from '@/util'
 
-let allPosts = await Astro.glob('../../pages/posts/*.md');
-allPosts = allPosts.sort((a, b) => {
-  return (
-    parseInt(b.url.split('/posts/')[1].split('-')[0]) -
-    parseInt(a.url.split('/posts/')[1].split('-')[0])
-  );
-});
+const posts = await Astro.glob('../pages/posts/*.md');
+const allPosts = sortPosts(posts)
 
 let currentPageMatch = currentPage.slice(1);
 if (currentPageMatch.slice(-1) == '/') {
@@ -18,11 +14,8 @@ if (currentPageMatch.slice(-1) == '/') {
 
 const sidebarSections = allPosts.reduce((col, item, i) => {
   const url = item.url;
-  const oldTitle = url.split('/posts/')[1];
-  const title =
-    '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
   const route = {
-    title,
+    title: parseTitle(url),
     link: url.slice(1),
   };
   if (i === 0) {
@@ -40,7 +33,7 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
       <AstroLogo size={40} />
     </a>
     <a href="/">
-      <h1>{CONFIG.SITE.title}</h1>
+      <h1>{SITE.title}</h1>
     </a>
   </div>
   <ul class="nav-groups">

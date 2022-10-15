@@ -6,7 +6,8 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@layouts/*": ["./src/layouts/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@/*": ["./src/*"]
     }
   },
   "moduleResolution": "node"

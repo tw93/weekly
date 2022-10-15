@@ -1,0 +1,28 @@
+<script type="text/javascript" src="https://gw.alipayobjects.com/os/k/h3/heti-addon.min.js"></script>
+<script type="text/javascript" src="https://gw.alipayobjects.com/os/k/3j/lozad.min.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = lozad();
+    observer.observe();
+
+    const heti = new Heti('.heti');
+    heti.autoSpacing();
+  });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TEL60V1WM9" is:inline></script>
+<script>
+  // @ts-ignore
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    // @ts-ignore
+    dataLayer.push(arguments);
+  }
+  // @ts-ignore
+  gtag('js', new Date());
+  // @ts-ignore
+  gtag('config', 'G-RP9WWK86CZ');
+</script>

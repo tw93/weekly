@@ -1,11 +1,12 @@
 ---
+import {parseTitle} from '@/util'
+
 export interface Props {
   post: any;
 }
 
 const { post } = Astro.props;
-const oldTitle = post.url.split('/posts/')[1];
-const title = '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
+const title = parseTitle(post.url);
 const { pic, desc, date } = post.frontmatter;
 ---
 
