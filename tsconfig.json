@@ -6,7 +6,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@pages/*": ["./src/pages/*"],
+      "@layouts/*": ["./src/layouts/*"],
       "@/*": ["./src/*"]
     }
   },

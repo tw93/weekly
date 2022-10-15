@@ -11,7 +11,7 @@ function defaultLayoutPlugin() {
         if (headHtml) {
             image = parse(headHtml).querySelector('img').getAttribute('src');
         }
-        file.data.astro.frontmatter.layout = '@pages/post.astro';
+        file.data.astro.frontmatter.layout = '@layouts/post.astro';
         file.data.astro.frontmatter.pic = image;
         file.data.astro.frontmatter.desc = tree.children[1].children[1].value;
         const num = file.history[0].split('/posts/')[1].split('-')[0];
