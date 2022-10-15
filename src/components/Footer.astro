@@ -4,7 +4,11 @@
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
-    const observer = lozad();
+    const observer = lozad('.lozad',{
+     loaded: function(el) {
+           el.alt = el.getAttribute('data-alt')
+        }
+    });
     observer.observe();
 
     const heti = new Heti('.heti');
