@@ -4,7 +4,7 @@ export interface Props {
   content: any;
   pageURL: URL | string;
 }
-const { icon,keywords,author,twitter,homePage } =SITE;
+const { icon,keywords,author,twitterId,homePage } =SITE;
 const { content = {}, pageURL } = Astro.props;
 const pageTitle = content.title ? `${SITE.title}${content.title}` : SITE.title;
 const imageSrc = SITE.pic;
