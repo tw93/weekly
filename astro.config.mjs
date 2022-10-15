@@ -14,7 +14,6 @@ function defaultLayoutPlugin() {
     file.data.astro.frontmatter.layout = '@layouts/post.astro';
     file.data.astro.frontmatter.pic = image;
     file.data.astro.frontmatter.desc = tree.children[1].children[1].value;
-
     const num = file.history[0].split('/posts/')[1].split('-')[0];
     if (num < 99) {
       file.data.astro.frontmatter.date = dayjs('2022-10-10')

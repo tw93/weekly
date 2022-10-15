@@ -16,6 +16,7 @@ export const get = () =>
     site: 'https://weekly.tw93.fun/',
     customData: `<image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image>`,
     items: posts.map((item) => {
+      console.log(item)
       const url = item.url;
       const oldTitle = url.split('/posts/')[1];
       const title =
@@ -23,7 +24,7 @@ export const get = () =>
       return {
         link: url,
         title,
-        description: item.frontmatter.content,
+        description: item.compiledContent(),
         pubDate: item.frontmatter.date,
       };
     }),
