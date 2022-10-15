@@ -7,15 +7,15 @@ export interface Props {
 const { icon,keywords,author,twitter,homePage } =SITE;
 const { content = {}, pageURL } = Astro.props;
 const pageTitle = content.title ? `${SITE.title}${content.title}` : SITE.title;
-const imageSrc = content?.image ?? SITE.pic;
+const imageSrc = SITE.pic;
 const description = content.description ? content.description : SITE.description;
 ---
 
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content={imageSrc} />
 <meta name="twitter:site" content={homePage} />
 <meta property="twitter:url" content={pageURL} />
-<meta name="twitter:creator" content={twitter} />
+<meta name="twitter:creator" content={`@${twitter}`} />
 <meta property="twitter:description" content={description} />
 
 <meta name="keywords" content={keywords}/>
