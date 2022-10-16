@@ -1,5 +1,5 @@
 ---
-import {SITE} from '@/config';
+import { SITE } from '@/config';
 import AstroLogo from './AstroLogo.astro';
 import HeaderLink from './HeaderLink.astro';
 ---
@@ -7,7 +7,7 @@ import HeaderLink from './HeaderLink.astro';
 <header>
   <nav
     class="nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 ml-4"
-    title="Top Navigation"
+    title={SITE.title}
   >
     <div class="logo flex md:ml-0 ml-4">
       <a href="/" class="logo-image">
@@ -19,9 +19,17 @@ import HeaderLink from './HeaderLink.astro';
     </div>
     <div style="flex-grow: 1;" class="text-right md:mr-1 mr-0">
       <HeaderLink href={SITE.blogPage} target="_blank">Blog</HeaderLink>
-      <HeaderLink href={`https://twitter.com/${SITE.twitterId}`} target="_blank">Twitter</HeaderLink>
-      <HeaderLink href={`https://github.com/${SITE.githubId}`} target="_blank" class="lg:inline-block hidden">GitHub</HeaderLink>
-      <HeaderLink href="/rss.xml" target="_blank" class="lg:inline-block hidden">RSS</HeaderLink>
+      <HeaderLink href={`https://twitter.com/${SITE.twitterId}`} target="_blank"
+        >Twitter</HeaderLink
+      >
+      <HeaderLink
+        href={`https://github.com/${SITE.githubId}`}
+        target="_blank"
+        class="lg:inline-block hidden">GitHub</HeaderLink
+      >
+      <HeaderLink href="/rss.xml" target="_blank" class="lg:inline-block hidden"
+        >RSS</HeaderLink
+      >
     </div>
   </nav>
 </header>
@@ -84,7 +92,12 @@ import HeaderLink from './HeaderLink.astro';
     margin: 10px 0 5px;
   }
 
-  /** Style Algolia */
+  @media (max-width: 50em) {
+    .nav-wrapper {
+      margin: 5px 0 5px;
+    }
+  }
+
   :root {
     --docsearch-primary-color: var(--theme-accent);
     --docsearch-logo-color: var(--theme-text);
