@@ -17,8 +17,8 @@ if __name__ == "__main__":
 
   for root, dirs, filenames in os.walk('./src/pages/posts'):
     filenames = sorted(filenames, key=lambda x:float(re.findall("(\d+)",x)[0]))
-    filenames.sort(reverse=True)
     print(filenames)
+    filenames.sort(reverse=True)
   for index, name in enumerate(filenames):
       if name.endswith('.md'):
         filepath = urllib.parse.quote(name)
