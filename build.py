@@ -15,7 +15,8 @@ if __name__ == "__main__":
   recentfile=open('RECENT.md','w')
 
   for root, dirs, filenames in os.walk('./src/pages/posts'):
-    filenames.sort(reverse=True, key=lambda f: int(filter(str.isdigit, f)))
+    filenames.sort(key=lambda f: int(re.sub('\D', '', f)))
+    filenames.sort(reverse=True)
 
   for index, name in enumerate(filenames):
       if name.endswith('.md'):
