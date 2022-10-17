@@ -16,9 +16,7 @@ if __name__ == "__main__":
   recentfile=open('RECENT.md','w')
 
   for root, dirs, filenames in os.walk('./src/pages/posts'):
-    filenames = sorted(filenames, key=lambda x:float(re.findall("(\d+)",x)[0]))
-    print(filenames)
-    filenames.sort(reverse=True)
+    filenames = sorted(filenames, key=lambda x:float(re.findall("(\d+)",x)[0]), reverse=True)
   for index, name in enumerate(filenames):
       if name.endswith('.md'):
         filepath = urllib.parse.quote(name)
@@ -28,7 +26,6 @@ if __name__ == "__main__":
         readmeMd= '* [{}]({})\n'.format(title, url)
         dateList = ["2022-10-10","2022-09-26","2022-09-12","2022-09-05","2022-08-29"]
         num = int(oldTitle.split('-')[0])
-        print(num)
         if index < 5 :
           if num < 100 :
             modified = dateList[99-num]
