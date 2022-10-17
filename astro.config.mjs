@@ -1,6 +1,5 @@
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
-import vercel from '@astrojs/vercel/serverless';
 import dayjs from 'dayjs';
 import fs from 'fs';
 import { defineConfig } from 'astro/config';
@@ -61,8 +60,6 @@ function defaultLayoutPlugin() {
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  adapter: vercel(),
   integrations: [react(), tailwind()],
   markdown: {
     remarkPlugins: [defaultLayoutPlugin],
