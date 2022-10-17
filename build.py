@@ -1,6 +1,6 @@
 import os
 import httpx
-import natsort
+import re
 import urllib.parse
 import datetime
 
@@ -16,7 +16,7 @@ if __name__ == "__main__":
   recentfile=open('RECENT.md','w')
 
   for root, dirs, filenames in os.walk('./src/pages/posts'):
-    filenames = natsort.natsorted(filenames,reverse=True)
+    filenames.sort(key=lambda f: int(re.sub('\D', '', f)))
 
   for index, name in enumerate(filenames):
       if name.endswith('.md'):
