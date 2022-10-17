@@ -23,6 +23,7 @@
   "dependencies": {
     "@algolia/client-search": "^4.14.2",
     "@astrojs/rss": "^1.0.2",
+    "@astrojs/vercel": "^2.0.1",
     "@docsearch/css": "^3.2.1",
     "@docsearch/react": "^3.2.1",
     "@tailwindcss/line-clamp": "^0.4.2",
