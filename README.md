@@ -1,6 +1,7 @@
 # 潮流周刊
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅～
+* [第 100 期 - 无忧孩童](https://weekly.tw93.fun/posts/100-无忧孩童)
 * [第 99 期 - 自驾回家](https://weekly.tw93.fun/posts/99-自驾回家)
 * [第 98 期 - 潮流建筑](https://weekly.tw93.fun/posts/98-潮流建筑)
 * [第 97 期 - 水上森林](https://weekly.tw93.fun/posts/97-水上森林)
@@ -90,7 +91,6 @@
 * [第 13 期 - 茶颜悦色](https://weekly.tw93.fun/posts/13-茶颜悦色)
 * [第 12 期 - 大理稻田](https://weekly.tw93.fun/posts/12-大理稻田)
 * [第 11 期 - 御牛道](https://weekly.tw93.fun/posts/11-御牛道)
-* [第 100 期 - 无忧孩童](https://weekly.tw93.fun/posts/100-无忧孩童)
 * [第 10 期 - 新疆的雪山](https://weekly.tw93.fun/posts/10-新疆的雪山)
 * [第 09 期 - 华山](https://weekly.tw93.fun/posts/09-华山)
 * [第 08 期 - 日本大阪海游馆](https://weekly.tw93.fun/posts/08-日本大阪海游馆)
