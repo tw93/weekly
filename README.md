@@ -1,6 +1,6 @@
 # 潮流周刊
 
-> 记录工程师 Tw93 的不枯燥生活，欢迎订阅～
+> 记录工程师 Tw93 的不枯燥生活，欢迎订阅，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
 * [第 100 期 - 无忧孩童](https://weekly.tw93.fun/posts/100-无忧孩童)
 * [第 99 期 - 自驾回家](https://weekly.tw93.fun/posts/99-自驾回家)
