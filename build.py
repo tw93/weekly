@@ -33,7 +33,7 @@ if __name__ == "__main__":
           if num < 100 :
             modified = dateList[99-num]
           else :
-            modified = fetch_ci_time('/src/pages/posts' + filepath)
+            modified = fetch_ci_time('/src/pages/posts/' + filepath)
 
           recentMd= '* [{}]({}) - {}\n'.format(title, url, modified)
           recentfile.write(recentMd)
