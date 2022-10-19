@@ -9,7 +9,7 @@ import HeaderLink from './HeaderLink.astro';
     class="nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 ml-4"
     title={SITE.title}
   >
-    <div class="logo flex md:ml-0 ml-4">
+    <div class="logo flex md:ml-0 ml-3">
       <a href="/" class="logo-image">
         <AstroLogo size={40} />
       </a>
@@ -17,7 +17,7 @@ import HeaderLink from './HeaderLink.astro';
         <h1>{SITE.title}</h1>
       </a>
     </div>
-    <div style="flex-grow: 1;" class="text-right md:mr-1 mr-0">
+    <div style="flex-grow: 1;" class="text-right md:mr-1 -mr-1">
       <HeaderLink href={SITE.blogPage} target="_blank">Blog</HeaderLink>
       <HeaderLink href={`https://twitter.com/${SITE.twitterId}`} target="_blank"
         >Twitter</HeaderLink
