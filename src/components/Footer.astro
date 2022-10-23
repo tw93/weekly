@@ -4,29 +4,38 @@
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
-    const observer = lozad('.lozad',{
-     loaded: function(el) {
-           el.alt = el.getAttribute('data-alt')
-        }
+
+    // 图片懒加载
+    const observer = lozad('.lozad', {
+      loaded: function (el) {
+        el.alt = el.getAttribute('data-alt');
+      },
     });
     observer.observe();
 
+    // 字体间距优化
     const heti = new Heti('.heti');
     heti.autoSpacing();
+
+    // 链接外跳
+    const links = document.links;
+    for (let i = 0; i < +links.length; i++) {
+      if (links[i].hostname != window.location.hostname ) {
+        links[i].target = '_blank';
+      }
+    }
   });
 </script>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DT01FBW30E" is:inline></script>
 <script>
-  // @ts-ignore
+  // @ts-nocheck
   window.dataLayer = window.dataLayer || [];
   function gtag() {
-    // @ts-ignore
     dataLayer.push(arguments);
   }
-  // @ts-ignore
   gtag('js', new Date());
-  // @ts-ignore
   gtag('config', 'G-DT01FBW30E');
 </script>
