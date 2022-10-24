@@ -2,6 +2,7 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 101 期 - 1024节日快乐](https://weekly.tw93.fun/posts/101-1024节日快乐)
 * [第 100 期 - 无忧孩童](https://weekly.tw93.fun/posts/100-无忧孩童)
 * [第 99 期 - 自驾回家](https://weekly.tw93.fun/posts/99-自驾回家)
 * [第 98 期 - 潮流建筑](https://weekly.tw93.fun/posts/98-潮流建筑)
