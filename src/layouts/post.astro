@@ -16,7 +16,7 @@ const currentPage = pageUrl.pathname;
 
 let title = parseTitle(currentPage);
 
-const { date, pic, desc } = Astro.props.frontmatter;
+const { date, pic, desc, url } = Astro.props.frontmatter;
 const content = {
   title,
   image: pic,
@@ -165,7 +165,7 @@ const currentUrl = SITE.homePage + currentPage;
           <hr />
           <div class="flex justify-between md:flex-row flex-col">
             <p class=" text-black">
-              发布日期：<a href={`https://github.com/${SITE.repo}/tree/main/src/pages${currentPage}.md`} target="_blank"
+              发布日期：<a href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`} target="_blank"
                 >{date}</a>
             </p>
             <p>
