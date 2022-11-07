@@ -164,17 +164,23 @@ const currentUrl = SITE.homePage + currentPage;
           <slot />
           <hr />
           <div class="flex justify-between md:flex-row flex-col">
-            <p class=" text-black">
-              发布日期：<a href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`} target="_blank"
-                >{date}</a>
+            <p class="text-black">
+              发布日期：<a
+                href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
+                target="_blank"
+                title="Edit">{date}</a
+              >
             </p>
             <p>
               <a href="/">去首页</a> | <a
-                href={`https://github.com/${SITE.githubId}`}
+                href={`https://github.com/${SITE.githubId}/weekly`}
+                title="Star"
                 target="_blank">Github</a
-              > | <a href={`https://twitter.com/${SITE.twitterId}`} target="_blank"
-                >Twitter</a
-              > | <a href="/rss.xml">RSS</a>
+              > | <a
+                href={`https://twitter.com/${SITE.twitterId}`}
+                target="_blank"
+                title="Follow">Twitter</a
+              > | <a href="/rss.xml" title="Subscribe">RSS</a>
             </p>
           </div>
         </div>
