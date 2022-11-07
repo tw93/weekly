@@ -5,7 +5,7 @@
 
 html {
   font-size: 16px;
-  font-display: block;
+  font-display: swap;
   color: #262626;
   -webkit-font-smoothing: antialiased;
 }
