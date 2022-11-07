@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 import AstroLogo from '../components/Header/AstroLogo.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
 import { SITE } from '@/config';
-import {parseTitle} from '@/util'
+import { parseTitle } from '@/util';
 
 export interface Props {
   title: string;
@@ -32,119 +32,119 @@ const currentUrl = SITE.homePage + currentPage;
     <meta name="generator" content={Astro.generator} />
     <title>{SITE.title}{title}</title>
     <style>
-    body {
+      body {
         width: 100%;
         --gutter: 0.5rem;
         --doc-padding: 2rem;
-    }
+      }
 
-    .layout {
+      .layout {
         display: grid;
         grid-auto-flow: column;
         grid-template-columns:
-              minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
-              minmax(var(--gutter), 1fr);
+          minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
+          minmax(var(--gutter), 1fr);
         overflow-x: hidden;
-    }
+      }
 
-    .heti h1.content-title:first-child {
+      .heti h1.content-title:first-child {
         margin-block-start: 8px !important;
         margin-bottom: 16px;
-    }
+      }
 
-    .grid-sidebar {
+      .grid-sidebar {
         height: 100vh;
         position: sticky;
         top: 0;
         padding: 0;
         margin-left: -5px;
-    }
+      }
 
-    #grid-left {
+      #grid-left {
         position: fixed;
         background-color: var(--theme-bg);
         z-index: 10;
         display: none;
-    }
+      }
 
-    #grid-main {
+      #grid-main {
         padding: 0.8rem var(--gutter) 4rem var(--gutter);
         grid-column: 2;
         display: flex;
         flex-direction: column;
         height: 100%;
-    }
+      }
 
-    #grid-right {
+      #grid-right {
         display: none;
-    }
+      }
 
-    @media (min-width: 50em) {
+      @media (min-width: 50em) {
         .layout {
-            overflow: initial;
-            grid-template-columns: 18rem minmax(0, var(--max-width));
-            gap: 0;
+          overflow: initial;
+          grid-template-columns: 18rem minmax(0, var(--max-width));
+          gap: 0;
         }
 
         #grid-main {
-            padding: 0.8rem 2rem 4rem 2rem;
+          padding: 0.8rem 2rem 4rem 2rem;
         }
 
         #grid-left {
-            display: flex;
-            padding-left: 2rem;
-            position: sticky;
-            grid-column: 1;
+          display: flex;
+          padding-left: 2rem;
+          position: sticky;
+          grid-column: 1;
         }
-    }
+      }
 
-    @media (min-width: 72em) {
+      @media (min-width: 72em) {
         .layout {
-            grid-template-columns: 20rem minmax(0, var(--max-width)) 13rem;
-            padding-left: 0;
-            padding-right: 0;
-            margin: 0 auto;
+          grid-template-columns: 20rem minmax(0, var(--max-width)) 13rem;
+          padding-left: 0;
+          padding-right: 0;
+          margin: 0 auto;
         }
 
         #grid-right {
-            grid-column: 3;
-            display: flex;
+          grid-column: 3;
+          display: flex;
         }
-    }
+      }
 
-    .gsc-left-header .color-text-secondary {
+      .gsc-left-header .color-text-secondary {
         display: none;
-    }
+      }
 
-    .logo {
+      .logo {
         display: none;
         margin-top: -0.1em;
-    }
+      }
 
-    @media (max-width: 50em) {
+      @media (max-width: 50em) {
         .logo {
-            display: block;
-            color: #fff;
-            margin-top: -0.1em;
-            margin-right: 0.2em;
+          display: block;
+          color: #fff;
+          margin-top: -0.1em;
+          margin-right: 0.2em;
         }
 
         .logo:active {
-            text-decoration: none;
-            border-block-end: none;
-            padding-block-end: none;
+          text-decoration: none;
+          border-block-end: none;
+          padding-block-end: none;
         }
 
         #grid-main {
-            margin-top: -7px;
-            padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
+          margin-top: -7px;
+          padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
         }
 
         .heti h1.content-title:first-child {
-            margin-bottom: 12px;
-            font-size: 2rem;
+          margin-bottom: 12px;
+          font-size: 2rem;
         }
-    }
+      }
     </style>
   </head>
   <body>
@@ -154,7 +154,7 @@ const currentUrl = SITE.homePage + currentPage;
       </aside>
       <div id="grid-main">
         <div
-          class="markdown-body heti md:mx-auto pb-16 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
+          class="markdown-body heti md:mx-auto md:pb-16 pb-6 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
           id="write"
         >
           <h1 class="content-title flex align-middle">
@@ -163,7 +163,20 @@ const currentUrl = SITE.homePage + currentPage;
           </h1>
           <slot />
           <hr />
-          <p class="mt-10 text-black">发布日期：{date}</p>
+          <div class="flex justify-between md:flex-row flex-col">
+            <p class=" text-black">
+              发布日期：<a href={`https://github.com/${SITE.repo}/tree/main/src/pages${currentPage}.md`} target="_blank"
+                >{date}</a>
+            </p>
+            <p>
+              <a href="/">去首页</a> | <a href="/rss.xml">RSS</a> | <a
+                href="https://github.com/tw93"
+                target="_blank">Github</a
+              > | <a href="https://twitter.com/HiTw93" target="_blank"
+                >Twitter</a
+              >
+            </p>
+          </div>
         </div>
         <script
           src="https://giscus.app/client.js"
@@ -184,6 +197,6 @@ const currentUrl = SITE.homePage + currentPage;
         ></script>
       </div>
     </main>
-    <Footer/>
+    <Footer />
   </body>
 </html>
