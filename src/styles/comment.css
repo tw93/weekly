@@ -125,6 +125,7 @@ main .gsc-comment-box-textarea:focus,
 
 .gsc-comment {
   font-size: 0.9rem;
+  line-height: 1.8;
 }
 
 .gsc-reactions-count {
