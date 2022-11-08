@@ -28,6 +28,10 @@ img {
   object-fit: cover;
 }
 
+.heti p > img {
+  margin-top: 8px;
+}
+
 pre,
 iframe {
   max-width: 900px;
