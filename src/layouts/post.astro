@@ -6,11 +6,12 @@ import Footer from '../components/Footer.astro';
 import AstroLogo from '../components/Header/AstroLogo.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
 import { SITE } from '@/config';
-import { parseTitle } from '@/util';
+import { parseTitle, sortPosts, getIndex } from '@/util';
 
 export interface Props {
   title: string;
 }
+
 const pageUrl = new URL(Astro.request.url);
 const currentPage = pageUrl.pathname;
 
@@ -23,6 +24,19 @@ const content = {
   description: desc,
 };
 const currentUrl = SITE.homePage + currentPage;
+
+// 或者下一篇文章
+const posts = await Astro.glob('../pages/posts/*.md');
+const allPosts = sortPosts(posts);
+const postIndex = getIndex(currentPage);
+let nextUrl = '';
+if (postIndex > 2) {
+  nextUrl = allPosts[allPosts.length - postIndex + 1].url;
+}
+let prevUrl = '';
+if (postIndex < allPosts.length) {
+  prevUrl = allPosts[allPosts.length - postIndex - 1].url;
+}
 ---
 
 <html lang="ch">
@@ -145,6 +159,12 @@ const currentUrl = SITE.homePage + currentPage;
           font-size: 2rem;
         }
       }
+      .post-footer a {
+        color: var(--theme-text-accent);
+      }
+      .post-footer a:hover {
+        border-block-end: none;
+      }
     </style>
   </head>
   <body>
@@ -154,7 +174,7 @@ const currentUrl = SITE.homePage + currentPage;
       </aside>
       <div id="grid-main">
         <div
-          class="markdown-body heti md:mx-auto md:pb-16 pb-6 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
+          class="markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
           id="write"
         >
           <h1 class="content-title flex align-middle">
@@ -163,25 +183,41 @@ const currentUrl = SITE.homePage + currentPage;
           </h1>
           <slot />
           <hr />
-          <div class="flex justify-between md:flex-row flex-col">
-            <p class="text-black">
+          <div
+            class="flex justify-between md:flex-row flex-col mt-2 post-footer"
+          >
+            <div class="text-black">
               发布日期：<a
                 href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
                 target="_blank"
                 title="Edit">{date}</a
               >
-            </p>
-            <p>
-              <a href="/">去首页</a> | <a
-                href={`https://github.com/${SITE.githubId}/weekly`}
-                title="Star"
-                target="_blank">Github</a
-              > | <a
+            </div>
+            <div class="md:mt-0 mt-4">
+              {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
+              {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
+              <a href="/">去首页 |</a>
+              <a
                 href={`https://twitter.com/${SITE.twitterId}`}
                 target="_blank"
                 title="Follow">Twitter</a
-              > | <a href="/rss.xml" title="Subscribe">RSS</a>
-            </p>
+              >
+              <a
+                href={`https://github.com/${SITE.githubId}/weekly`}
+                title="Star"
+                target="_blank"
+                class="lg:inline-block hidden"
+              >
+                | Github</a
+              >
+              <a
+                href="/rss.xml"
+                title="Subscribe"
+                class="xl:inline-block hidden"
+              >
+                | RSS</a
+              >
+            </div>
           </div>
         </div>
         <script
