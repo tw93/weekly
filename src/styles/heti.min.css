@@ -488,6 +488,11 @@ blockquote blockquote {
   font-size: 0.875em;
 }
 
+.heti > p > small{
+  display: inherit;
+  margin-top: -0.6em;
+}
+
 .heti strong {
   font-weight: bold;
 }
