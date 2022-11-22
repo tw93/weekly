@@ -165,6 +165,10 @@ if (postIndex < allPosts.length) {
       .post-footer a:hover {
         border-block-end: none;
       }
+      .heti .pay-button:hover {
+        border-block-end: none;
+        padding-block-end: 0px;
+      }
     </style>
   </head>
   <body>
@@ -182,6 +186,14 @@ if (postIndex < allPosts.length) {
             {title}
           </h1>
           <slot />
+          <div class="flex align-middle justify-center mt-4">
+            <a
+              class="inline-block h-10 items-center rounded bg-[#171515] px-5 py-3 text-sm font-medium text-white pay-button"
+              href="https://miaoyan.app/cats.html?name=Weekly"
+              target="_blank"
+              rel="noreferrer">有收货 → 去喂猫❤️</a
+            >
+          </div>
           <hr />
           <div
             class="flex justify-between md:flex-row flex-col mt-2 post-footer"
