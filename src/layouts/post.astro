@@ -198,14 +198,14 @@ if (postIndex < allPosts.length) {
           <div
             class="flex justify-between md:flex-row flex-col mt-2 post-footer"
           >
-            <div class="text-black">
+            <div class="text-black flex-1">
               发布日期：<a
                 href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
                 target="_blank"
                 title="Edit">{date}</a
               >
             </div>
-            <div class="md:mt-0 mt-4">
+            <div class="md:mt-0 mt-4 flex-1 text-right">
               {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
               {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
               <a href="/">去首页 |</a>
