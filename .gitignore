@@ -1,5 +1,4 @@
 # build output
-dist/
 .output/
 
 # dependencies
