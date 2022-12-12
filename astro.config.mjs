@@ -49,10 +49,6 @@ function defaultLayoutPlugin() {
         } else if (num == 99) {
           file.data.astro.frontmatter.date = '2022-10-10';
         } else {
-          console.log(">>>>>>>>>>filePath");
-          console.log(filePath)
-          console.log(">>>>>>>>>>ctime")
-          console.log(fs.statSync(filePath))
           file.data.astro.frontmatter.date = createDate;
         }
       } else {
