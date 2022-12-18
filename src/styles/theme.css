@@ -1,5 +1,5 @@
 :root {
-  --font-fallback: LXGW WenKai Lite, Helvetica, Arial, sans-serif,
+  --font-fallback: LXGW WenKai Screen R, Helvetica, Arial, sans-serif,
     Apple Color Emoji, Segoe UI Emoji;
   --font-body: var(--font-fallback);
   --font-mono: 'SF Mono', Consolas, Monaco, 'Courier New', Courier, monospace;

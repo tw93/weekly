@@ -1,4 +1,4 @@
-@import url('https://gw.alipayobjects.com/os/k/webfont/style.css');
+@import url('https://gw.alipayobjects.com/os/k/font/lxgwwenkaiscreenr.css');
 main {
   --color-prettylights-syntax-comment: #6e7781;
   --color-prettylights-syntax-constant: #0550ae;
@@ -84,7 +84,7 @@ main {
 }
 
 main {
-  font-family: 'LXGW WenKai Lite', sans-serif;
+  font-family: 'LXGW WenKai Screen R', sans-serif;
 }
 
 main .pagination-loader-container {
@@ -105,7 +105,7 @@ main .gsc-comment-box-textarea {
 .form-control {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 main .gsc-comment-box-textarea:focus,
 #__next .form-control:focus {
@@ -124,7 +124,7 @@ main .gsc-comment-box-textarea:focus,
 }
 
 .gsc-comment {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.8;
 }
 
@@ -134,14 +134,14 @@ main .gsc-comment-box-textarea:focus,
 .gsc-reactions-count:after {
   content: '欢迎一起交流~';
   visibility: visible;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: inline-block;
   margin-bottom: 1rem;
   margin-left: -4rem;
 }
 
 .gsc-reply-content {
-  padding-top: 0.8rem;
+  padding-top: 0.9rem;
   padding-bottom: 0.8rem;
 }
 #__next .rounded-md {
@@ -152,7 +152,7 @@ input:focus {
   outline: none;
 }
 .gsc-social-reaction-summary-item {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   border-radius: 8px;
   line-height: 26px;
   padding-inline-end: 6px;
