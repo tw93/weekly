@@ -260,15 +260,6 @@ blockquote blockquote {
   letter-spacing: 0.05em;
 }
 
-.heti h1:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
-.heti h1:not(:lang(zh)),
-.heti h2:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
-.heti h2:not(:lang(zh)),
-.heti h3:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
-.heti h3:not(:lang(zh)) {
-  letter-spacing: 0;
-}
-
 .heti h1 + h2,
 .heti h2 + h3,
 .heti h3 + h4,
