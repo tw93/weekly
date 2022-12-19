@@ -105,7 +105,7 @@ main .gsc-comment-box-textarea {
 .form-control {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 main .gsc-comment-box-textarea:focus,
 #__next .form-control:focus {
@@ -124,7 +124,7 @@ main .gsc-comment-box-textarea:focus,
 }
 
 .gsc-comment {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.8;
 }
 
@@ -141,7 +141,7 @@ main .gsc-comment-box-textarea:focus,
 }
 
 .gsc-reply-content {
-  padding-top: 0.9rem;
+  padding-top: 0.8rem;
   padding-bottom: 0.8rem;
 }
 #__next .rounded-md {
@@ -152,7 +152,7 @@ input:focus {
   outline: none;
 }
 .gsc-social-reaction-summary-item {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   border-radius: 8px;
   line-height: 26px;
   padding-inline-end: 6px;
