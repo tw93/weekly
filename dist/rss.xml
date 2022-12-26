@@ -39,7 +39,11 @@ Mage 是一个用于转换和集成数据的开源数据管道工具，产品很
 买了 Kindle 后我一直在看王小波，很喜欢他的风格，等看完了，可以从这个榜单里面找找想看的。</p>
 <p><strong>疫情冲击波抵达三四线城市</strong><br>
 <a href="https://mp.weixin.qq.com/s/vtKTVfnwvo1go6b_lJGx9A">https://mp.weixin.qq.com/s/vtKTVfnwvo1go6b_lJGx9A</a><br>
-《财经十一人》本周对山东、江西、黑龙江、吉林、安徽、湖北、云南、河北等省份的多个三四线城市做了采访，从当地居民、药店和医院医护人员处了解到中小城市遭受疫情冲击的现状。</p>]]></description><pubDate>Sat, 24 Dec 2022 16:00:00 GMT</pubDate></item><item><title><![CDATA[第109期 - 新疆奶茶]]></title><link>https://weekly.tw93.fun/posts/109-%E6%96%B0%E7%96%86%E5%A5%B6%E8%8C%B6/</link><guid>https://weekly.tw93.fun/posts/109-%E6%96%B0%E7%96%86%E5%A5%B6%E8%8C%B6/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/p1/109.jpg" width="800">
+《财经十一人》本周对山东、江西、黑龙江、吉林、安徽、湖北、云南、河北等省份的多个三四线城市做了采访，从当地居民、药店和医院医护人员处了解到中小城市遭受疫情冲击的现状。</p>
+<p><strong>每期一个惊讶的代码效果：Parallax scroll animation</strong><br>
+<a href="https://codepen.io/isladjan/pen/abdyPBw">https://codepen.io/isladjan/pen/abdyPBw</a><br>
+第六期推荐一个近两年年比较火的视差滚动效果「Parallax scroll animation」，苹果展示新产品就很喜欢用这个特效，放到一些产品介绍页面功能模块还是很合适的，一般采用 Gsap ScrollTrigger 方式来实现，可以去研究下这个如何实现的。<br>
+<img src="https://cdn.fliggy.com/upic/7xRitI.gif" width="800"></p>]]></description><pubDate>Sat, 24 Dec 2022 16:00:00 GMT</pubDate></item><item><title><![CDATA[第109期 - 新疆奶茶]]></title><link>https://weekly.tw93.fun/posts/109-%E6%96%B0%E7%96%86%E5%A5%B6%E8%8C%B6/</link><guid>https://weekly.tw93.fun/posts/109-%E6%96%B0%E7%96%86%E5%A5%B6%E8%8C%B6/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/p1/109.jpg" width="800">
 <p><small>封面来源于周末吃的一家新疆菜「冒烟的阿凡提」里面的咸奶茶，还点了手抓饭、烤包子、大盘鸡、串都很正宗很好吃，很值得一去。</small></p>
 <blockquote>
 <p><strong>记录每周看到的接地气的前端潮流技术，筛选后发布于此，觉得不错可关注此专栏，方便获取更新通知</strong></p>
