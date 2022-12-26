@@ -53,7 +53,7 @@ function defaultLayoutPlugin() {
         }
         //对于110期以后的，由于原有封面图不支持twitter，这里兼容一下
         if (num >= 110) {
-          file.data.astro.frontmatter.twitterImg = `/assets/${num}.jpg`;
+          file.data.astro.frontmatter.twitterImg = `https://weekly.tw93.fun/assets/${num}.jpg`;
         }
       } else {
         file.data.astro.frontmatter.date = createDate;
