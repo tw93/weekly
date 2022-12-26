@@ -17,11 +17,12 @@ const currentPage = pageUrl.pathname;
 
 let title = parseTitle(currentPage);
 
-const { date, pic, desc, url } = Astro.props.frontmatter;
+const { date, pic, desc, url, twitterImg } = Astro.props.frontmatter;
 const content = {
   title,
   image: pic,
   description: desc,
+  twitterImg,
 };
 const currentUrl = SITE.homePage + currentPage;
 
