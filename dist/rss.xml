@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title><![CDATA[潮流周刊]]></title><description><![CDATA[记录 Tw93 潮流前端的日常生活]]></description><link>https://weekly.tw93.fun/</link><image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image><item><title><![CDATA[第110期 - 大阪夜景]]></title><link>https://weekly.tw93.fun/posts/110-%E5%A4%A7%E9%98%AA%E5%A4%9C%E6%99%AF/</link><guid>https://weekly.tw93.fun/posts/110-%E5%A4%A7%E9%98%AA%E5%A4%9C%E6%99%AF/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/pr/110.JPG" width="800">
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title><![CDATA[潮流周刊]]></title><description><![CDATA[记录 Tw93 潮流前端的日常生活]]></description><link>https://weekly.tw93.fun/</link><image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image><item><title><![CDATA[第111期 - 新年追日]]></title><link>https://weekly.tw93.fun/posts/111-%E6%96%B0%E5%B9%B4%E8%BF%BD%E6%97%A5/</link><guid>https://weekly.tw93.fun/posts/111-%E6%96%B0%E5%B9%B4%E8%BF%BD%E6%97%A5/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/b4/111.jpg" width="800">
+<p><small>封面来源于元旦西溪湿地拍的落日，配合上树和傍晚，有一丝意境，祝大家新的一年平安快乐。</small></p>
+<blockquote>
+<p><strong>记录每周看到的接地气的前端潮流技术，筛选后发布于此，觉得不错可关注此专栏，方便获取更新通知</strong></p>
+</blockquote>
+<h2 id="技术相关">技术相关</h2>
+<p><strong>什么是比较好的低代码产品</strong><br>
+<a href="https://tw93.fun/2023-01-02/low-code.html">https://tw93.fun/2023-01-02/low-code.html</a><br>
+说到低代码，喜欢的人特别喜欢，不喜欢的人很不喜欢，此外也有假装去喜欢的，也有喜欢得不明不白的。我现在对于低代码是有点儿喜欢的那种，不过只限于在特定领域，实现需求的速度比熟练工程师写代码要快的那种场景。</p>
+<p><strong>打包 JavaScript 库的现代化指南</strong><br>
+<a href="https://mp.weixin.qq.com/s/m-i_Et6YqkZ0aj537vN2_A">https://mp.weixin.qq.com/s/m-i_Et6YqkZ0aj537vN2_A</a><br>
+属于比较基础的内容，适合前端同学查漏补缺一下。</p>
+<p><strong>现代前端框架的重要概念</strong><br>
+<a href="https://juejin.cn/post/7183639661246414909">https://juejin.cn/post/7183639661246414909</a><br>
+将当前前端框架开发里面的一些新概念给解释了下，如 State、Effects、Memoization、Templating and rendering。</p>
+<h2 id="潮流工具">潮流工具</h2>
+<p><strong>wrapped：看你的 Github 一年做了些啥</strong><br>
+<a href="https://wrapped.run/">https://wrapped.run/</a><br>
+看图说话，大概是这个样子的生成，很精致的样子，不过下面的那个模块指标不太清楚。<br>
+<img src="https://cdn.fliggy.com/upic/TPVbZG.png" width="800"></p>
+<p><strong>UIVerse：让你的网站更加奇特</strong><br>
+<a href="https://uiverse.io/">https://uiverse.io/</a><br>
+这个网站收藏了大量的组件，你可以很轻易的 copy 到你的项目中使用，整体效果还不错。<br>
+<img src="https://cdn.fliggy.com/upic/vnIkSq.png" width="800"></p>
+<p><strong>Mindmap Gallery：分享有趣的脑图</strong><br>
+<a href="https://xmind.app/share/?category=zh">https://xmind.app/share/?category=zh</a><br>
+发现 XMind 有提供一个好玩的「Mindmap Gallery」，分享了不少挺有趣的脑图，有一些感兴趣的可以收藏下来，或者找到类似的学习如何画一个清楚的脑图。<br>
+<img src="https://cdn.fliggy.com/upic/hdyjV1.png" width="800"></p>
+<p><strong>Web Design Museum：历史博物馆</strong><br>
+<a href="https://www.webdesignmuseum.org/">https://www.webdesignmuseum.org/</a><br>
+收藏从 1991 年以来的 2000 多个精心挑选的网站/软件/Logo 的历史变化，可以很好看明白当时的一些设计趋势，随便一看会让发现不少有趣的东西。<br>
+<img src="https://cdn.fliggy.com/upic/zp8ivk.jpeg" width="800"></p>
+<h2 id="随便看看">随便看看</h2>
+<p><strong>日本行经验分享</strong><br>
+<a href="https://sspai.com/post/77549">https://sspai.com/post/77549</a><br>
+少数派作者 22 年 12 月份去日本游玩经验总结，行尽白云云里路，满身还带白云归。日本还需要再去一次。</p>
+<p><strong>PPT 招谁惹谁了？</strong><br>
+<a href="https://www.huxiu.com/article/758833.html">https://www.huxiu.com/article/758833.html</a><br>
+其实更重要的是可以快速讲明白事情，少一些花里胡哨即可，这样看反而是 markdown 最不错了。</p>
+<p><strong>小米创业思考</strong><br>
+<a href="https://book.douban.com/subject/36057097/">https://book.douban.com/subject/36057097/</a><br>
+2023 年读的第一本书是雷军的《小米创业思考》，比想象中要接地气很多，其中对于工程师的理解看完以后对个人成长不少输入。</p>
+<p><strong>每期一个惊讶的代码效果：Sparkly skull ✨</strong><br>
+<a href="https://codepen.io/Mamboleoo/pen/yLbxYdx">https://codepen.io/Mamboleoo/pen/yLbxYdx</a><br>
+第七期推荐一个用 Three.js 来做的 3D 💀 效果「Sparkly skull ✨」，是一个从 0 开始绘制的效果，很神奇和精致，可以去看看代码如何实现的。<br>
+<img src="https://cdn.fliggy.com/upic/XOb0KT.gif" width="800"></p>]]></description><pubDate>Mon, 02 Jan 2023 16:00:00 GMT</pubDate></item><item><title><![CDATA[第110期 - 大阪夜景]]></title><link>https://weekly.tw93.fun/posts/110-%E5%A4%A7%E9%98%AA%E5%A4%9C%E6%99%AF/</link><guid>https://weekly.tw93.fun/posts/110-%E5%A4%A7%E9%98%AA%E5%A4%9C%E6%99%AF/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/pr/110.JPG" width="800">
 <p><small>封面来源于 2018 年冬季夜晚在大阪 Abeno Harukas 高楼下俯拍大阪城的照片，很是漂亮，日本是放开后最想再去一趟的地方，整体给人感受不错。</small></p>
 <blockquote>
 <p><strong>记录每周看到的接地气的前端潮流技术，筛选后发布于此，觉得不错可关注此专栏，方便获取更新通知</strong></p>
@@ -666,47 +711,4 @@ npm 都已经 12 岁了，我们创建包的方式应该现代一些啦，还挺
 前几天听到是 200 亿美元的时候，我感觉太牛逼了，国外 SaaS 产品做好的太有可为啊，不过很多设计师应该很不爽，回想之前被 PS 全家桶包围的感觉。</p>
 <p><strong>手工耿在专业圈子里什么水平?</strong><br>
 <a href="https://www.zhihu.com/question/401938297">https://www.zhihu.com/question/401938297</a><br>
-看了分析真心感觉很牛逼。</p>]]></description><pubDate>Sun, 18 Sep 2022 16:00:00 GMT</pubDate></item><item><title><![CDATA[第96期 - 杭州乐园]]></title><link>https://weekly.tw93.fun/posts/96-%E6%9D%AD%E5%B7%9E%E4%B9%90%E5%9B%AD/</link><guid>https://weekly.tw93.fun/posts/96-%E6%9D%AD%E5%B7%9E%E4%B9%90%E5%9B%AD/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/app2/shui.jpg" width="900/">
-<p><small>中秋去杭州乐园玩了一趟，历史第三次去，怎么感觉没有上两次新鲜了，除去这个水还可以，其他的物理机器上下左右都有些纯晕的感觉，不是特别刺激</small></p>
-<blockquote>
-<p><strong>记录每周看到的接地气的前端潮流技术，筛选后发布于此，觉得不错可关注此专栏，方便获取更新通知</strong></p>
-</blockquote>
-<h2 id="技术文章">技术文章</h2>
-<p><strong>Clean Code concepts adapted for JavaScript</strong><br>
-<a href="https://github.com/ryanmcdermott/clean-code-javascript">https://github.com/ryanmcdermott/clean-code-javascript</a><br>
-时不时看看如何写好代码都很有趣。</p>
-<p><strong>Rewriting tests from Cypress to Playwright using GPT3</strong><br>
-<a href="https://contra.com/p/PWBcPYZc-rewriting-tests-from-cypress-to-playwright-using-gpt-3">https://contra.com/p/PWBcPYZc-rewriting-tests-from-cypress-to-playwright-using-gpt-3</a><br>
-使用 GPT3 来重写测试案例，并在这个过程观察 GitHub Copilot 的智能提示。</p>
-<p><strong>基于 iframe 的微前端框架 —— 擎天</strong><br>
-<a href="https://mp.weixin.qq.com/s/Rohj17iy7qglDAjheo5aKw">https://mp.weixin.qq.com/s/Rohj17iy7qglDAjheo5aKw</a><br>
-还真有基于 iframe 的微前端方案。</p>
-<h2 id="潮流开源">潮流开源</h2>
-<p><strong>Minimal Theme for Twitter</strong><br>
-<a href="https://chrome.google.com/webstore/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=zh-CN">https://chrome.google.com/webstore/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp?hl=zh-CN</a><br>
-喜欢用 Twitter 的朋友，这个简化扩展不容错过，对于强迫症而言简直 YYDS。<br>
-<img src="https://cdn.fliggy.com/upic/mhhXih.png" width="600/"></p>
-<p><strong>omni：像 Pro 一样来使用浏览器</strong><br>
-<a href="https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi">https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi</a><br>
-使用简单的命令界面管理标签、书签、浏览器历史记录，可以快捷执行各种操作等。<br>
-<img src="https://cdn.fliggy.com/upic/sFUkCs.png" width="600/"></p>
-<p><strong>Nushell：一种新类型的命令行</strong><br>
-<a href="https://www.nushell.sh/">https://www.nushell.sh/</a><br>
-试了试下过还不错，这个是官方的一个截图。<br>
-<img src="https://cdn.fliggy.com/upic/0rHdOe.jpg" width="600/"></p>
-<p><strong>Nginx Proxy Manager：可视化类型的 Nginx 代理管理工具</strong><br>
-<a href="https://nginxproxymanager.com/">https://nginxproxymanager.com/</a><br>
-可以按照安装教程在本地部署看看效果。</p>
-<p><strong>chinese-independent-blogs：中文独立博客列表</strong><br>
-<a href="https://github.com/timqian/chinese-independent-blogs">https://github.com/timqian/chinese-independent-blogs</a><br>
-不止一次听到有人说：“在中国, 独立博客的时代已经过去了”；不过其实还是有不少同学在写博客的。</p>
-<h2 id="随便看看">随便看看</h2>
-<p><strong>日本移居指南</strong><br>
-<a href="https://guoyu.mirror.xyz/bPaDKAcrhJGUbaXu9BWDcdD-F46gBFATTvf_qwZ9Bso">https://guoyu.mirror.xyz/bPaDKAcrhJGUbaXu9BWDcdD-F46gBFATTvf_qwZ9Bso</a><br>
-郭宇的一篇文章，超级详细的介绍了移居日本需要注意的方方面面。</p>
-<p><strong>少数派们都得过啥病？</strong><br>
-<a href="https://sspai.com/post/75678">https://sspai.com/post/75678</a><br>
-多喝水、多运动、多休息准没有错。</p>
-<p><strong>高价大闸蟹，背后有哪些商业套路？</strong><br>
-<a href="https://www.huxiu.com/article/659476.html">https://www.huxiu.com/article/659476.html</a><br>
-好吧，我一直觉得这个东西很贵，吃不太习惯，香辣蟹不香吗？（可能有人会打我…）</p>]]></description><pubDate>Sun, 11 Sep 2022 16:00:00 GMT</pubDate></item></channel></rss>
+看了分析真心感觉很牛逼。</p>]]></description><pubDate>Sun, 18 Sep 2022 16:00:00 GMT</pubDate></item></channel></rss>
