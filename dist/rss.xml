@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title><![CDATA[潮流周刊]]></title><description><![CDATA[记录 Tw93 潮流前端的日常生活]]></description><link>https://weekly.tw93.fun/</link><image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image><item><title><![CDATA[第112期 - 咖啡店猫]]></title><link>https://weekly.tw93.fun/posts/112-%E5%92%96%E5%95%A1%E5%BA%97%E7%8C%AB/</link><guid>https://weekly.tw93.fun/posts/112-%E5%92%96%E5%95%A1%E5%BA%97%E7%8C%AB/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/gx/112.jpg" width="800">
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title><![CDATA[潮流周刊]]></title><description><![CDATA[记录 Tw93 潮流前端的日常生活]]></description><link>https://weekly.tw93.fun/</link><image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image><item><title><![CDATA[第113期 - 猫的克隆]]></title><link>https://weekly.tw93.fun/posts/113-%E7%8C%AB%E7%9A%84%E5%85%8B%E9%9A%86/</link><guid>https://weekly.tw93.fun/posts/113-%E7%8C%AB%E7%9A%84%E5%85%8B%E9%9A%86/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/1o/113.jpg" width="800">
+<p><small>封面来源于周末拍的家里的汤圆蹲在栏杆上的样子，由于有玻璃缘故，有一种<code>猫.clone()</code>的感觉，很稳，经常在很窄的栏杆上跑来跑去。</small></p>
+<blockquote>
+<p><strong>记录每周看到的接地气的前端潮流技术，筛选后发布于此，觉得不错可关注此专栏，方便获取更新通知</strong></p>
+</blockquote>
+<h2 id="技术相关">技术相关</h2>
+<p><strong>Top Pens of 2022 on CodePen</strong><br>
+<a href="https://codepen.io/2022/popular/pens/">https://codepen.io/2022/popular/pens/</a><br>
+每年最期待的一个年度集合必然是 CodePen 的，收集了当年前 100 中很不错的 CodePen，很推荐一看。</p>
+<p><strong>Top Front-End Tools Of 2022</strong><br>
+<a href="https://www.smashingmagazine.com/2023/01/top-frontend-tools-2022/">https://www.smashingmagazine.com/2023/01/top-frontend-tools-2022/</a><br>
+来看看 smashing magazine 整理的去年很流行的前端工具，说不定有一些你可以使用上。</p>
+<p><strong>Web Design Trends 2023</strong><br>
+<a href="https://redstapler.co/web-design-trends-2023/">https://redstapler.co/web-design-trends-2023/</a><br>
+一起来看看 2023 年的 Web 设计趋势。</p>
+<h2 id="潮流工具">潮流工具</h2>
+<p><strong>FUTUREPEDIA：AI 工具收集网站</strong><br>
+<a href="https://www.futurepedia.io/">https://www.futurepedia.io/</a><br>
+找到一个更新频次很高的 AI 工具收集网站，类型超级多，包括写作/语音/图片生成/数据统计/游戏纹理/艺术等等方面，假如你对这个感兴趣，这个网站够你折腾很久了。<br>
+<img src="https://gw.alipayobjects.com/zos/k/dd/TinySnap-2023-01-15-22.13.19.png" width="800"></p>
+<p><strong>Auto Group Tabs：自动帮你分组 Chrome Tab 标签</strong><br>
+<a href="https://chrome.google.com/webstore/detail/auto-group-tabs/mnolhkkapjcaekdgopmfolekecfhgoob/related">https://chrome.google.com/webstore/detail/auto-group-tabs/mnolhkkapjcaekdgopmfolekecfhgoob/related</a><br>
+看图说话，类似如下的效果，很适合强迫症使用，包括有开超级多 Tab 窗口的同学。<br>
+<img src="https://gw.alipayobjects.com/zos/k/s6/TinySnap-2023-01-15-22.14.26.png" width="800"></p>
+<p><strong>The Algorithms：很丰富的开源算法库</strong><br>
+<a href="https://the-algorithms.com/zh_Hans">https://the-algorithms.com/zh_Hans</a><br>
+<img src="https://gw.alipayobjects.com/zos/k/hu/BFyTMl.jpg" width="800"><br>
+一个很丰富的开源算法库，提供了排序/检索/动态编程/密码/数据结构/图像处理/字符串等多类型的算法最佳实现，支持不少主流语言，提供算法实现和运行。</p>
+<p><strong>AlleyRead：优质 Newsletter 的收集工具</strong><br>
+<a href="https://alleyread.com/">https://alleyread.com/</a><br>
+一眼吸引我的是霞鹜文楷字体，收录了不少不错的各类型订阅站点，方便让你发现你感兴趣的，而且我一直觉得主动信息获取，远比算法信息流要好不少。<br>
+<img src="https://gw.alipayobjects.com/zos/k/ba/Qebvnt.jpg" width="800"></p>
+<h2 id="随便看看">随便看看</h2>
+<p><strong>一文看懂 WiFi 7</strong><br>
+<a href="https://mp.weixin.qq.com/s/GPqPnBf0A5tk0JcMEzIAXw">https://mp.weixin.qq.com/s/GPqPnBf0A5tk0JcMEzIAXw</a><br>
+去年使用上的 WIFI6，速度比想象中好了很多很多，来看看后面的 WIFI7。</p>
+<p><strong>王笛：怎样认识中国社会？</strong><br>
+<a href="https://mp.weixin.qq.com/s/D3j_F0bqI24dvhodl09FMg">https://mp.weixin.qq.com/s/D3j_F0bqI24dvhodl09FMg</a><br>
+中国的历史是循环往复的吗？明确的回答：显然不是。</p>
+<p><strong>什么是边缘计算</strong><br>
+<a href="https://blogs.nvidia.com/blog/2019/10/22/what-is-edge-computing/">https://blogs.nvidia.com/blog/2019/10/22/what-is-edge-computing/</a><br>
+最近刚好将一些边缘计算的能力使用到业务场景中去，可以看看这篇 nvidia 文章来解释什么是边缘计算。</p>
+<p><strong>Ten fastest-growing apps in 2022</strong><br>
+<a href="https://blog.curiosity.ai/ten-fastest-growing-apps-in-2022-including-some-you-dont-know-c177e46cc5f1">https://blog.curiosity.ai/ten-fastest-growing-apps-in-2022-including-some-you-dont-know-c177e46cc5f1</a><br>
+作者罗列了一些 2022 年增长最快的 App 软件，可以了解了解。<br>
+<img src="https://gw.alipayobjects.com/zos/k/yn/TinySnap-2023-01-15-22.09.34.png" width="800"></p>]]></description><pubDate>Sun, 15 Jan 2023 16:00:00 GMT</pubDate></item><item><title><![CDATA[第112期 - 咖啡店猫]]></title><link>https://weekly.tw93.fun/posts/112-%E5%92%96%E5%95%A1%E5%BA%97%E7%8C%AB/</link><guid>https://weekly.tw93.fun/posts/112-%E5%92%96%E5%95%A1%E5%BA%97%E7%8C%AB/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/gx/112.jpg" width="800">
 <p><small>封面来源于周末下午去木星咖啡喝澳白敲代码，睡在我旁边椅子的猫，后面走的时候给拍了一张，很是可爱漂亮，比我家汤圆可乐大了不少，一样过得无忧无虑。</small></p>
 <blockquote>
 <p><strong>记录每周看到的接地气的前端潮流技术，筛选后发布于此，觉得不错可关注此专栏，方便获取更新通知</strong></p>
@@ -665,59 +710,4 @@ Recoil 是 Facebook 推出的一款专门针对 React 应用的状态管理库�
 国庆看了一下这个电影，最近看过的很不错的一个了，喜欢日本元素的不容错过。</p>
 <p><strong>适量喝咖啡对身体有哪些好处？</strong><br>
 <a href="https://www.zhihu.com/question/546343871">https://www.zhihu.com/question/546343871</a><br>
-想起脱口秀庞博说的“不上班，我永运都不知道世界上有一种东西叫冰美式，如果你不工作的话，你是吃不了这种苦的，太苦了，就拿这个提神，跟拿棍子直接抡我，有什么区别真是”。</p>]]></description><pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate></item><item><title><![CDATA[第98期 - 潮流建筑]]></title><link>https://weekly.tw93.fun/posts/98-%E6%BD%AE%E6%B5%81%E5%BB%BA%E7%AD%91/</link><guid>https://weekly.tw93.fun/posts/98-%E6%BD%AE%E6%B5%81%E5%BB%BA%E7%AD%91/</guid><description><![CDATA[<img src="https://gw.alipayobjects.com/zos/k/br/IMG_0652.jpg" width="900/">
-<p><small>周末早上去买菜的路上，看到住的旁边这栋大楼居然给建起来了，在阳光下的无滤镜效果真好看。</small></p>
-<blockquote>
-<p><strong>记录每周看到的接地气的前端潮流技术，筛选后发布于此，觉得不错可关注此专栏，方便获取更新通知</strong></p>
-</blockquote>
-<h2 id="前端技术">前端技术</h2>
-<p><strong>一份详尽的 React re-render 指南</strong><br>
-<a href="https://mp.weixin.qq.com/s/SH7N2f5ZhUhysQ7_G2s9rQ">https://mp.weixin.qq.com/s/SH7N2f5ZhUhysQ7_G2s9rQ</a><br>
-什么是 re-render（重新渲染）？哪些是必要的 re-render？哪些是非必要的 re-render？如果你对这些问题还不是很明白，那么可以在这篇文章中找到答案。</p>
-<p><strong>React I Love You, But You’re Bringing Me Down</strong><br>
-<a href="https://marmelab.com/blog/2022/09/20/react-i-love-you.html">https://marmelab.com/blog/2022/09/20/react-i-love-you.html</a><br>
-辨证来看即可，挺有趣的。</p>
-<p><strong>为什么说 90% 的情况下，immer 完胜 immutable？</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/564029685">https://zhuanlan.zhihu.com/p/564029685</a><br>
-挺细的一个钻研，可以看看。</p>
-<p><strong>iPhone 14 Screen Sizes</strong><br>
-<a href="https://useyourloaf.com/blog/iphone-14-screen-sizes/">https://useyourloaf.com/blog/iphone-14-screen-sizes/</a><br>
-哈哈，前端同学可以整理一个中文版本的出来，iPhone 14 的各种尺寸。</p>
-<h2 id="潮流开源">潮流开源</h2>
-<p><strong>iOS16-Live-Activities：苹果 ActivityKit &#x26; WidgetKit &#x26; Dynamic Island</strong><br>
-<a href="https://github.com/1998code/iOS16-Live-Activities">https://github.com/1998code/iOS16-Live-Activities</a><br>
-有开发者基于 iOS 的一些新特性，开发了一些有趣的 Demo。</p>
-<table><tbody><tr><td><img width="400px" src="https://gw.alipayobjects.com/zos/k/app2/57899b0bf208.gif"></td><td><img width="400px" src="https://gw.alipayobjects.com/zos/k/app2/8af-49a49cc3657b.gif"></td></tr></tbody></table>
-<p><strong>web-clipper：网页内容裁剪保存工具</strong><br>
-<a href="https://github.com/webclipper/web-clipper">https://github.com/webclipper/web-clipper</a><br>
-支持多种笔记应用，如 Notion,OneNote,Bear,语雀,Joplin 等等，可以基于这个二次开发试试。</p>
-<p><strong>qwik：Html 优先的前端框架</strong><br>
-<a href="https://github.com/BuilderIO/qwik">https://github.com/BuilderIO/qwik</a><br>
-1kb js，这个思路还挺不错，可以去看看。</p>
-<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> { component$ } </span><span style="color: #FF7B72">from</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">'@builder.io/qwik'</span><span style="color: #C9D1D9">;</span></span>
-<span class="line"><span style="color: #FF7B72">export</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">App</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #D2A8FF">component$</span><span style="color: #C9D1D9">(() </span><span style="color: #FF7B72">=></span><span style="color: #C9D1D9"> {</span></span>
-<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #FF7B72">return</span><span style="color: #C9D1D9"> &#x3C;</span><span style="color: #7EE787">p</span><span style="color: #C9D1D9">>Hello Qwik&#x3C;/</span><span style="color: #7EE787">p</span><span style="color: #C9D1D9">>;</span></span>
-<span class="line"><span style="color: #C9D1D9">});</span></span></code></pre>
-<p><strong>homepage：一个高度可定制的主页</strong><br>
-<a href="https://github.com/benphelps/homepage">https://github.com/benphelps/homepage</a><br>
-很适合使用在开始页或者当作应用面板。<br>
-<img src="https://gw.alipayobjects.com/zos/k/kt/oY6gId.jpg" width="600/"></p>
-<h2 id="随便看看">随便看看</h2>
-<p><strong>2011 年的拍卖 1 个 BTC</strong><br>
-<a href="https://www.v2ex.com/t/13582">https://www.v2ex.com/t/13582</a><br>
-一篇 10 年前的文字，V 站的站长通过挖矿得到的 1 个 BTC，打算拿出来做一个实验——在 V2EX 上进行拍卖，最后 65 元被一个哥们收走了。</p>
-<p><strong>2022 年了，阻碍你离开 Android 的原因是？</strong><br>
-<a href="https://www.v2ex.com/t/881790">https://www.v2ex.com/t/881790</a><br>
-适合用 iPhone 的同学看看，可能会有些视觉偏差。</p>
-<p><strong>2022 年了，阻碍你离开 iPhone 的原因是？</strong><br>
-<a href="https://www.v2ex.com/t/881633">https://www.v2ex.com/t/881633</a><br>
-哈哈，居然还有一篇姊妹篇，太有趣了，对于我而言应该是全家桶的方便性阻碍我离开苹果。</p>
-<p><strong>如何克服精神内耗并对抗分心</strong><br>
-<a href="https://sspai.com/post/75687">https://sspai.com/post/75687</a><br>
-其实我觉得吧，记录和反省，加上多做自己认可喜欢的事情，就不会了。</p>
-<p><strong>电动汽车的生命周期比燃油车的要更长吗？</strong><br>
-<a href="https://www.zhihu.com/question/552123306">https://www.zhihu.com/question/552123306</a><br>
-不过不少同学其实觉得电动车开不了多长时间的误区。</p>
-<p><strong>年轻人开始践行“数字极简”</strong><br>
-<a href="https://www.huxiu.com/article/670591.html">https://www.huxiu.com/article/670591.html</a><br>
-梁海源提出了一个现代人的普遍焦虑:“我现在吃饭可以没有饭，上厕所可以没有纸，但不能没有手机。有一次上厕所特别着急，但是手机没电了，我还是充了一会电才去上了厕所。”</p>]]></description><pubDate>Sun, 25 Sep 2022 16:00:00 GMT</pubDate></item></channel></rss>
+想起脱口秀庞博说的“不上班，我永运都不知道世界上有一种东西叫冰美式，如果你不工作的话，你是吃不了这种苦的，太苦了，就拿这个提神，跟拿棍子直接抡我，有什么区别真是”。</p>]]></description><pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate></item></channel></rss>
