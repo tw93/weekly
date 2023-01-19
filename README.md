@@ -99,7 +99,7 @@
 * [第 19 期 - 落日西湖](https://weekly.tw93.fun/posts/19-落日西湖)
 * [第 18 期 - 心灵奇旅](https://weekly.tw93.fun/posts/18-心灵奇旅)
 * [第 17 期 - 火锅店担担面](https://weekly.tw93.fun/posts/17-火锅店担担面)
-* [第 16 期 - 大江大河2](https://weekly.tw93.fun/posts/16-大江大河2)
+* [第 16 期 - 亚庇清真寺](https://weekly.tw93.fun/posts/16-亚庇清真寺)
 * [第 15 期 - 养猫](https://weekly.tw93.fun/posts/15-养猫)
 * [第 14 期 - 2020跨年](https://weekly.tw93.fun/posts/14-2020跨年)
 * [第 13 期 - 茶颜悦色](https://weekly.tw93.fun/posts/13-茶颜悦色)
