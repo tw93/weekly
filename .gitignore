@@ -21,3 +21,4 @@ pnpm-debug.log*
 .vscode
 pnpm-lock.yaml
 .vercel
+dist
