@@ -24,6 +24,8 @@ function defaultLayoutPlugin() {
 
     const { date, desc, pic } = file.data.astro.frontmatter;
 
+    console.log(">>>>>",date)
+
     // 兼容没有描述情况
     if (!desc) {
       file.data.astro.frontmatter.desc = SITE.description;
