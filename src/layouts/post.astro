@@ -9,6 +9,7 @@ import { SITE } from '@/config';
 import { parseTitle, sortPosts, getIndex } from '@/util';
 
 export interface Props {
+  frontmatter: { date: any; pic: any; desc: any; url: any; twitterImg: any };
   title: string;
 }
 
@@ -167,7 +168,7 @@ if (postIndex < allPosts.length) {
       .post-footer a:hover {
         border-block-end: none;
       }
-      .heti .pay-button{
+      .heti .pay-button {
         color: #fff;
       }
       .heti .pay-button:hover {
@@ -187,7 +188,9 @@ if (postIndex < allPosts.length) {
           id="write"
         >
           <h1 class="content-title flex align-middle text-gray-800">
-            <a class="logo inline-block" href="/"><AstroLogo size={40} /></a>
+            <a class="logo inline-block md:hidden visible" href="/"
+              ><AstroLogo size={40} />
+            </a>
             {title}
           </h1>
           <slot />
