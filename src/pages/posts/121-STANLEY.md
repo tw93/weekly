@@ -12,7 +12,8 @@ date: 2023/03/20
 
 **XRender 2.0 正式发布啦！**  
 <https://juejin.cn/post/7212054600161804349>  
-终于经过差不多半年时间，XRender 重构以后，性能更好，也更美观，很值得一试。
+终于经过差不多半年时间，XRender 重构以后，性能更好，也更美观，很值得一试。  
+<img src=https://gw.alipayobjects.com/zos/k/p8/%25E7%25BC%2596%25E7%25BB%2584.png width=800 />
 
 **Rust 编译器源码概要**  
 <https://catcoding.me/p/rustc-source/>  
