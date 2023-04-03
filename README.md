@@ -2,6 +2,7 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 123 期 - 杭州新绿](https://weekly.tw93.fun/posts/123-杭州新绿)
 * [第 122 期 - 赤道夜景](https://weekly.tw93.fun/posts/122-赤道夜景)
 * [第 121 期 - STANLEY](https://weekly.tw93.fun/posts/121-STANLEY)
 * [第 120 期 - 大奥特曼](https://weekly.tw93.fun/posts/120-大奥特曼)
