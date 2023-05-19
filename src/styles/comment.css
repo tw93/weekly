@@ -111,7 +111,6 @@ main .gsc-comment-box-textarea {
 main .gsc-comment-box-textarea:focus,
 #__next .form-control:focus {
   outline: 0;
-  border-color: inherit;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
