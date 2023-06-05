@@ -65,6 +65,6 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   markdown: {
     remarkPlugins: [defaultLayoutPlugin],
-    extendDefaultPlugins: true,
+    extendDefaultPlugins: true
   },
 });
