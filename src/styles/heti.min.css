@@ -208,6 +208,10 @@ blockquote blockquote {
   color: inherit;
 }
 
+.heti pre.astro-code{
+  margin-top: -20px;
+}
+
 .heti h1,
 .heti h2,
 .heti h3,
