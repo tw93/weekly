@@ -2,6 +2,7 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 137 期 - 九龙公园](https://weekly.tw93.fun/posts/137-九龙公园)
 * [第 136 期 - 深圳湾桥](https://weekly.tw93.fun/posts/136-深圳湾桥)
 * [第 135 期 - 香港不错](https://weekly.tw93.fun/posts/135-香港不错)
 * [第 134 期 - 看人游泳](https://weekly.tw93.fun/posts/134-看人游泳)
