@@ -10,7 +10,7 @@ posts = posts.sort((a, b) => {
 });
 
 //只保留15，当前太多了
-posts.splice(15);
+posts.splice(10);
 
 export const get = () =>
   rss({
