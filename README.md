@@ -2,6 +2,9 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 148 期 - 开车回家](https://weekly.tw93.fun/posts/148-开车回家)
+* [第 147 期 - 被关的马](https://weekly.tw93.fun/posts/147-被关的马)
+* [第 146 期 - 桂花小麦](https://weekly.tw93.fun/posts/146-桂花小麦)
 * [第 145 期 - 小橡皮树](https://weekly.tw93.fun/posts/145-小橡皮树)
 * [第 144 期 - 街舞少女](https://weekly.tw93.fun/posts/144-街舞少女)
 * [第 143 期 - 粉色的云](https://weekly.tw93.fun/posts/143-粉色的云)
