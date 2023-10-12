@@ -16,11 +16,11 @@ body {
   color: #262626;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .html {
     color: #ede6f5;
   }
-}
+} */
 
 img {
   max-width: 100%;
@@ -117,12 +117,6 @@ a,
   background-color: #e6e6e6;
 }
 
-@media (prefers-color-scheme: dark) {
-  .heti hr {
-    background-color: #121212;
-  }
-}
-
 .heti p {
   margin-block-start: 1.8em;
   margin-block-end: 1.8em;
@@ -170,11 +164,11 @@ blockquote blockquote {
   max-width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .heti blockquote {
     border-left: 4px solid #2f363d;
   }
-}
+} */
 
 .heti pre {
   margin-block-start: 0.8em;
@@ -193,11 +187,11 @@ blockquote blockquote {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .heti pre {
     background-color: rgba(255, 255, 255, 0.03);
   }
-}
+} */
 
 .heti pre code {
   margin: 0;
@@ -340,7 +334,7 @@ blockquote blockquote {
   border-radius: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .heti table {
     border-color: #404040;
   }
@@ -350,7 +344,7 @@ blockquote blockquote {
     background-color: #343941;
     color: #e8e8eb;
   }
-}
+} */
 
 .heti table {
   margin-right: auto;
@@ -367,13 +361,13 @@ blockquote blockquote {
   border-style: solid;
   border-color: #ccc;
 }
-
+/*
 @media (prefers-color-scheme: dark) {
   .heti th,
   .heti td {
     border-color: #404040;
   }
-}
+} */
 
 .heti caption {
   caption-side: bottom;
@@ -459,11 +453,11 @@ blockquote blockquote {
   color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .heti mark {
     background-color: rgba(77, 74, 0, 0.88);
   }
-}
+} */
 
 .heti q {
   quotes: '「' '」' '『' '』';
@@ -518,12 +512,12 @@ blockquote blockquote {
   background-color: #dbedff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .heti sup:target,
   .heti sup a:target {
     background-color: #3a6188;
   }
-}
+} */
 
 .heti summary {
   padding-inline-start: 1em;
@@ -543,11 +537,11 @@ blockquote blockquote {
   border-block-end-color: rgba(0, 0, 0, 0.54);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .heti u[title] {
     border-block-end-color: rgba(255, 255, 255, 0.54);
   }
-}
+} */
 
 .heti address,
 .heti cite,
@@ -897,11 +891,11 @@ blockquote blockquote {
   line-height: 24px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .heti .heti-fn {
     border-block-start-color: #404040;
   }
-}
+} */
 
 .heti .heti-fn ol {
   margin-block-start: 0.8em;
@@ -912,11 +906,11 @@ blockquote blockquote {
   background-color: #dbedff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .heti .heti-fn li:target {
     background-color: #3a6188;
   }
-}
+} */
 
 .heti .heti-hang {
   position: absolute;
@@ -1156,9 +1150,9 @@ img[loading='lazy'] {
   outline-color: #eef1f2;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   img[loading='lazy'] {
     background-color: #343941;
     outline-color: #343941;
   }
-}
+} */
