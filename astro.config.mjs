@@ -16,6 +16,7 @@ function defaultLayoutPlugin() {
       const imageElement = parse(tree.children[0].value).querySelector('img');
       file.data.astro.frontmatter.pic = imageElement.getAttribute('src');
     }
+    console.log(tree.children[1]?.children)
 
     // 描述放到文档中头图的下一行，会自动帮你处理，也可以用 frontmatter 方式，赋值给 desc 字段
     if (tree.children[1]?.children[1]?.value) {
