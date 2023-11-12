@@ -2,6 +2,7 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 153 期 - 高空画家](https://weekly.tw93.fun/posts/153-高空画家)
 * [第 152 期 - 赛博红桥](https://weekly.tw93.fun/posts/152-赛博红桥)
 * [第 151 期 - 牛逼的楼](https://weekly.tw93.fun/posts/151-牛逼的楼)
 * [第 150 期 - 重庆雄起](https://weekly.tw93.fun/posts/150-重庆雄起)
