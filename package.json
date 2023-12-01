@@ -26,8 +26,7 @@
     "@astrojs/vercel": "^2.0.1",
     "@docsearch/css": "^3.2.1",
     "@docsearch/react": "^3.2.1",
-    "@tailwindcss/line-clamp": "^0.4.2",
-    "astro": "^1.4.7",
+    "astro": "^3.6.4",
     "dayjs": "^1.11.5",
     "lozad": "^1.16.0",
     "node-html-parser": "^6.1.1",
@@ -36,8 +35,8 @@
     "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
-    "@astrojs/react": "^1.1.4",
-    "@astrojs/tailwind": "^2.0.1",
+    "@astrojs/react": "^3.0.6",
+    "@astrojs/tailwind": "^5.0.2",
     "@tailwindcss/typography": "^0.5.7",
     "@types/lozad": "^1.16.1"
   }
