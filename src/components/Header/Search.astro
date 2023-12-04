@@ -16,7 +16,7 @@ import SearchIcon from './SearchIcon.astro'
 			<button
 				data-close-modal
 				class='ms-auto cursor-pointer rounded-full bg-black text-white px-4 py-2 dark:bg-white dark:text-black close-icon'
-				>关闭</button
+				>X</button
 			>
       {
 				import.meta.env.DEV ? (
@@ -161,6 +161,10 @@ import SearchIcon from './SearchIcon.astro'
   .site-search .pagefind-ui__message{
     margin-block-start: 0;
     margin-block-end: 0;
+    padding: 8px 0 16px;
+  }
+
+  .content-title .site-search .pagefind-ui__message{
     padding: 8px 0;
   }
 
@@ -176,7 +180,12 @@ import SearchIcon from './SearchIcon.astro'
     margin-top: 0px;
   }
 
-  .site-search .pagefind-ui__result-title.pagefind-ui__result-link:hover{
+  .site-search .pagefind-ui__result-title .pagefind-ui__result-link:hover{
     text-decoration: none !important;
   }
+
+  .site-search .pagefind-ui__search-clear{
+    font-size: 12px;
+  }
+
 </style>
