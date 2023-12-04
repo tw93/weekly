@@ -18,12 +18,16 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "postbuild": "pagefind --site dist"
   },
   "dependencies": {
+    "@pagefind/default-ui": "^1.0.4",
     "astro": "^3.6.4",
     "dayjs": "^1.11.10",
     "lozad": "^1.16.0",
+    "motion": "^10.16.4",
+    "pagefind": "^1.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

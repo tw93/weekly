@@ -5,6 +5,7 @@ import HeadSEO from '../components/HeadSEO.astro';
 import Footer from '../components/Footer.astro';
 import AstroLogo from '../components/Header/AstroLogo.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
+import Search from '../components/Header/Search.astro';
 import { SITE } from '@/config';
 import { parseTitle, sortPosts, getIndex } from '@/util';
 
@@ -191,7 +192,8 @@ if (postIndex < allPosts.length) {
             <a class="logo inline-block md:hidden visible" href="/"
               ><AstroLogo size={40} />
             </a>
-            {title}
+            <span data-pagefind-meta="title">{title}</span>
+            <Search />
           </h1>
           <slot />
           <div class="flex align-middle justify-center mt-4">
@@ -210,6 +212,7 @@ if (postIndex < allPosts.length) {
               发布日期：<a
                 href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
                 target="_blank"
+                data-pagefind-sort="date"
                 title="Edit">{date}</a
               >
             </div>
