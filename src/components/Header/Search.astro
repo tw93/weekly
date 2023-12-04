@@ -10,24 +10,24 @@ import SearchIcon from './SearchIcon.astro'
 	</button>
 	<dialog
 		aria-label='search'
-		class='h-full max-h-full w-full max-w-full  bg-white dark:bg-[#0a0910ec] shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left'
+		class='h-full max-h-full w-full max-w-full  bg-white shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left'
 	>
 		<div class='dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6'>
 			<button
 				data-close-modal
-				class='ms-auto cursor-pointer rounded-full bg-black text-white px-4 py-2 dark:bg-white dark:text-black close-icon'
+				class='ms-auto cursor-pointer rounded-full bg-black text-white px-4 py-2 close-icon'
 				>X</button
 			>
       {
 				import.meta.env.DEV ? (
-					<div class='mx-auto text-center dark:text-white'>
+					<div class='mx-auto text-center'>
 						<p>
 							Search is only available in production builds. <br />
 							Try building and previewing the site to test it out locally.
 						</p>
 					</div>
 				) : (
-					<div class='search-container dark:text-white w-full'>
+					<div class='search-container w-full'>
 						<div id='pagefind__search' />
 					</div>
 				)
@@ -130,14 +130,6 @@ import SearchIcon from './SearchIcon.astro'
     --pagefind-ui-font: 'LXGW WenKai Screen R', sans-serif;
   }
 
-	.dark {
-		--pagefind-ui-primary: #eeeeee;
-		--pagefind-ui-text: #eeeeee;
-		--pagefind-ui-background: #152028;
-		--pagefind-ui-border: #152028;
-		--pagefind-ui-tag: #152028;
-	}
-
   .site-search{
     font-size: 16px;
   }
@@ -183,6 +175,7 @@ import SearchIcon from './SearchIcon.astro'
   .site-search .pagefind-ui__result-title .pagefind-ui__result-link:hover{
     text-decoration: none !important;
     color: #a67c52;
+    border-block-end: none;
   }
 
   .site-search .pagefind-ui__search-clear{
