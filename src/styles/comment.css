@@ -128,7 +128,7 @@ main .gsc-comment-box-textarea:focus,
   line-height: 1.8;
 }
 
-.gsc-comment-content{
+.gsc-comment-content {
   font-size: 1rem;
 }
 
@@ -161,4 +161,16 @@ input:focus {
   line-height: 26px;
   padding-inline-end: 6px;
   padding-inline-start: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  main {
+    --color-border-default: #ddd;
+  }
+  html img,
+  html video,
+  .gsc-direct-reaction-button-emoji,
+  .gsc-emoji {
+    filter: invert(1) hue-rotate(180deg);
+  }
 }
