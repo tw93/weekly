@@ -29,10 +29,10 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
 
 <nav aria-labelledby="grid-left" class="pt-6 text-gray-800">
   <div class="logo flex">
-    <a href="/" class="logo-image">
+    <a href="/" class="logo-image" data-astro-prefetch>
       <AstroLogo size={40} />
     </a>
-    <a href="/">
+    <a href="/" data-astro-prefetch>
       <h1 class="text-gray-800">{SITE.title}</h1>
     </a>
   </div>
@@ -45,6 +45,7 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
               {section.children.map((child) => (
                 <li class="nav-link">
                   <a
+                    data-astro-prefetch
                     href={`/${child.link}`}
                     aria-current={`${
                       decodeURIComponent(currentPageMatch) === child.link

@@ -2,6 +2,7 @@ import fs from 'fs';
 import dayjs from 'dayjs';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
+
 import { defineConfig } from 'astro/config';
 import { parse } from 'node-html-parser';
 import { SITE } from './src/config';
@@ -45,9 +46,8 @@ function defaultLayoutPlugin() {
     frontmatter.pic = frontmatter.pic || SITE.pic;
 
     if (!frontmatter.date) {
-      frontmatter.date = SITE.repo === WEEKLY_REPO_NAME
-        ? getWeeklyDateFormat(filePath.split('/posts/')[1].split('-')[0])
-        : getCreateDateFormat(filePath);
+      frontmatter.date =
+        SITE.repo === WEEKLY_REPO_NAME ? getWeeklyDateFormat(filePath.split('/posts/')[1].split('-')[0]) : getCreateDateFormat(filePath);
     }
 
     if (SITE.repo === WEEKLY_REPO_NAME) {
@@ -57,6 +57,7 @@ function defaultLayoutPlugin() {
 }
 
 export default defineConfig({
+  prefetch: true,
   integrations: [react(), tailwind()],
   markdown: {
     remarkPlugins: [defaultLayoutPlugin],
