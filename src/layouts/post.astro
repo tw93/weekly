@@ -266,3 +266,13 @@ if (postIndex < allPosts.length) {
     <Footer />
   </body>
 </html>
+
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('#write img');
+    images.forEach(img => {
+      img.setAttribute('loading', 'lazy');
+    });
+  });
+</script>

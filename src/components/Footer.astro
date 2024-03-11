@@ -5,17 +5,18 @@
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
 
+    // 字体间距优化
+    const heti = new Heti('.heti');
+    heti.autoSpacing();
+
     // 图片懒加载
     const observer = lozad('.lozad', {
       loaded: function (el) {
         el.alt = el.getAttribute('data-alt');
       },
     });
-    observer.observe();
 
-    // 字体间距优化
-    const heti = new Heti('.heti');
-    heti.autoSpacing();
+    observer.observe();
 
     // 链接外跳
     const links = document.links;
