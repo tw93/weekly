@@ -28,7 +28,7 @@ const content = {
 };
 const currentUrl = SITE.homePage + currentPage;
 
-// 或者下一篇文章
+// The next article
 const posts = await Astro.glob('../pages/posts/*.md');
 const allPosts = sortPosts(posts);
 const postIndex = getIndex(currentPage);
@@ -270,11 +270,11 @@ if (postIndex < allPosts.length) {
 
 <script is:inline>
   window.addEventListener('DOMContentLoaded', () => {
-    // 第二张图片是封面图，正常加载，后面的可以做一些优化
+    // The second image is the cover image, both of which could do with some optimization
     const images = document.querySelectorAll('#write img');
     images.forEach((img,index) => {
 
-      if (index > 1){
+      if (index > 0){
         img.setAttribute('loading', 'lazy');
         img.setAttribute('decoding', 'async');
       }

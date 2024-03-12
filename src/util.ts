@@ -1,4 +1,4 @@
-// 转化成标题
+// Convert to title
 export const parseTitle = (currentPage: string) => {
   const oldTitle = decodeURIComponent(currentPage.split('/posts/')[1]);
   let title = '第' + oldTitle.split('-')[0] + '期 - ' + oldTitle.split('-')[1];
@@ -8,13 +8,13 @@ export const parseTitle = (currentPage: string) => {
   return title
 }
 
-//获取当前文章的序号
+// Get the current article number.
 export const getIndex = (currentPage: string) => {
   const oldTitle = decodeURIComponent(currentPage.split('/posts/')[1]);
   return parseInt(oldTitle.split('-')[0])
 }
 
-//排序所有的文章
+// Sort all articles.
 export const sortPosts = (allPosts: any) => {
   return allPosts.sort((a, b) => {
     return (

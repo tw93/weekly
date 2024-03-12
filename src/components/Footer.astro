@@ -5,11 +5,11 @@
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
 
-    // 字体间距优化
+    // Optimization of letter spacing
     const heti = new Heti('.heti');
     heti.autoSpacing();
 
-    // 图片懒加载
+    // Lazy loading of images
     const observer = lozad('.lozad', {
       loaded: function (el) {
         el.alt = el.getAttribute('data-alt');
@@ -18,7 +18,7 @@
 
     observer.observe();
 
-    // 链接外跳
+    // Jump to external link
     const links = document.links;
     for (let i = 0; i < +links.length; i++) {
       if (links[i].hostname != window.location.hostname ) {
