@@ -6,6 +6,7 @@ import react from '@astrojs/react';
 import { defineConfig } from 'astro/config';
 import { parse } from 'node-html-parser';
 import { SITE } from './src/config';
+import rehypeCustomizeImageSrc from './rehype-customize-image-src.js';
 
 const DEFAULT_FORMAT = 'YYYY/MM/DD';
 const WEEKLY_REPO_NAME = 'tw93/weekly';
@@ -61,5 +62,6 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   markdown: {
     remarkPlugins: [defaultLayoutPlugin],
+    rehypePlugins: [rehypeCustomizeImageSrc],
   },
 });

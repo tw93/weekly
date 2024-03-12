@@ -270,9 +270,15 @@ if (postIndex < allPosts.length) {
 
 <script is:inline>
   window.addEventListener('DOMContentLoaded', () => {
+    // 第二张图片是封面图，正常加载，后面的可以做一些优化
     const images = document.querySelectorAll('#write img');
-    images.forEach(img => {
-      img.setAttribute('loading', 'lazy');
+    images.forEach((img,index) => {
+
+      if (index > 1){
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('decoding', 'async');
+      }
+
     });
   });
 </script>
