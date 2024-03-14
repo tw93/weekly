@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import '../styles/heti.min.css';
 import HeadCommon from '../components/HeadCommon.astro';
 import HeadSEO from '../components/HeadSEO.astro';
@@ -42,7 +43,7 @@ if (postIndex < allPosts.length) {
 }
 ---
 
-<html lang="ch">
+<html lang="ch" transition:animate="none">
 	<head>
 		<HeadCommon />
 		<HeadSEO content={content} pageURL={currentUrl} />
@@ -177,11 +178,12 @@ if (postIndex < allPosts.length) {
 				padding-block-end: 0px;
 			}
 		</style>
+		<ViewTransitions />
 	</head>
 	<body>
 		<main class="layout">
 			<aside id="grid-left" class="grid-sidebar" title="Site Navigation">
-				<LeftSidebar currentPage={currentPage} />
+				<LeftSidebar currentPage={currentPage}/>
 			</aside>
 			<div id="grid-main">
 				<div
