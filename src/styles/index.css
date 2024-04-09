@@ -391,3 +391,8 @@ h2.heading {
 html {
   transition: color 300ms, background-color 300ms;
 }
+
+
+#write img{
+  cursor: url('https://gw.alipayobjects.com/zos/k/rt/plus_cursor.png') 25 25, auto;
+}
