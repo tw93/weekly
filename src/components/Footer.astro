@@ -4,7 +4,7 @@
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
-	document.addEventListener('DOMContentLoaded', function () {
+	document.addEventListener('astro:page-load', function () {
 		// Optimization of letter spacing
 		const heti = new Heti('.heti');
 		heti.autoSpacing();
@@ -27,10 +27,12 @@
 		}
 
 		const zoomImgs = document.querySelectorAll('#write img');
-		if (zoomImgs && zoomImgs.length > 0) {
+		const isMobileDevice = /Android|iPhone/i.test(navigator.userAgent);
+		if (zoomImgs && zoomImgs.length > 0 && !isMobileDevice) {
 			Intense && Intense(zoomImgs);
 		}
 	});
+
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
