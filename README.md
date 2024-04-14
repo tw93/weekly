@@ -2,6 +2,7 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 172 期 - 骑青山湖](https://weekly.tw93.fun/posts/172-骑青山湖)
 * [第 171 期 - 看虞美人](https://weekly.tw93.fun/posts/171-看虞美人)
 * [第 170 期 - 杭州翠绿](https://weekly.tw93.fun/posts/170-杭州翠绿)
 * [第 169 期 - 路边繁花](https://weekly.tw93.fun/posts/169-路边繁花)
