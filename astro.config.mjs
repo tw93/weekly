@@ -1,7 +1,6 @@
 import fs from 'fs';
 import dayjs from 'dayjs';
 import tailwind from '@astrojs/tailwind';
-import react from '@astrojs/react';
 
 import { defineConfig } from 'astro/config';
 import { parse } from 'node-html-parser';
@@ -61,7 +60,7 @@ function defaultLayoutPlugin() {
 
 export default defineConfig({
 	prefetch: true,
-	integrations: [react(), tailwind()],
+	integrations: [tailwind()],
 	markdown: {
 		remarkPlugins: [defaultLayoutPlugin],
 		rehypePlugins: [rehypeCustomizeImageSrc],
