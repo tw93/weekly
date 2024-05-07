@@ -151,7 +151,7 @@ if (postIndex < allPosts.length) {
 				.logo:active {
 					text-decoration: none;
 					border-block-end: none;
-					padding-block-end: none;
+					padding-block-end: unset;
 				}
 
 				#grid-main {
@@ -175,7 +175,7 @@ if (postIndex < allPosts.length) {
 			}
 			.heti .pay-button:hover {
 				border-block-end: none;
-				padding-block-end: 0px;
+				padding-block-end: 0;
 			}
 		</style>
 		<ViewTransitions />
@@ -236,6 +236,7 @@ if (postIndex < allPosts.length) {
 					</div>
 				</div>
 				<script
+					data-astro-rerun
 					src="https://giscus.app/client.js"
 					data-repo={SITE.repo}
 					data-repo-id="R_kgDOG4TsQA"

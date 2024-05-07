@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "@pagefind/default-ui": "^1.1.0",
-    "astro": "^4.6.1",
-    "dayjs": "^1.11.10",
+    "astro": "^4.7.1",
+    "dayjs": "^1.11.11",
     "lozad": "^1.16.0",
     "motion": "^10.17.0",
     "pagefind": "^1.1.0"
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@astrojs/rss": "^4.0.5",
     "@astrojs/tailwind": "^5.1.0",
-    "@tailwindcss/typography": "^0.5.12",
+    "@tailwindcss/typography": "^0.5.13",
     "@types/lozad": "^1.16.4",
     "node-html-parser": "^6.1.13",
     "prettier": "^3.2.5",
