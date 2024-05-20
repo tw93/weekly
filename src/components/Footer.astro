@@ -4,7 +4,7 @@
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
-	document.addEventListener('astro:page-load', function () {
+	document.addEventListener('DOMContentLoaded', function () {
 		// Optimization of letter spacing
 		const heti = new Heti('.heti');
 		heti.autoSpacing();
@@ -32,7 +32,6 @@
 			Intense && Intense(zoomImgs);
 		}
 	});
-
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

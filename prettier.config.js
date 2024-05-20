@@ -5,7 +5,7 @@ export default {
 	singleQuote: true,
 	tabWidth: 2,
 	trailingComma: 'es5',
-	useTabs: true,
+	useTabs: false,
 	plugins: ['prettier-plugin-astro'],
 	overrides: [
 		{

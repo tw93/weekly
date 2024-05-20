@@ -1,24 +1,27 @@
 ---
-import '@pagefind/default-ui/css/ui.css'
-import SearchIcon from './SearchIcon.astro'
+import '@pagefind/default-ui/css/ui.css';
+import SearchIcon from './SearchIcon.astro';
 ---
 
 <site-search id='search' class='ms-auto relative md:inline-block hidden site-search'>
-	<button data-open-modal disabled class='flex items-center justify-center rounded-md gap-1 search-icon' title="输入/进行搜索">
+	<button
+		data-open-modal
+		disabled
+		class='flex items-center justify-center rounded-md gap-1 search-icon'
+		title='输入/进行搜索'
+	>
 		<SearchIcon />
 		<!-- <span class='md:hidden text-2xl'> Search</span> -->
 	</button>
 	<dialog
 		aria-label='search'
-		class='h-full max-h-full w-full max-w-full  bg-white shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left'
+		class='h-full max-h-full w-full max-w-full bg-white shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left'
 	>
 		<div class='dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6'>
-			<button
-				data-close-modal
-				class='ms-auto cursor-pointer rounded-full bg-black text-white px-4 py-2 close-icon'
+			<button data-close-modal class='ms-auto cursor-pointer rounded-full bg-black text-white px-4 py-2 close-icon'
 				>X</button
 			>
-      {
+			{
 				import.meta.env.DEV ? (
 					<div class='mx-auto text-center'>
 						<p>
@@ -37,149 +40,139 @@ import SearchIcon from './SearchIcon.astro'
 </site-search>
 
 <script>
-  // @ts-ignore
-	import { animate } from 'motion'
+	import { animate } from 'motion';
 	class SiteSearch extends HTMLElement {
 		constructor() {
-			super()
-			const openBtn = this.querySelector<HTMLButtonElement>('button[data-open-modal]')!
-			const closeBtn = this.querySelector<HTMLButtonElement>('button[data-close-modal]')!
-			const dialog = this.querySelector('dialog')!
-			const dialogFrame = this.querySelector('.dialog-frame')!
+			super();
+			const openBtn = this.querySelector<HTMLButtonElement>('button[data-open-modal]')!;
+			const closeBtn = this.querySelector<HTMLButtonElement>('button[data-close-modal]')!;
+			const dialog = this.querySelector('dialog')!;
+			const dialogFrame = this.querySelector('.dialog-frame')!;
 
 			const onWindowClick = (event: MouseEvent) => {
 				// make sure the click is outside the of the dialog
-				if (
-					document.body.contains(event.target as Node) &&
-					!dialogFrame.contains(event.target as Node)
-				)
-					closeModal()
-			}
+				if (document.body.contains(event.target as Node) && !dialogFrame.contains(event.target as Node)) closeModal();
+			};
 
 			const openModal = (event?: MouseEvent) => {
-				dialog.showModal()
+				dialog.showModal();
 
 				animate(
 					'dialog',
 					{
-						clipPath: [
-							'polygon(0 0, 100% 0, 100% -200%, -200% -200%)',
-							'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'
-						],
-						opacity: [0, 1]
+						clipPath: ['polygon(0 0, 100% 0, 100% -200%, -200% -200%)', 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'],
+						opacity: [0, 1],
 					},
 					{ duration: 0.2 }
-				)
-				document.body.classList.add('overflow-hidden')
-				this.querySelector('input')?.focus()
-				event?.stopPropagation()
-				window.addEventListener('click', onWindowClick)
-			}
+				);
+				document.body.classList.add('overflow-hidden');
+				this.querySelector('input')?.focus();
+				event?.stopPropagation();
+				window.addEventListener('click', onWindowClick);
+			};
 
 			const closeModal = () => {
-				dialog.close()
-				document.body.classList.remove('overflow-hidden')
-				window.removeEventListener('click', onWindowClick)
-			}
+				dialog.close();
+				document.body.classList.remove('overflow-hidden');
+				window.removeEventListener('click', onWindowClick);
+			};
 
-			openBtn.addEventListener('click', openModal)
-			openBtn.disabled = false
-			closeBtn.addEventListener('click', closeModal)
-			document.addEventListener('astro:after-swap', closeModal)
+			openBtn.addEventListener('click', openModal);
+			openBtn.disabled = false;
+			closeBtn.addEventListener('click', closeModal);
+			document.addEventListener('astro:after-swap', closeModal);
 
 			// Listen for `/` keyboard shortcut
 			window.addEventListener('keydown', (e) => {
 				if (e.key === '/' && !dialog.open) {
-					openModal()
-					e.preventDefault()
+					openModal();
+					e.preventDefault();
 				}
-			})
+			});
 
 			window.addEventListener('DOMContentLoaded', () => {
-				if (import.meta.env.DEV) return
-				const onIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1))
+				if (import.meta.env.DEV) return;
+				const onIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 				onIdle(async () => {
 					// @ts-ignore
-					const { PagefindUI } = await import('@pagefind/default-ui')
+					const { PagefindUI } = await import('@pagefind/default-ui');
 					new PagefindUI({
 						element: '#pagefind__search',
 						baseUrl: import.meta.env.BASE_URL,
 						bundlePath: import.meta.env.BASE_URL.replace(/\/$/, '') + '/pagefind/',
 						showImages: false,
-            translations: {
-              placeholder: "搜索潮流内容",
-              zero_results: "没有找到 [SEARCH_TERM]",
-              many_results: "[COUNT] 条搜索命中 [SEARCH_TERM]",
-              clear_search: "清除",
-              load_more: "加载更多结果",
-            }
-					})
-				})
-			})
+						translations: {
+							placeholder: '搜索潮流内容',
+							zero_results: '没有找到 [SEARCH_TERM]',
+							many_results: '[COUNT] 条搜索命中 [SEARCH_TERM]',
+							clear_search: '清除',
+							load_more: '加载更多结果',
+						},
+					});
+				});
+			});
 		}
 	}
 
-	customElements.define('site-search', SiteSearch)
+	customElements.define('site-search', SiteSearch);
 </script>
 
 <style is:global>
+	body {
+		--pagefind-ui-primary: #a67c52;
+		--pagefind-ui-border-width: 1px;
+		--pagefind-ui-font: 'LXGW WenKai Screen R', sans-serif;
+	}
 
-  body {
-    --pagefind-ui-primary: #a67c52;
-    --pagefind-ui-border-width: 1px;
-    --pagefind-ui-font: 'LXGW WenKai Screen R', sans-serif;
-  }
+	.site-search {
+		font-size: 16px;
+	}
 
-  .site-search{
-    font-size: 16px;
-  }
+	.pagefind-ui__search-input {
+		font-size: 14px;
+	}
 
-  .pagefind-ui__search-input {
-    font-size: 14px;
-  }
+	.search-icon {
+		position: absolute;
+		left: -40px;
+		top: -23px;
+		outline: none;
+	}
 
-  .search-icon {
-    position: absolute;
-    left: -40px;
-    top: -23px;
-    outline: none;
-  }
+	.content-title .search-icon {
+		top: -16px;
+		left: -24px;
+	}
 
-  .content-title .search-icon{
-    top: -16px;
-    left: -24px;
-  }
+	.site-search .pagefind-ui__message {
+		margin-block-start: 0;
+		margin-block-end: 0;
+		padding: 8px 0 16px;
+	}
 
-  .site-search .pagefind-ui__message{
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding: 8px 0 16px;
-  }
+	.content-title .site-search .pagefind-ui__message {
+		padding: 8px 0;
+	}
 
-  .content-title .site-search .pagefind-ui__message{
-    padding: 8px 0;
-  }
+	.site-search .pagefind-ui__result {
+		padding: 20px 0 !important;
+	}
 
-  .site-search .pagefind-ui__result {
-    padding: 20px 0 !important;
-  }
+	.site-search .close-icon {
+		font-size: 14px;
+	}
 
-  .site-search .close-icon{
-    font-size: 14px;
-  }
+	.site-search .pagefind-ui__button {
+		margin-top: 0px;
+	}
 
-  .site-search .pagefind-ui__button{
-    margin-top: 0px;
-  }
+	.site-search .pagefind-ui__result-title .pagefind-ui__result-link:hover {
+		text-decoration: none !important;
+		color: #a67c52;
+		border-block-end: none;
+	}
 
-  .site-search .pagefind-ui__result-title .pagefind-ui__result-link:hover{
-    text-decoration: none !important;
-    color: #a67c52;
-    border-block-end: none;
-  }
-
-  .site-search .pagefind-ui__search-clear{
-    font-size: 12px;
-  }
-
+	.site-search .pagefind-ui__search-clear {
+		font-size: 12px;
+	}
 </style>

@@ -9,26 +9,24 @@ const { content = {}, pageURL } = Astro.props;
 const pageTitle = content.title ? `${SITE.title}${content.title}` : SITE.title;
 const imageSrc = content.twitterImg || SITE.pic;
 const description = content.description ? content.description : SITE.description;
-const preloadImage = content.image
-	? content.image + '?x-oss-process=image/resize,w_3600/format,webp'
-	: false;
+const preloadImage = content.image ? content.image + '?x-oss-process=image/resize,w_3600/format,webp' : false;
 ---
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content={imageSrc} />
-<meta name="twitter:site" content={homePage} />
-<meta property="twitter:url" content={pageURL} />
-<meta name="twitter:creator" content={`@${twitterId}`} />
-<meta property="twitter:description" content={description} />
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:image' content={imageSrc} />
+<meta name='twitter:site' content={homePage} />
+<meta property='twitter:url' content={pageURL} />
+<meta name='twitter:creator' content={`@${twitterId}`} />
+<meta property='twitter:description' content={description} />
 
-<meta name="keywords" content={keywords} />
-<meta name="author" content={author} />
-<meta name="description" content={description} />
-<meta property="og:type" content="website" />
-<meta property="og:title" content={pageTitle} />
-<meta property="og:image" content={icon} />
-<meta property="og:description" content={description} />
-<meta property="og:url" content={pageURL} />
-<meta property="og:site_name" content={pageTitle} />
+<meta name='keywords' content={keywords} />
+<meta name='author' content={author} />
+<meta name='description' content={description} />
+<meta property='og:type' content='website' />
+<meta property='og:title' content={pageTitle} />
+<meta property='og:image' content={icon} />
+<meta property='og:description' content={description} />
+<meta property='og:url' content={pageURL} />
+<meta property='og:site_name' content={pageTitle} />
 
-{preloadImage && <link rel="preload" href={preloadImage} as="image" />}
+{preloadImage && <link rel='preload' href={preloadImage} as='image' />}

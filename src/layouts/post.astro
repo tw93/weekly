@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import '../styles/heti.min.css';
 import HeadCommon from '../components/HeadCommon.astro';
 import HeadSEO from '../components/HeadSEO.astro';
@@ -43,11 +42,11 @@ if (postIndex < allPosts.length) {
 }
 ---
 
-<html lang="ch" transition:animate="none">
+<html lang='ch'>
 	<head>
 		<HeadCommon />
 		<HeadSEO content={content} pageURL={currentUrl} />
-		<meta name="generator" content={Astro.generator} />
+		<meta name='generator' content={Astro.generator} />
 		<title>{SITE.title}{title}</title>
 		<style>
 			body {
@@ -178,79 +177,73 @@ if (postIndex < allPosts.length) {
 				padding-block-end: 0;
 			}
 		</style>
-		<ViewTransitions />
 	</head>
 	<body>
-		<main class="layout">
-			<aside id="grid-left" class="grid-sidebar" title="Site Navigation">
-				<LeftSidebar currentPage={currentPage}/>
+		<main class='layout'>
+			<aside id='grid-left' class='grid-sidebar' title='Site Navigation'>
+				<LeftSidebar currentPage={currentPage} />
 			</aside>
-			<div id="grid-main">
+			<div id='grid-main'>
 				<div
-					class="markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
-					id="write"
+					class='markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5'
+					id='write'
 				>
-					<h1 class="content-title flex align-middle text-gray-800">
-						<a class="logo inline-block md:hidden visible" href="/"><AstroLogo size={40} /> </a>
-						<span data-pagefind-meta="title">{title}</span>
+					<h1 class='content-title flex align-middle text-gray-800'>
+						<a class='logo inline-block md:hidden visible' href='/'><AstroLogo size={40} /> </a>
+						<span data-pagefind-meta='title'>{title}</span>
 						<Search />
 					</h1>
 					<slot />
-					<div class="flex align-middle justify-center mt-4">
+					<div class='flex align-middle justify-center mt-4'>
 						<a
-							class="inline-block h-10 items-center rounded bg-[#262626] px-5 py-3 text-sm font-medium text-white pay-button"
-							href="https://miaoyan.app/cats.html?name=潮流周刊"
-							target="_blank"
-							rel="noreferrer">喜欢周刊 → 去喂猫 ❤️</a
+							class='inline-block h-10 items-center rounded bg-[#262626] px-5 py-3 text-sm font-medium text-white pay-button'
+							href='https://miaoyan.app/cats.html?name=潮流周刊'
+							target='_blank'
+							rel='noreferrer'>喜欢周刊 → 去喂猫 ❤️</a
 						>
 					</div>
 					<hr />
-					<div class="flex justify-between md:flex-row flex-col mt-2 post-footer">
-						<div class="text-gray-800 flex-1">
+					<div class='flex justify-between md:flex-row flex-col mt-2 post-footer'>
+						<div class='text-gray-800 flex-1'>
 							发布日期：<a
 								href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
-								target="_blank"
-								data-pagefind-sort="date"
-								title="Edit">{date}</a
+								target='_blank'
+								data-pagefind-sort='date'
+								title='Edit'>{date}</a
 							>
 						</div>
-						<div class="md:mt-0 mt-4 flex-1 text-right">
+						<div class='md:mt-0 mt-4 flex-1 text-right'>
 							{nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
 							{prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
-							<a href="/">去首页 |</a>
-							<a href={`https://twitter.com/${SITE.twitterId}`} target="_blank" title="Follow"
-								>Twitter</a
-							>
+							<a href='/'>去首页 |</a>
+							<a href={`https://twitter.com/${SITE.twitterId}`} target='_blank' title='Follow'>Twitter</a>
 							<a
 								href={`https://github.com/${SITE.githubId}/weekly`}
-								title="Star"
-								target="_blank"
-								class="lg:inline-block hidden"
+								title='Star'
+								target='_blank'
+								class='lg:inline-block hidden'
 							>
 								| Github</a
 							>
-							<a href="/rss.xml" title="Subscribe" target="_blank" class="xl:inline-block hidden">
-								| RSS</a
-							>
+							<a href='/rss.xml' title='Subscribe' target='_blank' class='xl:inline-block hidden'> | RSS</a>
 						</div>
 					</div>
 				</div>
 				<script
-					data-astro-rerun
-					src="https://giscus.app/client.js"
+					src='https://giscus.app/client.js'
 					data-repo={SITE.repo}
-					data-repo-id="R_kgDOG4TsQA"
-					data-category="General"
-					data-category-id="DIC_kwDOG4TsQM4CR4bV"
-					data-mapping="title"
-					data-strict="0"
-					data-reactions-enabled="1"
-					data-emit-metadata="0"
-					data-input-position="bottom"
-					data-theme="https://gw.alipayobjects.com/os/k/we/comment.css"
-					data-lang="zh-CN"
-					data-loading="lazy"
-					crossorigin="anonymous"
+					data-repo-id='R_kgDOG4TsQA'
+					data-category='General'
+					data-category-id='DIC_kwDOG4TsQM4CR4bV'
+					data-mapping='title'
+					data-strict='0'
+					data-reactions-enabled='1'
+					data-emit-metadata='0'
+					data-input-position='bottom'
+					data-theme='https://gw.alipayobjects.com/os/k/we/comment.css'
+					data-lang='zh-CN'
+					data-loading='lazy'
+					crossorigin='anonymous'
 					async></script>
 			</div>
 		</main>

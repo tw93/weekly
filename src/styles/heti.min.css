@@ -1,19 +1,19 @@
 :root {
-  --text-font: 'LXGW WenKai Screen R', sans-serif;
-  --code-text-font: 'LXGW WenKai Screen R', sans-serif;
+	--text-font: 'LXGW WenKai Screen R', sans-serif;
+	--code-text-font: 'LXGW WenKai Screen R', sans-serif;
 }
 
 html {
-  font-size: 16px;
-  font-display: swap;
-  color: #262626;
-  -webkit-font-smoothing: antialiased;
+	font-size: 16px;
+	font-display: swap;
+	color: #262626;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  color: #262626;
+	padding: 0;
+	margin: 0;
+	color: #262626;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -23,51 +23,51 @@ body {
 } */
 
 img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 
 .heti p > img {
-  margin-top: 8px;
+	margin-top: 8px;
 }
 
 pre,
 iframe {
-  max-width: 900px;
+	max-width: 900px;
 }
 
 a,
 .heti a heti-spacing {
-  color: #1d9bf0;
-  cursor: pointer;
+	color: #1d9bf0;
+	cursor: pointer;
 }
 
 .heti {
-  font-weight: 400;
-  -webkit-font-smoothing: subpixel-antialiased;
-  line-height: 1.74;
-  letter-spacing: 0.036em;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-  color: #262626;
+	font-weight: 400;
+	-webkit-font-smoothing: subpixel-antialiased;
+	line-height: 1.74;
+	letter-spacing: 0.036em;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	color: #262626;
 }
 
 .heti::before,
 .heti::after {
-  content: '';
-  display: table;
+	content: '';
+	display: table;
 }
 
 .heti::after {
-  clear: both;
+	clear: both;
 }
 
 .heti > *:first-child,
 .heti section > *:first-child,
 .heti td > *:first-child {
-  margin-block-start: 0 !important;
+	margin-block-start: 0 !important;
 }
 
 .heti > h1:first-child,
@@ -76,92 +76,92 @@ a,
 .heti > h4:first-child,
 .heti > h5:first-child,
 .heti > h6:first-child {
-  margin-block-start: 10px !important;
+	margin-block-start: 10px !important;
 }
 
 .heti > ol:first-child {
-  margin-block-start: 5px !important;
-  padding-inline-start: calc(12px + 1em);
+	margin-block-start: 5px !important;
+	padding-inline-start: calc(12px + 1em);
 }
 
 .heti > ul:first-child {
-  margin-block-start: 5px !important;
-  padding-inline-start: 20px;
+	margin-block-start: 5px !important;
+	padding-inline-start: 20px;
 }
 
 .heti > *:last-child,
 .heti section > *:last-child,
 .heti td > *:last-child {
-  margin-block-end: 0 !important;
+	margin-block-end: 0 !important;
 }
 
 .heti figure {
-  display: block;
-  text-align: center;
+	display: block;
+	text-align: center;
 }
 
 .heti figure > img {
-  display: block;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
+	display: block;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 .heti hr {
-  width: 100%;
-  height: 1px;
-  margin-block-start: 1.8em;
-  margin-block-end: 1.8em;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  border: 0;
-  background-color: #e6e6e6;
+	width: 100%;
+	height: 1px;
+	margin-block-start: 1.8em;
+	margin-block-end: 1.8em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	border: 0;
+	background-color: #e6e6e6;
 }
 
 .heti p {
-  margin-block-start: 1.8em;
-  margin-block-end: 1.8em;
-  text-align: left;
+	margin-block-start: 1.8em;
+	margin-block-end: 1.8em;
+	text-align: left;
 }
 
 .heti p[align='center'] {
-  text-align: center;
+	text-align: center;
 }
 
 .heti p[align='left'] {
-  text-align: left;
+	text-align: left;
 }
 
 .heti p[align='right'] {
-  text-align: right;
+	text-align: right;
 }
 
 .heti blockquote {
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
-  padding-inline-start: 16px;
-  padding-inline-end: 16px;
-  border-radius: 4px;
-  color: #777;
-  border-left: 4px solid #f1f3f4;
-  line-height: 1;
+	margin-block-start: 0.8em;
+	margin-block-end: 1.8em;
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
+	border-radius: 4px;
+	color: #777;
+	border-left: 4px solid #f1f3f4;
+	line-height: 1;
 }
 
 .heti blockquote p {
-  margin-block-end: 0.4em;
-  margin-block-start: 0.4em;
-  line-height: 1.74;
+	margin-block-end: 0.4em;
+	margin-block-start: 0.4em;
+	line-height: 1.74;
 }
 
 blockquote blockquote {
-  padding-right: 0;
+	padding-right: 0;
 }
 
 .heti blockquote {
-  margin: 0;
-  overflow: hidden;
-  box-sizing: border-box;
-  padding: 0 15px;
-  max-width: 100%;
+	margin: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 0 15px;
+	max-width: 100%;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -171,20 +171,20 @@ blockquote blockquote {
 } */
 
 .heti pre {
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-block-start: 12px;
-  padding-block-end: 12px;
-  padding-inline-start: 16px;
-  padding-inline-end: 16px;
-  overflow: auto;
-  font-family: var(--text-font);
-  white-space: pre;
-  word-wrap: normal;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.03);
+	margin-block-start: 0.8em;
+	margin-block-end: 1.8em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	padding-block-start: 12px;
+	padding-block-end: 12px;
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
+	overflow: auto;
+	font-family: var(--text-font);
+	white-space: pre;
+	word-wrap: normal;
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.03);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -194,16 +194,16 @@ blockquote blockquote {
 } */
 
 .heti pre code {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background-color: transparent;
-  color: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background-color: transparent;
+	color: inherit;
 }
 
-.heti pre.astro-code{
-  margin-top: -20px;
+.heti pre.astro-code {
+	margin-top: -20px;
 }
 
 .heti h1,
@@ -212,50 +212,50 @@ blockquote blockquote {
 .heti h4,
 .heti h5,
 .heti h6 {
-  position: relative;
-  margin: 0;
-  line-height: 1.8;
-  margin-block-start: 1.8em;
-  margin-block-end: 0.8em;
-  font-weight: bolder;
+	position: relative;
+	margin: 0;
+	line-height: 1.8;
+	margin-block-start: 1.8em;
+	margin-block-end: 0.8em;
+	font-weight: bolder;
 }
 
 .heti h1 {
-  font-size: 2em;
+	font-size: 2em;
 }
 
 .heti h2 {
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 .heti h3 {
-  font-size: 1.25em;
-  margin-block-start: 0.6em;
-  margin-block-start: 0.6em;
+	font-size: 1.25em;
+	margin-block-start: 0.6em;
+	margin-block-start: 0.6em;
 }
 
 .heti h4 {
-  font-size: 1em;
-  margin-block-start: 0.6em;
-  margin-block-start: 0.6em;
+	font-size: 1em;
+	margin-block-start: 0.6em;
+	margin-block-start: 0.6em;
 }
 
 .heti h5 {
-  font-size: 1em;
-  margin-block-start: 0.6em;
-  margin-block-start: 0.6em;
+	font-size: 1em;
+	margin-block-start: 0.6em;
+	margin-block-start: 0.6em;
 }
 
 .heti h6 {
-  font-size: 1em;
-  margin-block-start: 0.6em;
-  margin-block-start: 0.6em;
+	font-size: 1em;
+	margin-block-start: 0.6em;
+	margin-block-start: 0.6em;
 }
 
 .heti h1,
 .heti h2,
 .heti h3 {
-  letter-spacing: 0.05em;
+	letter-spacing: 0.05em;
 }
 
 .heti h1 + h2,
@@ -263,75 +263,75 @@ blockquote blockquote {
 .heti h3 + h4,
 .heti h4 + h5,
 .heti h5 + h6 {
-  margin-block-start: 0.8em;
+	margin-block-start: 0.8em;
 }
 
 .heti ul,
 .heti ol,
 .heti dl {
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
+	margin-block-start: 0.8em;
+	margin-block-end: 1.8em;
 }
 
 .heti ul {
-  padding-inline-start: calc(24px + 0.5em);
+	padding-inline-start: calc(24px + 0.5em);
 }
 
 .heti ol {
-  padding-inline-start: calc(24px + 1em);
+	padding-inline-start: calc(24px + 1em);
 }
 
 .heti ul ul,
 .heti ul ol,
 .heti ol ul,
 .heti ol ol {
-  margin-block-start: 0;
-  margin-block-end: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 .heti ul {
-  list-style-type: disc;
+	list-style-type: disc;
 }
 
 .heti ol {
-  list-style-type: decimal;
+	list-style-type: decimal;
 }
 
 .heti ul ul,
 .heti ol ul {
-  list-style-type: circle;
+	list-style-type: circle;
 }
 
 .heti ul ul ul,
 .heti ul ol ul,
 .heti ol ul ul,
 .heti ol ol ul {
-  list-style-type: square;
+	list-style-type: square;
 }
 
 .heti li {
-  list-style-type: unset;
+	list-style-type: unset;
 }
 
 .heti table {
-  box-sizing: border-box;
-  table-layout: fixed;
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  border-collapse: collapse;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ccc;
-  word-break: break-word;
+	box-sizing: border-box;
+	table-layout: fixed;
+	margin-block-start: 0.8em;
+	margin-block-end: 1.8em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	border-collapse: collapse;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ccc;
+	word-break: break-word;
 }
 
 .heti p > code,
 .heti li > code {
-  background-color: #eef1f2;
-  padding: 2px;
-  border-radius: 4px;
+	background-color: #eef1f2;
+	padding: 2px;
+	border-radius: 4px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -347,19 +347,19 @@ blockquote blockquote {
 } */
 
 .heti table {
-  margin-right: auto;
-  margin-left: 0px;
+	margin-right: auto;
+	margin-left: 0px;
 }
 
 .heti th,
 .heti td {
-  padding-block-start: 6px;
-  padding-block-end: 6px;
-  padding-inline-start: 8px;
-  padding-inline-end: 8px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ccc;
+	padding-block-start: 6px;
+	padding-block-end: 6px;
+	padding-inline-start: 8px;
+	padding-inline-end: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ccc;
 }
 /*
 @media (prefers-color-scheme: dark) {
@@ -370,87 +370,87 @@ blockquote blockquote {
 } */
 
 .heti caption {
-  caption-side: bottom;
-  margin-block-start: 2px;
-  margin-block-end: -4px;
-  font-size: 14px;
-  line-height: 24px;
+	caption-side: bottom;
+	margin-block-start: 2px;
+	margin-block-end: -4px;
+	font-size: 14px;
+	line-height: 24px;
 }
 
 .heti a {
-  text-decoration: none;
-  color: #1d9bf0;
+	text-decoration: none;
+	color: #1d9bf0;
 }
 
 .heti a:hover {
-  padding-block-end: 1px;
-  border-block-end: 1px solid currentColor;
-  text-decoration: none;
+	padding-block-end: 1px;
+	border-block-end: 1px solid currentColor;
+	text-decoration: none;
 }
 
 .heti abbr[title] {
-  padding-block-end: 1px;
-  border-block-end: 1px dotted;
-  text-decoration: none;
-  cursor: help;
+	padding-block-end: 1px;
+	border-block-end: 1px dotted;
+	text-decoration: none;
+	cursor: help;
 }
 
 .heti b,
 .heti strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .heti code {
-  margin-inline-start: 0.25em;
-  margin-inline-end: 0.25em;
-  font-size: 1em;
-  font-family: var(--text-font);
+	margin-inline-start: 0.25em;
+	margin-inline-end: 0.25em;
+	font-size: 1em;
+	font-family: var(--text-font);
 }
 
 .heti pre code {
-  font-family: var(--code-text-font);
+	font-family: var(--code-text-font);
 }
 
 .heti dfn {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .heti dfn:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .heti dfn:not(:lang(zh)) {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 .heti em {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .heti figcaption {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 14px;
-  text-align: start;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	text-align: start;
 }
 
 .heti i {
-  font-style: italic;
+	font-style: italic;
 }
 
 .heti ins,
 .heti u {
-  padding-block-end: 1px;
-  border-block-end: 1px solid;
-  text-decoration: none;
+	padding-block-end: 1px;
+	border-block-end: 1px solid;
+	text-decoration: none;
 }
 
 .heti mark {
-  padding-block-start: 2px;
-  padding-block-end: 2px;
-  padding-inline-start: 1px;
-  padding-inline-end: 1px;
-  margin-inline-start: 1px;
-  margin-inline-end: 1px;
-  background-color: rgba(255, 247, 0, 0.88);
-  color: inherit;
+	padding-block-start: 2px;
+	padding-block-end: 2px;
+	padding-inline-start: 1px;
+	padding-inline-end: 1px;
+	margin-inline-start: 1px;
+	margin-inline-end: 1px;
+	background-color: rgba(255, 247, 0, 0.88);
+	color: inherit;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -460,56 +460,56 @@ blockquote blockquote {
 } */
 
 .heti q {
-  quotes: '「' '」' '『' '』';
+	quotes: '「' '」' '『' '』';
 }
 
 .heti q:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .heti q:not(:lang(zh)) {
-  quotes: initial;
-  quotes: auto;
+	quotes: initial;
+	quotes: auto;
 }
 
 .heti rt {
-  font-size: 0.875em;
-  font-weight: 400;
+	font-size: 0.875em;
+	font-weight: 400;
 }
 
 .heti small {
-  font-size: 0.875em;
+	font-size: 0.875em;
 }
 
-.heti > p > small{
-  display: inherit;
-  margin-top: -0.6em;
+.heti > p > small {
+	display: inherit;
+	margin-top: -0.6em;
 }
 
 .heti strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .heti sub,
 .heti sup {
-  position: relative;
-  margin-inline-start: 0.25em;
-  margin-inline-end: 0.25em;
-  font-size: 0.75em;
-  font-family: var(--text-font);
-  font-style: normal;
-  line-height: 1;
-  vertical-align: baseline;
+	position: relative;
+	margin-inline-start: 0.25em;
+	margin-inline-end: 0.25em;
+	font-size: 0.75em;
+	font-family: var(--text-font);
+	font-style: normal;
+	line-height: 1;
+	vertical-align: baseline;
 }
 
 .heti sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 .heti sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 .heti sup:target,
 .heti sup a:target {
-  background-color: #dbedff;
+	background-color: #dbedff;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -520,21 +520,21 @@ blockquote blockquote {
 } */
 
 .heti summary {
-  padding-inline-start: 1em;
-  outline: 0;
-  cursor: pointer;
+	padding-inline-start: 1em;
+	outline: 0;
+	cursor: pointer;
 }
 
 .heti summary::-webkit-details-marker {
-  width: 0.6em;
-  margin-inline-end: 0.4em;
+	width: 0.6em;
+	margin-inline-end: 0.4em;
 }
 
 .heti u[title] {
-  cursor: help;
-  border-block-end-width: 3px;
-  border-block-end-style: double;
-  border-block-end-color: rgba(0, 0, 0, 0.54);
+	cursor: help;
+	border-block-end-width: 3px;
+	border-block-end-style: double;
+	border-block-end-color: rgba(0, 0, 0, 0.54);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -548,7 +548,7 @@ blockquote blockquote {
 .heti dfn,
 .heti dt,
 .heti em {
-  font-style: normal;
+	font-style: normal;
 }
 
 .heti address:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
@@ -561,7 +561,7 @@ blockquote blockquote {
 .heti dt:not(:lang(zh)),
 .heti em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .heti em:not(:lang(zh)) {
-  font-style: italic;
+	font-style: italic;
 }
 
 .heti abbr[title],
@@ -569,21 +569,21 @@ blockquote blockquote {
 .heti ins,
 .heti s,
 .heti u {
-  margin-inline-start: 1px;
-  margin-inline-end: 1px;
+	margin-inline-start: 1px;
+	margin-inline-end: 1px;
 }
 
 .heti,
 .heti--sans {
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 
 .heti--serif {
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 
 .heti--classic {
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 
 .heti--classic h1,
@@ -592,28 +592,28 @@ blockquote blockquote {
 .heti--classic h4,
 .heti--classic h5,
 .heti--classic h6 {
-  font-family: var(--text-font);
-  font-weight: 800;
+	font-family: var(--text-font);
+	font-weight: 800;
 }
 
 .heti--classic blockquote,
 .heti--classic cite,
 .heti--classic q {
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 
 .heti--classic figcaption,
 .heti--classic caption,
 .heti--classic th {
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 
 .heti--hei {
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 
 .heti--song {
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 
 .heti--columns-1,
@@ -630,8 +630,8 @@ blockquote blockquote {
 .heti--columns-44em,
 .heti--columns-48em,
 .heti comma {
-  max-width: none;
-  column-gap: 2em;
+	max-width: none;
+	column-gap: 2em;
 }
 
 .heti--columns-1 p,
@@ -648,72 +648,72 @@ blockquote blockquote {
 .heti--columns-44em p,
 .heti--columns-48em p,
 .heti comma p {
-  margin-block-start: 0.4em;
-  margin-block-end: 0.8em;
-  text-indent: 2em;
+	margin-block-start: 0.4em;
+	margin-block-end: 0.8em;
+	text-indent: 2em;
 }
 
 .heti--columns-1 {
-  column-count: 1;
+	column-count: 1;
 }
 
 .heti--columns-2 {
-  column-count: 2;
+	column-count: 2;
 }
 
 .heti--columns-3 {
-  column-count: 3;
+	column-count: 3;
 }
 
 .heti--columns-4 {
-  column-count: 4;
+	column-count: 4;
 }
 
 .heti--columns-16em {
-  column-width: 16em;
+	column-width: 16em;
 }
 
 .heti--columns-20em {
-  column-width: 20em;
+	column-width: 20em;
 }
 
 .heti--columns-24em {
-  column-width: 24em;
+	column-width: 24em;
 }
 
 .heti--columns-28em {
-  column-width: 28em;
+	column-width: 28em;
 }
 
 .heti--columns-32em {
-  column-width: 32em;
+	column-width: 32em;
 }
 
 .heti--columns-36em {
-  column-width: 36em;
+	column-width: 36em;
 }
 
 .heti--columns-40em {
-  column-width: 40em;
+	column-width: 40em;
 }
 
 .heti--columns-44em {
-  column-width: 44em;
+	column-width: 44em;
 }
 
 .heti--columns-48em {
-  column-width: 48em;
+	column-width: 48em;
 }
 
 .heti--vertical {
-  max-width: none;
-  max-height: 42em;
-  writing-mode: vertical-rl;
-  letter-spacing: 0.125em;
+	max-width: none;
+	max-height: 42em;
+	writing-mode: vertical-rl;
+	letter-spacing: 0.125em;
 }
 
 ::marker {
-  letter-spacing: -1px !important;
+	letter-spacing: -1px !important;
 }
 
 .heti--vertical h1,
@@ -722,16 +722,16 @@ blockquote blockquote {
 .heti--vertical h4,
 .heti--vertical h5,
 .heti--vertical h6 {
-  text-align: start;
+	text-align: start;
 }
 
 .heti--vertical q {
-  quotes: '「' '」' '『' '』';
+	quotes: '「' '」' '『' '』';
 }
 
 .heti--ancient,
 .heti--poetry {
-  font-family: var(--text-font);
+	font-family: var(--text-font);
 }
 
 .heti--ancient h1,
@@ -746,9 +746,9 @@ blockquote blockquote {
 .heti--poetry h4,
 .heti--poetry h5,
 .heti--poetry h6 {
-  font-family: var(--text-font);
-  font-weight: 800;
-  text-align: center;
+	font-family: var(--text-font);
+	font-weight: 800;
+	text-align: center;
 }
 
 .heti--ancient h1 .heti-meta,
@@ -763,132 +763,132 @@ blockquote blockquote {
 .heti--poetry h4 .heti-meta,
 .heti--poetry h5 .heti-meta,
 .heti--poetry h6 .heti-meta {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 @media screen and (min-width: 640px) {
-  .heti--ancient h1 .heti-meta,
-  .heti--ancient h2 .heti-meta,
-  .heti--ancient h3 .heti-meta,
-  .heti--ancient h4 .heti-meta,
-  .heti--ancient h5 .heti-meta,
-  .heti--ancient h6 .heti-meta,
-  .heti--poetry h1 .heti-meta,
-  .heti--poetry h2 .heti-meta,
-  .heti--poetry h3 .heti-meta,
-  .heti--poetry h4 .heti-meta,
-  .heti--poetry h5 .heti-meta,
-  .heti--poetry h6 .heti-meta {
-    position: absolute;
-    line-height: inherit;
-    text-indent: 0;
-    display: inline;
-    margin-block-start: 0.3em;
-    margin-inline-start: 8px;
-  }
+	.heti--ancient h1 .heti-meta,
+	.heti--ancient h2 .heti-meta,
+	.heti--ancient h3 .heti-meta,
+	.heti--ancient h4 .heti-meta,
+	.heti--ancient h5 .heti-meta,
+	.heti--ancient h6 .heti-meta,
+	.heti--poetry h1 .heti-meta,
+	.heti--poetry h2 .heti-meta,
+	.heti--poetry h3 .heti-meta,
+	.heti--poetry h4 .heti-meta,
+	.heti--poetry h5 .heti-meta,
+	.heti--poetry h6 .heti-meta {
+		position: absolute;
+		line-height: inherit;
+		text-indent: 0;
+		display: inline;
+		margin-block-start: 0.3em;
+		margin-inline-start: 8px;
+	}
 }
 
 .heti--ancient .heti-meta,
 .heti--poetry .heti-meta {
-  line-height: 24px;
-  text-align: center;
-  text-indent: 0;
+	line-height: 24px;
+	text-align: center;
+	text-indent: 0;
 }
 
 .heti--ancient p {
-  text-indent: 2em;
+	text-indent: 2em;
 }
 
 .heti--poetry p {
-  text-align: center;
-  text-indent: 0;
+	text-align: center;
+	text-indent: 0;
 }
 
 .heti--annotation p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  line-height: 2.25;
-  text-indent: 2em;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	line-height: 2.25;
+	text-indent: 2em;
 }
 
 .heti--annotation em {
-  -webkit-text-emphasis: filled circle;
-  -webkit-text-emphasis-position: under;
-  font-weight: 400;
+	-webkit-text-emphasis: filled circle;
+	-webkit-text-emphasis-position: under;
+	font-weight: 400;
 }
 
 .heti--annotation em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .heti--annotation em:not(:lang(zh)) {
-  -webkit-text-emphasis: none;
+	-webkit-text-emphasis: none;
 }
 
 .heti--annotation .heti-meta {
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
+	margin-block-start: 0.8em;
+	margin-block-end: 1.8em;
 }
 
 .heti .heti-meta {
-  display: block;
-  text-indent: 0;
+	display: block;
+	text-indent: 0;
 }
 
 .heti .heti-verse {
-  text-align: center;
-  text-indent: 0;
+	text-align: center;
+	text-indent: 0;
 }
 
 .heti .heti-large {
-  font-size: 18px;
-  line-height: 24px;
+	font-size: 18px;
+	line-height: 24px;
 }
 
 .heti .heti-x-large {
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: 0.05em;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.05em;
 }
 
 .heti .heti-small {
-  font-size: 14px;
-  line-height: 24px;
+	font-size: 14px;
+	line-height: 24px;
 }
 
 .heti .heti-x-small {
-  font-size: 12px;
-  line-height: 18px;
+	font-size: 12px;
+	line-height: 18px;
 }
 
 .heti .heti-list-latin {
-  list-style-type: upper-latin;
+	list-style-type: upper-latin;
 }
 
 .heti .heti-list-latin ol {
-  list-style-type: lower-roman;
+	list-style-type: lower-roman;
 }
 
 .heti .heti-list-latin ol ol {
-  list-style-type: lower-latin;
+	list-style-type: lower-latin;
 }
 
 .heti .heti-list-han {
-  list-style-type: cjk-ideographic;
+	list-style-type: cjk-ideographic;
 }
 
 .heti .heti-list-han ol {
-  list-style-type: decimal;
+	list-style-type: decimal;
 }
 
 .heti .heti-list-han ol ol {
-  list-style-type: decimal-leading-zero;
+	list-style-type: decimal-leading-zero;
 }
 
 .heti .heti-fn {
-  margin-block-start: 4em;
-  border-block-start: 1px solid;
-  border-block-start-color: #ccc;
-  font-size: 14px;
-  font-family: var(--text-font);
-  line-height: 24px;
+	margin-block-start: 4em;
+	border-block-start: 1px solid;
+	border-block-start-color: #ccc;
+	font-size: 14px;
+	font-family: var(--text-font);
+	line-height: 24px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -898,12 +898,12 @@ blockquote blockquote {
 } */
 
 .heti .heti-fn ol {
-  margin-block-start: 0.8em;
-  margin-block-end: 0;
+	margin-block-start: 0.8em;
+	margin-block-end: 0;
 }
 
 .heti .heti-fn li:target {
-  background-color: #dbedff;
+	background-color: #dbedff;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -913,99 +913,99 @@ blockquote blockquote {
 } */
 
 .heti .heti-hang {
-  position: absolute;
-  line-height: inherit;
-  text-indent: 0;
+	position: absolute;
+	line-height: inherit;
+	text-indent: 0;
 }
 
 .heti .heti-em {
-  -webkit-text-emphasis: filled circle;
-  -webkit-text-emphasis-position: under;
+	-webkit-text-emphasis: filled circle;
+	-webkit-text-emphasis-position: under;
 }
 
 .heti .heti-em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .heti .heti-em:not(:lang(zh)) {
-  -webkit-text-emphasis: none;
+	-webkit-text-emphasis: none;
 }
 
 .heti .heti-ruby--inline {
-  display: inline-flex;
-  flex-direction: column-reverse;
-  height: 1.5em;
+	display: inline-flex;
+	flex-direction: column-reverse;
+	height: 1.5em;
 }
 
 .heti .heti-ruby--inline rt {
-  display: inline;
-  margin-bottom: -0.25em;
-  line-height: 1;
-  text-align: center;
+	display: inline;
+	margin-bottom: -0.25em;
+	line-height: 1;
+	text-align: center;
 }
 
 .heti heti-spacing {
-  display: inline;
+	display: inline;
 }
 
 .heti heti-spacing + sup,
 .heti heti-spacing + sub {
-  margin-inline-start: 0;
+	margin-inline-start: 0;
 }
 
 .heti .heti-spacing-start {
-  margin-inline-end: 0.25em;
+	margin-inline-end: 0.25em;
 }
 
 .heti .heti-spacing-end {
-  margin-inline-start: 0.25em;
+	margin-inline-start: 0.25em;
 }
 
 .heti heti-adjacent {
-  display: inline;
+	display: inline;
 }
 
 .heti .heti-adjacent-half {
-  margin-inline-end: -0.5em;
+	margin-inline-end: -0.5em;
 }
 
 .heti .heti-adjacent-quarter {
-  margin-inline-end: -0.25em;
+	margin-inline-end: -0.25em;
 }
 
 .heti ul.cb {
-  list-style-type: none;
-  padding-inline-start: 12px;
+	list-style-type: none;
+	padding-inline-start: 12px;
 }
 
 .heti ul.cb ul.cb {
-  padding-inline-start: 24px;
+	padding-inline-start: 24px;
 }
 
 .heti ul.cb input[type='checkbox'] {
-  position: relative;
-  font-size: 1rem;
-  width: 1rem;
-  height: 1rem;
-  top: 0.1rem;
-  cursor: pointer;
+	position: relative;
+	font-size: 1rem;
+	width: 1rem;
+	height: 1rem;
+	top: 0.1rem;
+	cursor: pointer;
 }
 
 .heti ul.cb input[type='checkbox']::before {
-  content: '';
-  position: absolute;
-  top: -6px;
-  bottom: -6px;
-  left: -6px;
-  right: -6px;
+	content: '';
+	position: absolute;
+	top: -6px;
+	bottom: -6px;
+	left: -6px;
+	right: -6px;
 }
 
 .hljs {
-  background: #f8f8f8;
-  color: #000;
+	background: #f8f8f8;
+	color: #000;
 }
 
 .hljs-comment,
 .hljs-quote,
 .hljs-variable {
-  color: #035c21;
+	color: #035c21;
 }
 
 .hljs-built_in,
@@ -1013,7 +1013,7 @@ blockquote blockquote {
 .hljs-name,
 .hljs-selector-tag,
 .hljs-tag {
-  color: #0a69d9;
+	color: #0a69d9;
 }
 
 .hljs-addition,
@@ -1025,129 +1025,129 @@ blockquote blockquote {
 .hljs-template-variable,
 .hljs-title,
 .hljs-type {
-  color: #bf3889;
+	color: #bf3889;
 }
 
 .hljs-deletion,
 .hljs-meta,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #208bff;
+	color: #208bff;
 }
 
 .hljs-doctag {
-  color: #6e7781;
+	color: #6e7781;
 }
 
 .hljs-attr {
-  color: #cf212e;
+	color: #cf212e;
 }
 
 .hljs-bullet,
 .hljs-link,
 .hljs-symbol {
-  color: #8250df;
+	color: #8250df;
 }
 
 .hljs-emphasis {
-  font-style: italic;
+	font-style: italic;
 }
 
 .hljs-strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 code.language-mermaid {
-  display: block;
-  text-align: center;
+	display: block;
+	text-align: center;
 }
 
 .heti pre.plantuml-image-container {
-  padding: 0;
-  background: transparent;
-  border-radius: none;
+	padding: 0;
+	background: transparent;
+	border-radius: none;
 }
 
 .heti pre.plantuml-image-container .plantuml-image {
-  border-radius: 4px;
+	border-radius: 4px;
 }
 
 .heti pre.mermaid-image-container {
-  padding: 0;
-  background: #fff;
+	padding: 0;
+	background: #fff;
 }
 
 .heti pre.markmap-image-container {
-  padding: 0;
+	padding: 0;
 }
 
 mjx-container[display='block'] {
-  display: block;
-  margin: 1em 0;
+	display: block;
+	margin: 1em 0;
 }
 
 span.emoji {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: baseline;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  width: 1em;
-  height: 1em;
-  background-size: 1em;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-  background-position: 50%, 50%;
-  background-size: contain;
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: baseline;
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+	width: 1em;
+	height: 1em;
+	background-size: 1em;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	background-position: 50%, 50%;
+	background-size: contain;
 }
 
 span.emoji-sizer {
-  line-height: 0.81em;
-  font-size: 1em;
-  margin: -2px 0;
+	line-height: 0.81em;
+	font-size: 1em;
+	margin: -2px 0;
 }
 
 span.emoji-outer {
-  display: -moz-inline-box;
-  display: inline-block;
-  *display: inline;
-  height: 1em;
-  width: 1em;
+	display: -moz-inline-box;
+	display: inline-block;
+	*display: inline;
+	height: 1em;
+	width: 1em;
 }
 
 span.emoji-inner {
-  display: -moz-inline-box;
-  display: inline-block;
-  text-indent: -9999px;
-  width: 100%;
-  height: 100%;
-  vertical-align: baseline;
-  *vertical-align: auto;
-  *zoom: 1;
+	display: -moz-inline-box;
+	display: inline-block;
+	text-indent: -9999px;
+	width: 100%;
+	height: 100%;
+	vertical-align: baseline;
+	*vertical-align: auto;
+	*zoom: 1;
 }
 
 img.emoji {
-  width: 1em;
-  height: 1em;
+	width: 1em;
+	height: 1em;
 }
 
 .language-markmap {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .markmap {
-  visibility: visible;
-  width: 100%;
-  height: var(--markmap-height);
-  font-family: var(--text-font) !important;
-  font-size: 0.8em !important;
+	visibility: visible;
+	width: 100%;
+	height: var(--markmap-height);
+	font-family: var(--text-font) !important;
+	font-size: 0.8em !important;
 }
 
 img[loading='lazy'] {
-  background-color: #eef1f2;
-  outline-color: #eef1f2;
+	background-color: #eef1f2;
+	outline-color: #eef1f2;
 }
 
 /* @media (prefers-color-scheme: dark) {
