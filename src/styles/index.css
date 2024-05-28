@@ -397,7 +397,5 @@ html {
 }
 
 #write img {
-	cursor:
-		url('https://gw.alipayobjects.com/zos/k/qg/zoomout.svg') 5 5,
-		auto;
+	cursor: zoom-in;
 }
