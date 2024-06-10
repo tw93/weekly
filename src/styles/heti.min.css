@@ -398,6 +398,7 @@ blockquote blockquote {
 .heti b,
 .heti strong {
 	font-weight: bold;
+  -webkit-font-smoothing: antialiased;
 }
 
 .heti code {
