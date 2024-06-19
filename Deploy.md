@@ -21,7 +21,7 @@
 3. 导入后，确定 FRAMEWORK PRESET 是 Astro（[截图](https://gw.alipayobjects.com/zos/k/ic/0BffKE.png)），一般会默认选中，没有的话请选择这个，选择后，点击 Deploy 即可，稍等片刻，等待部署
 4. 过了一会儿部署完成了，参考[截图](https://gw.alipayobjects.com/zos/k/e3/QLS7dG.png)位置，就是你的域名地址好了，点击进去就可以访问了，是不是很简单
 5. 由于评论系统使用的是我自己的 key，假如需要自用，辛苦参考 [giscus](https://giscus.app/zh-CN) 自己去配置一个，这样就和你的绑定了
-6. 一定一定需要把你的 `config.ts` 里面的信息配置成你自己的信息，防止转到我这边来了。
+6. 一定一定需要把你的 `config.ts` 里面的信息配置成你自己的信息，特别是 repo，防止出现不可预料的错误。
 
 ### 最后
 
