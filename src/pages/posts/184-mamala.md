@@ -49,6 +49,7 @@ Reddit 上的这个 lectures 频道，包含很多值得一听的视频讲座、
 推荐一个超级搞笑的韩剧「心灵的声音」，豆瓣 9.2，应该是看过最最搞笑的韩剧了，每一集不到半小时，一共十集，非常适合下饭视频，也适合周末在家一天就给看完了，非常搞笑，很好看。  
 <img src="https://gw.alipayobjects.com/zos/k/t9/GRU27B0b0AASgwL.jpeg" width="800" />
 
-**随便看看：最近看过的最好笑的视频**  
-小红书看到的一个叫做旺旺表弟博主的「这个男孩能价吗？」的系列视频，超级逗，不过建议只当做搞笑片看，会很有趣。  
-<video width="800px" preload loop controls><source src="https://sns-video-bd.xhscdn.com/1040g00g3135qju3h7i005n0rnun1ohbnlnf8pc0" type="video/mp4"></video>
+**随便看看：最近看过的最好笑的视频**
+<https://www.xiaohongshu.com/explore/665003330000000015011f29>  
+小红书看到的一个叫做旺旺表弟博主的「这个男孩能嫁吗？」的系列视频，超级逗，不过建议只当做搞笑片看，会很有趣。  
+<img src="https://gw.alipayobjects.com/zos/k/xa/bOkdZA.jpg" width="800" />
