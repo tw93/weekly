@@ -52,4 +52,4 @@ Reddit 上的这个 lectures 频道，包含很多值得一听的视频讲座、
 **随便看看：最近看过的最好笑的视频**
 <https://www.xiaohongshu.com/explore/665003330000000015011f29>  
 小红书看到的一个叫做旺旺表弟博主的「这个男孩能嫁吗？」的系列视频，超级逗，不过建议只当做搞笑片看，会很有趣。  
-<img src="https://gw.alipayobjects.com/zos/k/xa/bOkdZA.jpg" width="800" />
+<img src="https://gw.alipayobjects.com/zos/k/e7/SCR-20240707-unxu.png" width="800" />
