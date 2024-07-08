@@ -34,7 +34,7 @@ date: 2024/07/08
 
 **Youtube：让我们来搞一个 GPT-2**  
 <https://youtube.com/watch?v=l8pRSuU81PU>  
-Andrej Karpathy 大神的这个「让我们来搞一个 GPT-2」很值得跟着学习一遍，124 分钟的长视频，受限构建 GPT-2 网络，然后优化对应训练速度，并按照 GPT-2 和 GPT-3 论文参数设置训练运行，挺适合周末时间我们来照着视频学习一下。  
+Andrej Karpathy 大神的这个「让我们来搞一个 GPT-2」很值得跟着学习一遍，124 分钟的长视频，首先构建 GPT-2 网络，然后优化对应训练速度，并按照 GPT-2 和 GPT-3 论文参数设置训练运行，挺适合周末时间我们来照着视频学习一下。  
 <img src="https://gw.alipayobjects.com/zos/k/c4/SCR-20240630-tbgx.png" width="800" />
 
 **Reddit 上的这个 lectures 频道很不错**  
