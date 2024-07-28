@@ -2,6 +2,7 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 187 期 - 我想开了](https://weekly.tw93.fun/posts/187-我想开了)
 * [第 186 期 - 青柠冷饮](https://weekly.tw93.fun/posts/186-青柠冷饮)
 * [第 185 期 - 光照之美](https://weekly.tw93.fun/posts/185-光照之美)
 * [第 184 期 - mamala](https://weekly.tw93.fun/posts/184-mamala)
