@@ -172,10 +172,11 @@ if (postIndex < allPosts.length) {
       .heti .pay-button {
         color: var(--theme-bg);
         background-color: var(--theme-text);
+        padding-block-end: 9px;
       }
       .heti .pay-button:hover {
         border-block-end: none;
-        padding-block-end: 0;
+        padding-block-end: 9px;
       }
     </style>
   </head>
@@ -197,7 +198,7 @@ if (postIndex < allPosts.length) {
           <slot />
           <div class='flex align-middle justify-center mt-4'>
             <a
-              class='inline-block items-center rounded px-5 py-2 text-sm font-medium pay-button'
+              class='inline-block items-center rounded px-5 py-3 text-sm font-medium pay-button'
               href='https://miaoyan.app/cats.html?name=潮流周刊'
               target='_blank'
               rel='noreferrer'>你觉得有收获吗？❤️</a
