@@ -1,0 +1,138 @@
+<button id='theme-toggle' class='theme-toggle' aria-label='Toggle theme'>
+  <svg class='sun-and-moon' aria-hidden='true' width='24' height='24' viewBox='0 0 24 24'>
+    <mask class='moon' id='moon-mask'>
+      <rect x='0' y='0' width='100%' height='100%' fill='white'></rect>
+      <circle cx='24' cy='10' r='6' fill='black'></circle>
+    </mask>
+    <circle class='sun' cx='12' cy='12' r='6' fill='currentColor' mask='url(#moon-mask)'></circle>
+    <g class='sun-beams' stroke='currentColor'>
+      <line x1='12' y1='1' x2='12' y2='3'></line>
+      <line x1='12' y1='21' x2='12' y2='23'></line>
+      <line x1='4.22' y1='4.22' x2='5.64' y2='5.64'></line>
+      <line x1='18.36' y1='18.36' x2='19.78' y2='19.78'></line>
+      <line x1='1' y1='12' x2='3' y2='12'></line>
+      <line x1='21' y1='12' x2='23' y2='12'></line>
+      <line x1='4.22' y1='19.78' x2='5.64' y2='18.36'></line>
+      <line x1='18.36' y1='5.64' x2='19.78' y2='4.22'></line>
+    </g>
+  </svg>
+</button>
+
+<style is:global>
+  .theme-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--theme-text);
+    padding: 0;
+  }
+
+  .sun-and-moon > :is(.moon, .sun, .sun-beams, .moon-circle, .moon-crater) {
+    transform-origin: center center;
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease;
+  }
+
+  .sun-and-moon > :is(.moon, .sun) {
+    fill: currentColor;
+  }
+
+  .theme-toggle:is(:hover, :focus-visible) {
+    color: var(--theme-accent);
+  }
+
+  .sun-and-moon > .sun-beams {
+    stroke: currentColor;
+    stroke-width: 2px;
+  }
+
+  .moon-circle {
+    transition: transform 0.5s ease;
+  }
+
+  [data-theme='dark'] .sun-and-moon > .sun {
+    transform: scale(1.75);
+  }
+
+  [data-theme='dark'] .sun-and-moon > .sun-beams {
+    opacity: 0;
+  }
+
+  [data-theme='dark'] .sun-and-moon > .moon > circle {
+    transform: translateX(-7px);
+    transition: transform 0.5s ease;
+  }
+
+  [data-theme='dark'] .moon-circle {
+    transform: translateX(-12px) scale(0.92);
+  }
+
+  [data-theme='dark'] .moon-crater {
+    transform: translateX(-7px);
+  }
+
+  [data-theme='light'] .moon-circle,
+  [data-theme='light'] .moon-crater {
+    opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sun-and-moon > :is(.moon, .sun, .sun-beams, .moon-circle, .moon-crater) {
+      transition: none;
+    }
+  }
+</style>
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function changeGiscusTheme(newTheme) {
+    const giscusScript = document.getElementById('giscus-script');
+    if (giscusScript) {
+      giscusScript.setAttribute('data-theme', newTheme);
+
+      // Reload giscus
+      const iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
+      if (iframe) {
+        iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: newTheme } } }, 'https://giscus.app');
+      }
+    }
+  }
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+      changeGiscusTheme('https://gw.alipayobjects.com/os/k/weekly1/comment-dark.css');
+    } else {
+      document.body.classList.remove('dark');
+      changeGiscusTheme('https://gw.alipayobjects.com/os/k/weekly/comment.css');
+    }
+    document.body.setAttribute('data-theme', theme);
+
+    localStorage.setItem('theme', theme);
+  }
+
+  function toggleTheme() {
+    const currentTheme = document.body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  }
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    setTheme(prefersDarkScheme.matches ? 'dark' : 'light');
+  }
+
+  themeToggle.addEventListener('click', toggleTheme);
+
+  prefersDarkScheme.addEventListener('change', (e) => {
+    const newTheme = e.matches ? 'dark' : 'light';
+    setTheme(newTheme);
+  });
+</script>

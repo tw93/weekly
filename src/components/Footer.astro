@@ -1,47 +1,53 @@
+---
+import ThemeSwitch from './ThemeSwitch.astro';
+---
+
+<ThemeSwitch />
+
 <script type='text/javascript' src='https://gw.alipayobjects.com/os/k/h3/heti-addon.min.js'></script>
 <script type='text/javascript' src='https://gw.alipayobjects.com/os/k/3j/lozad.min.js'></script>
 <script type='text/javascript' src='https://gw.alipayobjects.com/os/k/x5/intense.min.js'></script>
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
-	document.addEventListener('DOMContentLoaded', function () {
-		// Optimization of letter spacing
-		const heti = new Heti('.heti');
-		heti.autoSpacing();
+  document.addEventListener('DOMContentLoaded', function () {
+    // Optimization of letter spacing
+    const heti = new Heti('.heti');
+    heti.autoSpacing();
 
-		// Lazy loading of images
-		const observer = lozad('.lozad', {
-			loaded: function (el) {
-				el.alt = el.getAttribute('data-alt');
-			},
-		});
+    // Lazy loading of images
+    const observer = lozad('.lozad', {
+      loaded: function (el) {
+        el.alt = el.getAttribute('data-alt');
+      },
+    });
 
-		observer.observe();
+    observer.observe();
 
-		// Jump to external link
-		const links = document.links;
-		for (let i = 0; i < +links.length; i++) {
-			if (links[i].hostname != window.location.hostname) {
-				links[i].target = '_blank';
-			}
-		}
+    // Jump to external link
+    const links = document.links;
+    for (let i = 0; i < +links.length; i++) {
+      if (links[i].hostname != window.location.hostname) {
+        links[i].target = '_blank';
+      }
+    }
 
-		const zoomImgs = document.querySelectorAll('#write img');
-		const isMobileDevice = /Android|iPhone/i.test(navigator.userAgent);
-		if (zoomImgs && zoomImgs.length > 0 && !isMobileDevice) {
-			Intense && Intense(zoomImgs);
-		}
-	});
+    const zoomImgs = document.querySelectorAll('#write img');
+    const isMobileDevice = /Android|iPhone/i.test(navigator.userAgent);
+    if (zoomImgs && zoomImgs.length > 0 && !isMobileDevice) {
+      Intense && Intense(zoomImgs);
+    }
+  });
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src='https://www.googletagmanager.com/gtag/js?id=G-DT01FBW30E' is:inline></script>
 <script>
-	// @ts-nocheck
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
-	gtag('config', 'G-DT01FBW30E');
+  // @ts-nocheck
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-DT01FBW30E');
 </script>

@@ -1,0 +1,134 @@
+@import url('https://gw.alipayobjects.com/os/k/font/lxgwwenkaiscreenr.css');
+
+main {
+  --color-btn-text: #e7e9ea;
+  --color-btn-bg: #2c3338;
+  --color-btn-border: rgb(231 233 234 / 15%);
+  --color-btn-shadow: 0 1px 0 rgb(231 233 234 / 4%);
+  --color-btn-inset-shadow: inset 0 1px 0 rgb(255 255 255 / 5%);
+  --color-btn-hover-bg: #353b42;
+  --color-btn-hover-border: rgb(231 233 234 / 15%);
+  --color-btn-active-bg: hsl(210deg 10% 23% / 100%);
+  --color-btn-active-border: rgb(231 233 234 / 15%);
+  --color-btn-selected-bg: hsl(210deg 10% 22% / 100%);
+  --color-btn-primary-text: #e7e9ea;
+  --color-btn-primary-bg: #a2784f;
+  --color-btn-primary-border: rgb(231 233 234 / 15%);
+  --color-btn-primary-shadow: 0 1px 0 rgb(231 233 234 / 10%);
+  --color-btn-primary-inset-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
+  --color-btn-primary-hover-bg: #b38a5f;
+  --color-btn-primary-hover-border: rgb(231 233 234 / 15%);
+  --color-btn-primary-selected-bg: hsl(33deg 40% 50% / 100%);
+  --color-btn-primary-selected-shadow: inset 0 1px 0 rgb(165 120 79 / 20%);
+  --color-btn-primary-disabled-text: rgba(199, 205, 210, 0.8);
+  --color-btn-primary-disabled-bg: #5c5248;
+  --color-btn-primary-disabled-border: rgb(231 233 234 / 15%);
+  --color-fg-default: #e7e9ea;
+  --color-fg-muted: #a9aeb3;
+  --color-fg-subtle: #8b949e;
+  --color-canvas-default: #21262b;
+  --color-canvas-overlay: #21262b;
+  --color-canvas-inset: #21262b;
+  --color-canvas-subtle: #21262b;
+  --color-border-default: #333;
+  --color-border-muted: #333;
+  --color-neutral-muted: rgb(110 118 129 / 40%);
+  --color-accent-fg: #a2784f;
+  --color-accent-emphasis: #333;
+  --color-accent-muted: #333;
+  --color-accent-subtle: #2c3338;
+  --color-success-fg: #3fb950;
+  --color-attention-fg: #d29922;
+  --color-danger-fg: #f85149;
+  --color-danger-muted: rgb(248 81 73 / 40%);
+  --color-danger-subtle: #3d1d1d;
+  --color-primer-shadow-inset: inset 0 1px 0 rgb(51 51 51 / 20%);
+  --color-primer-shadow-focus: 0 0 0 3px rgb(162 120 79 / 30%);
+  --color-scale-gray-1: #2c3338;
+  --color-scale-blue-1: #333;
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+  color-scheme: dark;
+}
+
+
+main {
+  font-family: 'LXGW WenKai Screen R', sans-serif;
+  letter-spacing: 0.6px;
+  color: red;
+}
+
+main .pagination-loader-container {
+  background-image: url('https://github.com/images/modules/pulls/progressive-disclosure-line.svg');
+}
+
+main .gsc-loading-image {
+  background-image: url('https://github.githubassets.com/images/mona-loading-default.gif');
+}
+
+main .gsc-left-header .color-text-secondary,
+.gsc-header {
+  display: none;
+}
+main .gsc-comment-box-textarea {
+  border-color: var(--color-border-default);
+}
+.form-control {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+main .gsc-comment-box-textarea:focus,
+#__next .form-control:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-primary,
+.btn.ml-1.rounded-md.border {
+  box-shadow: none;
+  border: none;
+}
+.gsc-tl-line {
+  width: 1px;
+}
+
+.gsc-comment {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.gsc-comment-content {
+  font-size: 1rem;
+}
+
+.gsc-reactions-count {
+  visibility: hidden;
+}
+.gsc-reactions-count:after {
+  content: '欢迎一起交流~';
+  visibility: visible;
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-left: -4rem;
+}
+
+.gsc-reply-content {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+#__next .rounded-md {
+  border-radius: 4px;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+.gsc-social-reaction-summary-item {
+  font-size: 0.85rem;
+  border-radius: 8px;
+  line-height: 26px;
+  padding-inline-end: 6px;
+  padding-inline-start: 6px;
+}

@@ -10,8 +10,8 @@ import { SITE } from '@/config';
 import { parseTitle, sortPosts, getIndex } from '@/util';
 
 export interface Props {
-	frontmatter: { date: string; pic: string; desc: string; url: string; twitterImg: string };
-	title: string;
+  frontmatter: { date: string; pic: string; desc: string; url: string; twitterImg: string };
+  title: string;
 }
 
 const pageUrl = new URL(Astro.request.url);
@@ -21,10 +21,10 @@ let title = parseTitle(currentPage);
 
 const { date, pic, desc, url, twitterImg } = Astro.props.frontmatter;
 const content = {
-	title,
-	image: pic,
-	description: desc,
-	twitterImg,
+  title,
+  image: pic,
+  description: desc,
+  twitterImg,
 };
 const currentUrl = SITE.homePage + currentPage;
 
@@ -34,231 +34,233 @@ const allPosts = sortPosts(posts);
 const postIndex = getIndex(currentPage);
 let nextUrl = '';
 if (postIndex > 2) {
-	nextUrl = allPosts[allPosts.length - postIndex + 1].url;
+  nextUrl = allPosts[allPosts.length - postIndex + 1].url;
 }
 let prevUrl = '';
 if (postIndex < allPosts.length) {
-	prevUrl = allPosts[allPosts.length - postIndex - 1].url;
+  prevUrl = allPosts[allPosts.length - postIndex - 1].url;
 }
 ---
 
 <html lang='ch'>
-	<head>
-		<HeadCommon />
-		<HeadSEO content={content} pageURL={currentUrl} />
-		<meta name='generator' content={Astro.generator} />
-		<title>{SITE.title}{title}</title>
-		<style>
-			body {
-				width: 100%;
-				--gutter: 0.5rem;
-				--doc-padding: 2rem;
-			}
+  <head>
+    <HeadCommon />
+    <HeadSEO content={content} pageURL={currentUrl} />
+    <meta name='generator' content={Astro.generator} />
+    <title>{SITE.title}{title}</title>
+    <style>
+      body {
+        width: 100%;
+        --gutter: 0.5rem;
+        --doc-padding: 2rem;
+      }
 
-			.layout {
-				display: grid;
-				grid-auto-flow: column;
-				grid-template-columns:
-					minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
-					minmax(var(--gutter), 1fr);
-				overflow-x: hidden;
-			}
+      .layout {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns:
+          minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
+          minmax(var(--gutter), 1fr);
+        overflow-x: hidden;
+      }
 
-			.heti h1.content-title:first-child {
-				margin-block-start: 8px !important;
-				margin-bottom: 16px;
-				letter-spacing: 0.02em;
-			}
+      .heti h1.content-title:first-child {
+        margin-block-start: 8px !important;
+        margin-bottom: 16px;
+        letter-spacing: 0.02em;
+      }
 
-			.grid-sidebar {
-				height: 100vh;
-				position: sticky;
-				top: 0;
-				padding: 0;
-				margin-left: -5px;
-			}
+      .grid-sidebar {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        padding: 0;
+        margin-left: -5px;
+      }
 
-			#grid-left {
-				position: fixed;
-				background-color: var(--theme-bg);
-				z-index: 10;
-				display: none;
-			}
+      #grid-left {
+        position: fixed;
+        background-color: var(--theme-bg);
+        z-index: 10;
+        display: none;
+      }
 
-			#grid-main {
-				padding: 0.8rem var(--gutter) 4rem var(--gutter);
-				grid-column: 2;
-				display: flex;
-				flex-direction: column;
-				height: 100%;
-			}
+      #grid-main {
+        padding: 0.8rem var(--gutter) 4rem var(--gutter);
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
 
-			#grid-right {
-				display: none;
-			}
+      #grid-right {
+        display: none;
+      }
 
-			@media (min-width: 50em) {
-				.layout {
-					overflow: initial;
-					grid-template-columns: 18rem minmax(0, var(--max-width));
-					gap: 0;
-				}
+      @media (min-width: 50em) {
+        .layout {
+          overflow: initial;
+          grid-template-columns: 18rem minmax(0, var(--max-width));
+          gap: 0;
+        }
 
-				#grid-main {
-					padding: 0.8rem 2rem 4rem 2rem;
-				}
+        #grid-main {
+          padding: 0.8rem 2rem 4rem 2rem;
+        }
 
-				#grid-left {
-					display: flex;
-					padding-left: 2rem;
-					position: sticky;
-					grid-column: 1;
-				}
-			}
+        #grid-left {
+          display: flex;
+          padding-left: 2rem;
+          position: sticky;
+          grid-column: 1;
+        }
+      }
 
-			@media (min-width: 72em) {
-				.layout {
-					grid-template-columns: 20rem minmax(0, var(--max-width)) 13rem;
-					padding-left: 0;
-					padding-right: 0;
-					margin: 0 auto;
-				}
+      @media (min-width: 72em) {
+        .layout {
+          grid-template-columns: 20rem minmax(0, var(--max-width)) 13rem;
+          padding-left: 0;
+          padding-right: 0;
+          margin: 0 auto;
+        }
 
-				#grid-right {
-					grid-column: 3;
-					display: flex;
-				}
-			}
+        #grid-right {
+          grid-column: 3;
+          display: flex;
+        }
+      }
 
-			.gsc-left-header .color-text-secondary {
-				display: none;
-			}
+      .gsc-left-header .color-text-secondary {
+        display: none;
+      }
 
-			.logo {
-				display: none;
-				margin-top: -0.1em;
-			}
+      .logo {
+        display: none;
+        margin-top: -0.1em;
+      }
 
-			@media (max-width: 50em) {
-				.logo {
-					display: block;
-					color: #fff;
-					margin-top: -0.1em;
-					margin-right: 0.2em;
-				}
+      @media (max-width: 50em) {
+        .logo {
+          display: block;
+          color: #fff;
+          margin-top: -0.1em;
+          margin-right: 0.2em;
+        }
 
-				.logo:active {
-					text-decoration: none;
-					border-block-end: none;
-					padding-block-end: unset;
-				}
+        .logo:active {
+          text-decoration: none;
+          border-block-end: none;
+          padding-block-end: unset;
+        }
 
-				#grid-main {
-					margin-top: -7px;
-					padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
-				}
+        #grid-main {
+          margin-top: -7px;
+          padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
+        }
 
-				.heti h1.content-title:first-child {
-					margin-bottom: 12px;
-					font-size: 1.8rem;
-				}
-			}
-			.post-footer a {
-				color: var(--theme-text-accent);
-			}
-			.post-footer a:hover {
-				border-block-end: none;
-			}
-			.heti .pay-button {
-				color: #fff;
-			}
-			.heti .pay-button:hover {
-				border-block-end: none;
-				padding-block-end: 0;
-			}
-		</style>
-	</head>
-	<body>
-		<main class='layout'>
-			<aside id='grid-left' class='grid-sidebar' title='Site Navigation'>
-				<LeftSidebar currentPage={currentPage} />
-			</aside>
-			<div id='grid-main'>
-				<div
-					class='markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5'
-					id='write'
-				>
-					<h1 class='content-title flex align-middle text-gray-800'>
-						<a class='logo inline-block md:hidden visible' href='/'><AstroLogo size={40} /> </a>
-						<span data-pagefind-meta='title'>{title}</span>
-						<Search />
-					</h1>
-					<slot />
-					<div class='flex align-middle justify-center mt-4'>
-						<a
-							class='inline-block h-10 items-center rounded bg-[#262626] px-5 py-3 text-sm font-medium text-white pay-button'
-							href='https://miaoyan.app/cats.html?name=潮流周刊'
-							target='_blank'
-							rel='noreferrer'>你觉得有收获吗？❤️</a
-						>
-					</div>
-					<hr />
-					<div class='flex justify-between md:flex-row flex-col mt-2 post-footer'>
-						<div class='text-gray-800 flex-1'>
-							发布日期：<a
-								href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
-								target='_blank'
-								data-pagefind-sort='date'
-								title='Edit'>{date}</a
-							>
-						</div>
-						<div class='md:mt-0 mt-4 flex-1 text-right'>
-							{nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
-							{prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
-							<a href='/'>去首页 |</a>
-							<a href={`https://twitter.com/${SITE.twitterId}`} target='_blank' title='Follow'>Twitter</a>
-							<a
-								href={`https://github.com/${SITE.githubId}/weekly`}
-								title='Star'
-								target='_blank'
-								class='lg:inline-block hidden'
-							>
-								| Github</a
-							>
-							<a href='/rss.xml' title='Subscribe' target='_blank' class='xl:inline-block hidden'> | RSS</a>
-						</div>
-					</div>
-				</div>
-				<script
-					src='https://giscus.app/client.js'
-					data-repo={SITE.repo}
-					data-repo-id='R_kgDOG4TsQA'
-					data-category='General'
-					data-category-id='DIC_kwDOG4TsQM4CR4bV'
-					data-mapping='title'
-					data-strict='0'
-					data-reactions-enabled='1'
-					data-emit-metadata='0'
-					data-input-position='bottom'
-					data-theme='https://gw.alipayobjects.com/os/k/we/comment.css'
-					data-lang='zh-CN'
-					data-loading='lazy'
-					crossorigin='anonymous'
-					async></script>
-			</div>
-		</main>
-		<Footer />
-		<script is:inline>
-			window.addEventListener('DOMContentLoaded', () => {
-				// The second image is the cover image
-				const images = document.querySelectorAll('#write img');
-				images.forEach((img, index) => {
-					if (index > 1) {
-						img.setAttribute('loading', 'lazy');
-						img.setAttribute('decoding', 'async');
-					}
-				});
-			});
-		</script>
-	</body>
+        .heti h1.content-title:first-child {
+          margin-bottom: 12px;
+          font-size: 1.8rem;
+        }
+      }
+      .post-footer a {
+        color: var(--theme-accent);
+      }
+      .post-footer a:hover {
+        border-block-end: none;
+      }
+      .heti .pay-button {
+        color: var(--theme-bg);
+        background-color: var(--theme-text);
+      }
+      .heti .pay-button:hover {
+        border-block-end: none;
+        padding-block-end: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class='layout'>
+      <aside id='grid-left' class='grid-sidebar' title='Site Navigation'>
+        <LeftSidebar currentPage={currentPage} />
+      </aside>
+      <div id='grid-main'>
+        <div
+          class='markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5'
+          id='write'
+        >
+          <h1 class='content-title flex align-middle text-gray-800 dark:text-gray-200'>
+            <a class='logo inline-block md:hidden visible' href='/'><AstroLogo size={40} /> </a>
+            <span data-pagefind-meta='title'>{title}</span>
+            <Search />
+          </h1>
+          <slot />
+          <div class='flex align-middle justify-center mt-4'>
+            <a
+              class='inline-block items-center rounded px-5 py-2 text-sm font-medium pay-button'
+              href='https://miaoyan.app/cats.html?name=潮流周刊'
+              target='_blank'
+              rel='noreferrer'>你觉得有收获吗？❤️</a
+            >
+          </div>
+          <hr />
+          <div class='flex justify-between md:flex-row flex-col mt-2 post-footer'>
+            <div class='text-gray-800 dark:text-gray-200 flex-1'>
+              发布日期：<a
+                href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
+                target='_blank'
+                data-pagefind-sort='date'
+                title='Edit'>{date}</a
+              >
+            </div>
+            <div class='md:mt-0 mt-4 flex-1 text-right'>
+              {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
+              {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
+              <a href='/'>去首页 |</a>
+              <a href={`https://twitter.com/${SITE.twitterId}`} target='_blank' title='Follow'>Twitter</a>
+              <a
+                href={`https://github.com/${SITE.githubId}/weekly`}
+                title='Star'
+                target='_blank'
+                class='lg:inline-block hidden'
+              >
+                | Github</a
+              >
+              <a href='/rss.xml' title='Subscribe' target='_blank' class='xl:inline-block hidden'> | RSS</a>
+            </div>
+          </div>
+        </div>
+        <script
+          id='giscus-script'
+          src='https://giscus.app/client.js'
+          data-repo={SITE.repo}
+          data-repo-id='R_kgDOG4TsQA'
+          data-category='General'
+          data-category-id='DIC_kwDOG4TsQM4CR4bV'
+          data-mapping='title'
+          data-strict='0'
+          data-reactions-enabled='1'
+          data-emit-metadata='0'
+          data-input-position='bottom'
+          data-theme='https://gw.alipayobjects.com/os/k/weekly/comment.css'
+          data-lang='zh-CN'
+          data-loading='lazy'
+          crossorigin='anonymous'
+          async></script>
+      </div>
+    </main>
+    <Footer />
+    <script is:inline>
+      window.addEventListener('DOMContentLoaded', () => {
+        // The second image is the cover image
+        const images = document.querySelectorAll('#write img');
+        images.forEach((img, index) => {
+          if (index > 1) {
+            img.setAttribute('loading', 'lazy');
+            img.setAttribute('decoding', 'async');
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
