@@ -9,8 +9,8 @@ import ThemeSwitch from './ThemeSwitch.astro';
 <script type='text/javascript' src='https://gw.alipayobjects.com/os/k/x5/intense.min.js'></script>
 
 <!-- This is intentionally inlined to avoid FOUC -->
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', function () {
+<script is:inline data-astro-rerun>
+  document.addEventListener('astro:page-load', function () {
     // Optimization of letter spacing
     const heti = new Heti('.heti');
     heti.autoSpacing();

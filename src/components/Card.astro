@@ -17,6 +17,7 @@ const { pic, desc, date } = post.frontmatter;
 	class='pb-3 md:mt-5 mt-4 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 w-96 card-content preload-link'
 >
 	<img
+    data-astro-rerun
 		data-placeholder-background='linear-gradient(to bottom, var(--placeholder-gradient-start), var(--placeholder-gradient-end))'
 		data-src={`${pic}?x-oss-process=image/resize,w_640/format,webp`}
 		data-alt={title}

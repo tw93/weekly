@@ -232,6 +232,8 @@ if (postIndex < allPosts.length) {
           </div>
         </div>
         <script
+          is:inline
+          data-astro-rerun
           id='giscus-script'
           src='https://giscus.app/client.js'
           data-repo={SITE.repo}
@@ -250,8 +252,8 @@ if (postIndex < allPosts.length) {
       </div>
     </main>
     <Footer />
-    <script is:inline>
-      window.addEventListener('DOMContentLoaded', () => {
+    <script is:inline data-astro-rerun>
+      window.addEventListener('astro:page-load', () => {
         // The second image is the cover image
         const images = document.querySelectorAll('#write img');
         images.forEach((img, index) => {
