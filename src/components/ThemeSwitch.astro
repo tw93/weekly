@@ -87,52 +87,42 @@
   }
 </style>
 <script>
-  const themeToggle = document.getElementById('theme-toggle');
-  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function changeGiscusTheme(newTheme) {
+  window.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const giscusScript = document.getElementById('giscus-script');
-    if (giscusScript) {
-      giscusScript.setAttribute('data-theme', newTheme);
+    const GISCUS_DARK_THEME = 'https://gw.alipayobjects.com/os/k/weekly1/comment-dark.css';
+    const GISCUS_LIGHT_THEME = 'https://gw.alipayobjects.com/os/k/weekly/comment.css';
 
-      // Reload giscus
-      const iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
-      if (iframe) {
-        iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: newTheme } } }, 'https://giscus.app');
+    const changeGiscusTheme = (newTheme) => {
+      if (giscusScript) {
+        giscusScript.setAttribute('data-theme', newTheme);
+        const iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
+        if (iframe) {
+          iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: newTheme } } }, 'https://giscus.app');
+        }
       }
-    }
-  }
+    };
 
-  function setTheme(theme) {
-    if (theme === 'dark') {
-      document.body.classList.add('dark');
-      changeGiscusTheme('https://gw.alipayobjects.com/os/k/weekly1/comment-dark.css');
-    } else {
-      document.body.classList.remove('dark');
-      changeGiscusTheme('https://gw.alipayobjects.com/os/k/weekly/comment.css');
-    }
-    document.body.setAttribute('data-theme', theme);
+    const setTheme = (theme) => {
+      document.body.classList.toggle('dark', theme === 'dark');
+      changeGiscusTheme(theme === 'dark' ? GISCUS_DARK_THEME : GISCUS_LIGHT_THEME);
+      document.body.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    };
 
-    localStorage.setItem('theme', theme);
-  }
+    const toggleTheme = () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    };
 
-  function toggleTheme() {
-    const currentTheme = document.body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-  }
+    const savedTheme = localStorage.getItem('theme');
+    setTheme(savedTheme || (prefersDarkScheme.matches ? 'dark' : 'light'));
 
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    setTheme(savedTheme);
-  } else {
-    setTheme(prefersDarkScheme.matches ? 'dark' : 'light');
-  }
+    themeToggle.addEventListener('click', toggleTheme);
 
-  themeToggle.addEventListener('click', toggleTheme);
-
-  prefersDarkScheme.addEventListener('change', (e) => {
-    const newTheme = e.matches ? 'dark' : 'light';
-    setTheme(newTheme);
+    prefersDarkScheme.addEventListener('change', (e) => {
+      setTheme(e.matches ? 'dark' : 'light');
+    });
   });
 </script>
