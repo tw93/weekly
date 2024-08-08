@@ -90,7 +90,7 @@ import SearchIcon from './SearchIcon.astro';
 				}
 			});
 
-			window.addEventListener('DOMContentLoaded', () => {
+			window.addEventListener('astro:page-load', () => {
 				if (import.meta.env.DEV) return;
 				const onIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 				onIdle(async () => {

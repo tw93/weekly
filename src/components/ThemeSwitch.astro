@@ -97,7 +97,7 @@
     const changeGiscusTheme = (newTheme) => {
       if (giscusScript) {
         giscusScript.setAttribute('data-theme', newTheme);
-        const iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
+        const iframe = document.querySelector('iframe.giscus-frame');
         if (iframe) {
           iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: newTheme } } }, 'https://giscus.app');
         }

@@ -47,6 +47,7 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
                     data-astro-prefetch
                     href={`/${child.link}`}
                     aria-current={`${decodeURIComponent(currentPageMatch) === child.link ? 'page' : 'false'}`}
+                    onclick='handleNavClick()'
                   >
                     {child.title}
                   </a>
@@ -60,13 +61,28 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
   </ul>
 </nav>
 
-<script is:inline data-astro-rerun>
-	document.addEventListener('astro:page-load', () => {
-		var target = document.querySelector('[aria-current="page"]');
-		if (target && target.offsetTop > window.innerHeight - 100) {
-			document.querySelector('.nav-groups').scrollTop = target.offsetTop - 86;
-		}
-	});
+<script is:inline>
+  let isInternalClick = false;
+
+  function handleNavClick() {
+    isInternalClick = true;
+    const scrollPosition = document.querySelector('.nav-groups').scrollTop;
+    localStorage.setItem('sidebarScrollPosition', scrollPosition);
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    const navGroups = document.querySelector('.nav-groups');
+    const savedScrollPosition = localStorage.getItem('sidebarScrollPosition');
+    if (isInternalClick && savedScrollPosition !== null) {
+      navGroups.scrollTop = parseInt(savedScrollPosition, 10);
+    } else {
+      var target = document.querySelector('[aria-current="page"]');
+      if (target && target.offsetTop > window.innerHeight - 100) {
+        navGroups.scrollTop = target.offsetTop - 86;
+      }
+    }
+    isInternalClick = false;
+  });
 </script>
 
 <style>
