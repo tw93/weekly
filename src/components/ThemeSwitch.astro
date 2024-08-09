@@ -95,11 +95,19 @@
     const GISCUS_LIGHT_THEME = 'https://gw.alipayobjects.com/os/k/weekly3/comment.css';
 
     const changeGiscusTheme = (newTheme) => {
-      if (giscusScript) {
-        giscusScript.setAttribute('data-theme', newTheme);
+      const updateIframeTheme = () => {
         const iframe = document.querySelector('iframe.giscus-frame');
         if (iframe) {
           iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: newTheme } } }, 'https://giscus.app');
+          return true;
+        }
+        return false;
+      };
+
+      if (giscusScript) {
+        giscusScript.setAttribute('data-theme', newTheme);
+        if (!updateIframeTheme()) {
+          setTimeout(updateIframeTheme, 200);
         }
       }
     };
