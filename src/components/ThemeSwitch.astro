@@ -86,8 +86,8 @@
     }
   }
 </style>
-<script is:inline data-astro-rerun>
-  window.addEventListener('astro:page-load', () => {
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const giscusScript = document.getElementById('giscus-script');
