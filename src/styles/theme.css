@@ -21,9 +21,9 @@
 
 [data-theme='dark'] {
   color-scheme: dark;
-  --theme-accent: #a2784f;
+  --theme-accent: #e8a15a;
   --theme-text: #e7e9ea;
-  --theme-divider: #333;
+  --theme-divider: #555;
   --theme-bg: #21262b;
   --placeholder-gradient-start: #2c3e50;
   --placeholder-gradient-end: #34495e;

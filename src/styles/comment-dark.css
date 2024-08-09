@@ -2,7 +2,7 @@
 
 main {
   --color-btn-text: #e7e9ea;
-  --color-btn-bg: #2c3338;
+  --color-btn-bg: #2c5558;
   --color-btn-border: rgb(231 233 234 / 15%);
   --color-btn-shadow: 0 1px 0 rgb(231 233 234 / 4%);
   --color-btn-inset-shadow: inset 0 1px 0 rgb(255 255 255 / 5%);
@@ -12,11 +12,11 @@ main {
   --color-btn-active-border: rgb(231 233 234 / 15%);
   --color-btn-selected-bg: hsl(210deg 10% 22% / 100%);
   --color-btn-primary-text: #e7e9ea;
-  --color-btn-primary-bg: #a2784f;
+  --color-btn-primary-bg: #e8a15a;
   --color-btn-primary-border: rgb(231 233 234 / 15%);
   --color-btn-primary-shadow: 0 1px 0 rgb(231 233 234 / 10%);
   --color-btn-primary-inset-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
-  --color-btn-primary-hover-bg: #b38a5f;
+  --color-btn-primary-hover-bg: #e8a15a;
   --color-btn-primary-hover-border: rgb(231 233 234 / 15%);
   --color-btn-primary-selected-bg: hsl(33deg 40% 50% / 100%);
   --color-btn-primary-selected-shadow: inset 0 1px 0 rgb(165 120 79 / 20%);
@@ -30,13 +30,13 @@ main {
   --color-canvas-overlay: #21262b;
   --color-canvas-inset: #21262b;
   --color-canvas-subtle: #21262b;
-  --color-border-default: #333;
-  --color-border-muted: #333;
+  --color-border-default: #555;
+  --color-border-muted: #555;
   --color-neutral-muted: rgb(110 118 129 / 40%);
-  --color-accent-fg: #a2784f;
-  --color-accent-emphasis: #333;
-  --color-accent-muted: #333;
-  --color-accent-subtle: #2c3338;
+  --color-accent-fg: #e8a15a;
+  --color-accent-emphasis: #555;
+  --color-accent-muted: #555;
+  --color-accent-subtle: #2c5558;
   --color-success-fg: #3fb950;
   --color-attention-fg: #d29922;
   --color-danger-fg: #f85149;
@@ -44,8 +44,8 @@ main {
   --color-danger-subtle: #3d1d1d;
   --color-primer-shadow-inset: inset 0 1px 0 rgb(51 51 51 / 20%);
   --color-primer-shadow-focus: 0 0 0 3px rgb(162 120 79 / 30%);
-  --color-scale-gray-1: #2c3338;
-  --color-scale-blue-1: #333;
+  --color-scale-gray-1: #2c5558;
+  --color-scale-blue-1: #555;
   --color-social-reaction-bg-hover: var(--color-scale-gray-1);
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
   color-scheme: dark;

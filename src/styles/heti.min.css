@@ -107,7 +107,7 @@ a,
   margin-inline-start: auto;
   margin-inline-end: auto;
   border: 0;
-  background-color: var(--theme-divider)
+  background-color: var(--theme-divider);
 }
 
 .heti p {
@@ -178,6 +178,10 @@ blockquote blockquote {
   .heti pre {
     background-color: rgba(255, 255, 255, 0.03);
   }
+}
+
+.dark .heti pre {
+  background-color: #111;
 }
 
 .heti pre code {
