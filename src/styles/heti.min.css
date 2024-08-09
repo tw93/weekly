@@ -181,7 +181,7 @@ blockquote blockquote {
 }
 
 .dark .heti pre {
-  background-color: #111;
+  background-color: #151515 !important;
 }
 
 .heti pre code {
