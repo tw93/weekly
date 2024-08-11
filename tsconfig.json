@@ -8,7 +8,9 @@
     "paths": {
       "@layouts/*": ["./src/layouts/*"],
       "@/*": ["./src/*"]
-    }
-  },
-  "moduleResolution": "node"
+    },
+    "moduleResolution": "node",
+    "strict": false,
+    "esModuleInterop": true
+  }
 }

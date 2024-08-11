@@ -9,21 +9,23 @@ import rehypeCustomizeImageSrc from './rehype-customize-image-src.js';
 
 const DEFAULT_FORMAT = 'YYYY/MM/DD';
 const WEEKLY_REPO_NAME = 'tw93/weekly';
+const START_DATE = '2022-10-10';
 
-function getCreateDateFormat(filePath) {
-	return dayjs(fs.statSync(filePath).birthtime).format(DEFAULT_FORMAT);
+function formatDate(date) {
+	return dayjs(date).format(DEFAULT_FORMAT);
 }
 
-function getWeeklyDateFormat(num) {
-	if (num < 100) {
-		return dayjs('2022-10-10')
-			.subtract(100 - num, 'week')
-			.format(DEFAULT_FORMAT);
-	}
-	return getCreateDateFormat(filePath);
+function getFileCreateDate(filePath) {
+	return formatDate(fs.statSync(filePath).birthtime);
 }
 
-function getTwitterImg(num) {
+function getWeeklyDate(num) {
+	return num < 100
+		? formatDate(dayjs(START_DATE).subtract(100 - num, 'week'))
+		: getFileCreateDate(filePath);
+}
+
+function getTwitterImage(num) {
 	return num >= 110 ? `https://weekly.tw93.fun/assets/${num}.jpg` : undefined;
 }
 
@@ -46,14 +48,15 @@ function defaultLayoutPlugin() {
 		frontmatter.pic = frontmatter.pic || SITE.pic;
 
 		if (!frontmatter.date) {
-			frontmatter.date =
-				SITE.repo === WEEKLY_REPO_NAME
-					? getWeeklyDateFormat(filePath.split('/posts/')[1].split('-')[0])
-					: getCreateDateFormat(filePath);
+			const postNumber = filePath.split('/posts/')[1].split('-')[0];
+			frontmatter.date = SITE.repo === WEEKLY_REPO_NAME
+				? getWeeklyDate(postNumber)
+				: getFileCreateDate(filePath);
 		}
 
 		if (SITE.repo === WEEKLY_REPO_NAME) {
-			frontmatter.twitterImg = getTwitterImg(filePath.split('/posts/')[1].split('-')[0]);
+			const postNumber = filePath.split('/posts/')[1].split('-')[0];
+			frontmatter.twitterImg = getTwitterImage(postNumber);
 		}
 	};
 }
@@ -62,7 +65,7 @@ export default defineConfig({
 	prefetch: true,
 	integrations: [tailwind()],
 	markdown: {
-		remarkPlugins: [defaultLayoutPlugin],
-		rehypePlugins: [rehypeCustomizeImageSrc],
+			remarkPlugins: [defaultLayoutPlugin],
+			rehypePlugins: [rehypeCustomizeImageSrc],
 	},
 });

@@ -7,22 +7,18 @@ import { parseTitle, sortPosts } from '@/util';
 const posts = await Astro.glob('../pages/posts/*.md');
 const allPosts = sortPosts(posts);
 
-let currentPageMatch = currentPage.slice(1);
-if (currentPageMatch.slice(-1) == '/') {
-  currentPageMatch = currentPageMatch.substring(0, currentPageMatch.length - 1);
-}
-const sidebarSections = allPosts.reduce((col, item, i) => {
-  const url = item.url;
+let currentPageMatch = currentPage.slice(1).replace(/\/$/, '');
+
+const sidebarSections = allPosts.reduce((sections, post, index) => {
   const route = {
-    title: parseTitle(url),
-    link: url.slice(1),
+    title: parseTitle(post.url),
+    link: post.url.slice(1),
   };
-  if (i === 0) {
-    const pesudoSection = { text: '' };
-    col.push({ ...pesudoSection, children: [] });
+  if (index === 0) {
+    sections.push({ text: '', children: [] });
   }
-  col[col.length - 1].children.push(route);
-  return col;
+  sections[sections.length - 1].children.push(route);
+  return sections;
 }, []);
 ---
 

@@ -26,27 +26,21 @@ const content = {
   description: desc,
   twitterImg,
 };
-const currentUrl = SITE.homePage + currentPage;
+const currentUrl = `${SITE.homePage}${currentPage}`;
 
 // The next article
 const posts = await Astro.glob('../pages/posts/*.md');
 const allPosts = sortPosts(posts);
 const postIndex = getIndex(currentPage);
-let nextUrl = '';
-if (postIndex > 2) {
-  nextUrl = allPosts[allPosts.length - postIndex + 1].url;
-}
-let prevUrl = '';
-if (postIndex < allPosts.length) {
-  prevUrl = allPosts[allPosts.length - postIndex - 1].url;
-}
+let nextUrl = postIndex > 2 ? allPosts[allPosts.length - postIndex + 1].url : '';
+let prevUrl = postIndex < allPosts.length ? allPosts[allPosts.length - postIndex - 1].url : '';
 ---
 
-<html lang='ch'>
+<html lang="ch">
   <head>
     <HeadCommon />
     <HeadSEO content={content} pageURL={currentUrl} />
-    <meta name='generator' content={Astro.generator} />
+    <meta name="generator" content={Astro.generator} />
     <title>{SITE.title}{title}</title>
     <style>
       body {
@@ -58,9 +52,7 @@ if (postIndex < allPosts.length) {
       .layout {
         display: grid;
         grid-auto-flow: column;
-        grid-template-columns:
-          minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
-          minmax(var(--gutter), 1fr);
+        grid-template-columns: minmax(var(--gutter), 1fr) minmax(0, var(--max-width)) minmax(var(--gutter), 1fr);
         overflow-x: hidden;
       }
 
@@ -163,17 +155,21 @@ if (postIndex < allPosts.length) {
           font-size: 1.8rem;
         }
       }
+
       .post-footer a {
         color: var(--theme-accent);
       }
+
       .post-footer a:hover {
         border-block-end: none;
       }
+
       .heti .pay-button {
         color: var(--theme-bg);
         background-color: var(--theme-text);
         padding-block-end: 9px;
       }
+
       .heti .pay-button:hover {
         border-block-end: none;
         padding-block-end: 9px;
@@ -181,79 +177,78 @@ if (postIndex < allPosts.length) {
     </style>
   </head>
   <body>
-    <main class='layout'>
-      <aside id='grid-left' class='grid-sidebar' title='Site Navigation'>
+    <main class="layout">
+      <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
         <LeftSidebar currentPage={currentPage} />
       </aside>
-      <div id='grid-main'>
+      <div id="grid-main">
         <div
-          class='markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5'
-          id='write'
+          class="markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
+          id="write"
         >
-          <h1 class='content-title flex align-middle text-gray-800 dark:text-gray-200'>
-            <a class='logo inline-block md:hidden visible' href='/'><AstroLogo size={40} /> </a>
-            <span data-pagefind-meta='title'>{title}</span>
+          <h1 class="content-title flex align-middle text-gray-800 dark:text-gray-200">
+            <a class="logo inline-block md:hidden visible" href="/"><AstroLogo size={40} /> </a>
+            <span data-pagefind-meta="title">{title}</span>
             <Search />
           </h1>
           <slot />
-          <div class='flex align-middle justify-center mt-4'>
+          <div class="flex align-middle justify-center mt-4">
             <a
-              class='inline-block items-center rounded px-5 py-3 text-sm font-medium pay-button'
-              href='https://miaoyan.app/cats.html?name=潮流周刊'
-              target='_blank'
-              rel='noreferrer'>你觉得有收获吗？❤️</a
+              class="inline-block items-center rounded px-5 py-3 text-sm font-medium pay-button"
+              href="https://miaoyan.app/cats.html?name=潮流周刊"
+              target="_blank"
+              rel="noreferrer">你觉得有收获吗？❤️</a
             >
           </div>
           <hr />
-          <div class='flex justify-between md:flex-row flex-col mt-2 post-footer'>
-            <div class='text-gray-800 dark:text-gray-200 flex-1'>
+          <div class="flex justify-between md:flex-row flex-col mt-2 post-footer">
+            <div class="text-gray-800 dark:text-gray-200 flex-1">
               发布日期：<a
                 href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
-                target='_blank'
-                data-pagefind-sort='date'
-                title='Edit'>{date}</a
+                target="_blank"
+                data-pagefind-sort="date"
+                title="Edit">{date}</a
               >
             </div>
-            <div class='md:mt-0 mt-4 flex-1 text-right'>
+            <div class="md:mt-0 mt-4 flex-1 text-right">
               {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
               {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
-              <a href='/'>去首页 |</a>
-              <a href={`https://twitter.com/${SITE.twitterId}`} target='_blank' title='Follow'>Twitter</a>
+              <a href="/">去首页 |</a>
+              <a href={`https://twitter.com/${SITE.twitterId}`} target="_blank" title="Follow">Twitter</a>
               <a
                 href={`https://github.com/${SITE.githubId}/weekly`}
-                title='Star'
-                target='_blank'
-                class='lg:inline-block hidden'
+                title="Star"
+                target="_blank"
+                class="lg:inline-block hidden"
               >
                 | Github</a
               >
-              <a href='/rss.xml' title='Subscribe' target='_blank' class='xl:inline-block hidden'> | RSS</a>
+              <a href="/rss.xml" title="Subscribe" target="_blank" class="xl:inline-block hidden"> | RSS</a>
             </div>
           </div>
         </div>
         <script
           is:inline
-          id='giscus-script'
-          src='https://giscus.app/client.js'
+          id="giscus-script"
+          src="https://giscus.app/client.js"
           data-repo={SITE.repo}
-          data-repo-id='R_kgDOG4TsQA'
-          data-category='General'
-          data-category-id='DIC_kwDOG4TsQM4CR4bV'
-          data-mapping='title'
-          data-strict='0'
-          data-reactions-enabled='1'
-          data-emit-metadata='0'
-          data-input-position='bottom'
-          data-theme='https://gw.alipayobjects.com/os/k/weekly/comment.css'
-          data-lang='zh-CN'
-          crossorigin='anonymous'
+          data-repo-id="R_kgDOG4TsQA"
+          data-category="General"
+          data-category-id="DIC_kwDOG4TsQM4CR4bV"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="https://gw.alipayobjects.com/os/k/weekly/comment.css"
+          data-lang="zh-CN"
+          crossorigin="anonymous"
           async></script>
       </div>
     </main>
     <Footer />
     <script is:inline>
       window.addEventListener('DOMContentLoaded', () => {
-        // The second image is the cover image
         const images = document.querySelectorAll('#write img');
         images.forEach((img, index) => {
           if (index > 1) {

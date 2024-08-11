@@ -3,32 +3,32 @@ import '@pagefind/default-ui/css/ui.css';
 import SearchIcon from './SearchIcon.astro';
 ---
 
-<site-search id='search' class='ms-auto relative md:inline-block hidden site-search'>
+<site-search id="search" class="ms-auto relative md:inline-block hidden site-search">
   <button
     data-open-modal
     disabled
-    class='flex items-center justify-center rounded-md gap-1 search-icon'
-    title='输入/进行搜索'
+    class="flex items-center justify-center rounded-md gap-1 search-icon"
+    title="输入/进行搜索"
   >
     <SearchIcon />
   </button>
   <dialog
-    aria-label='search'
-    class='h-full max-h-full w-full max-w-full shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left'
+    aria-label="search"
+    class="h-full max-h-full w-full max-w-full shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left"
   >
-    <div class='dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6'>
-      <button data-close-modal class='ms-auto cursor-pointer rounded-full px-4 py-2 close-icon'>X</button>
+    <div class="dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6">
+      <button data-close-modal class="ms-auto cursor-pointer rounded-full px-4 py-2 close-icon">X</button>
       {
         import.meta.env.DEV ? (
-          <div class='mx-auto text-center'>
+          <div class="mx-auto text-center">
             <p>
               Search is only available in production builds. <br />
               Try building and previewing the site to test it out locally.
             </p>
           </div>
         ) : (
-          <div class='search-container w-full'>
-            <div id='pagefind__search' />
+          <div class="search-container w-full">
+            <div id="pagefind__search" />
           </div>
         )
       }
@@ -41,8 +41,8 @@ import SearchIcon from './SearchIcon.astro';
   class SiteSearch extends HTMLElement {
     constructor() {
       super();
-      const openBtn = this.querySelector('button[data-open-modal]');
-      const closeBtn = this.querySelector('button[data-close-modal]');
+      const openBtn = this.querySelector('button[data-open-modal]') as HTMLButtonElement;
+      const closeBtn = this.querySelector('button[data-close-modal]') as HTMLButtonElement;
       const dialog = this.querySelector('dialog');
       const dialogFrame = this.querySelector('.dialog-frame');
 

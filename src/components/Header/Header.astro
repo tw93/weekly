@@ -5,121 +5,121 @@ import HeaderRight from './HeaderRight.astro';
 ---
 
 <header>
-	<nav class='nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 ml-4' title={SITE.title}>
-		<div class='logo flex md:ml-0 ml-3'>
-			<a href='/' class='logo-image'>
-				<AstroLogo size={40} />
-			</a>
-			<a href='/'>
-				<h1 class='text-gray-800 dark:text-gray-200'>{SITE.title}</h1>
-			</a>
-		</div>
-		<HeaderRight />
-	</nav>
+  <nav class="nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 ml-4" title={SITE.title}>
+    <div class="logo flex md:ml-0 ml-3">
+      <a href="/" class="logo-image">
+        <AstroLogo size={40} />
+      </a>
+      <a href="/">
+        <h1 class="text-gray-800 dark:text-gray-200">{SITE.title}</h1>
+      </a>
+    </div>
+    <HeaderRight />
+  </nav>
 </header>
 
 <style>
-	header {
-		height: var(--theme-navbar-height);
-		width: 100%;
-		background-color: var(--theme-navbar-bg);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		overflow: hidden;
-		top: 0;
-	}
+  header {
+    height: var(--theme-navbar-height);
+    width: 100%;
+    background-color: var(--theme-navbar-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    top: 0;
+  }
 
-	.logo {
-		display: flex;
-		font-size: 2rem;
-		flex-shrink: 0;
-		font-weight: 600;
-		line-height: 1;
-		gap: 0.25em;
-	}
+  .logo {
+    display: flex;
+    font-size: 2rem;
+    flex-shrink: 0;
+    font-weight: 600;
+    line-height: 1;
+    gap: 0.25em;
+  }
 
-	.logo a {
-		padding: 0.5em 0.25em;
-		margin: -0.5em -0.25em;
-		text-decoration: none;
-		font-weight: bolder;
-		display: block;
-	}
+  .logo a {
+    padding: 0.5em 0.25em;
+    margin: -0.5em -0.25em;
+    text-decoration: none;
+    font-weight: bolder;
+    display: block;
+    transition: color 100ms ease-out;
+    color: var(--theme-text);
+  }
 
-	.logo .logo-image {
-		margin-top: -0.6em;
-	}
+  .logo a:hover,
+  .logo a:focus {
+    color: var(--theme-accent);
+  }
 
-	.logo a {
-		transition: color 100ms ease-out;
-		color: var(--theme-text);
-	}
+  .logo .logo-image {
+    margin-top: -0.6em;
+  }
 
-	.logo a:hover,
-	.logo a:focus {
-		color: var(--theme-accent);
-	}
+  .logo h1 {
+    font: inherit;
+    margin: 0;
+  }
 
-	.logo h1 {
-		font: inherit;
-		margin: 0;
-	}
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+    margin: 10px 0 5px;
+  }
 
-	.nav-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		gap: 1em;
-		margin: 10px 0 5px;
-	}
+  @media (max-width: 50em) {
+    .nav-wrapper {
+      margin: 5px 0;
+    }
+  }
 
-	@media (max-width: 50em) {
-		.nav-wrapper {
-			margin: 5px 0 5px;
-		}
-	}
+  :root {
+    --docsearch-primary-color: var(--theme-accent);
+    --docsearch-logo-color: var(--theme-text);
+  }
 
-	:root {
-		--docsearch-primary-color: var(--theme-accent);
-		--docsearch-logo-color: var(--theme-text);
-	}
+  .search-item {
+    display: none;
+    position: relative;
+    z-index: 10;
+    flex-grow: 1;
+    padding-right: 0.7rem;
+    display: flex;
+    max-width: 200px;
+  }
 
-	.search-item {
-		display: none;
-		position: relative;
-		z-index: 10;
-		flex-grow: 1;
-		padding-right: 0.7rem;
-		display: flex;
-		max-width: 200px;
-	}
-	.btn-yellow {
-		color: #a67c52 !important;
-		font-weight: bold;
-	}
-	:global(.search-item > *) {
-		flex-grow: 1;
-	}
-	@media (min-width: 50em) {
-		.search-item {
-			max-width: 400px;
-		}
-	}
+  .btn-yellow {
+    color: #a67c52 !important;
+    font-weight: bold;
+  }
+
+  :global(.search-item > *) {
+    flex-grow: 1;
+  }
+
+  @media (min-width: 50em) {
+    .search-item {
+      max-width: 400px;
+    }
+  }
 </style>
 
 <style is:global>
-	@media (min-width: 1412px) {
-		.xl\:max-w-7xl {
-			max-width: 83.6rem;
-		}
-	}
+  @media (min-width: 1412px) {
+    .xl\:max-w-7xl {
+      max-width: 83.6rem;
+    }
+  }
 
-	@media (min-width: 1080px) .lg\:max-w-5xl {
-		max-width: 62.4rem;
-	}
+  @media (min-width: 1080px) .lg\:max-w-5xl {
+    max-width: 62.4rem;
+  }
 
-	@media (min-width: 768px) .md\:max-w-2xl {
-		max-width: 41.2rem;
-	}
+  @media (min-width: 768px) .md\:max-w-2xl {
+    max-width: 41.2rem;
+  }
 </style>

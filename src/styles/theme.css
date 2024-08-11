@@ -49,7 +49,8 @@ site-search dialog {
   background-color: var(--theme-bg);
   color: var(--theme-text);
 }
-site-search dialog button{
+
+site-search dialog button {
   background-color: var(--theme-text);
   color: var(--theme-bg);
 }
