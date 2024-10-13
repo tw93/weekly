@@ -10,6 +10,11 @@ date: 2024/10/14
 
 ## 潮流工具
 
+**整了一个 Bio Link 自部署版本**  
+<https://hi.tw93.fun/>  
+随手整了一个 Bio Link 自部署版本，用于 Twitter 的个人站点，甚至可以一键唤起 GitHub，假如你需要可右键显示源码自己改一下自用。  
+<img src="https://gw.alipayobjects.com/zos/k/2w/rkisol.png" width="600" />
+
 **Bolt.new：在浏览器里用 AI 驱动的全栈 Web 开发**  
 <https://github.com/stackblitz/bolt.new>  
 Bolt.new 这个思路真好直接在浏览器里面 Prompt、运行、编辑、部署全栈应用，「Prompt, run, edit, and deploy full-stack web applications」，通过 WebContainers 提供支持的浏览器内开发环境集成来弄的。  
