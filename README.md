@@ -2,6 +2,7 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 195 期 - BELLOCO](https://weekly.tw93.fun/posts/195-BELLOCO)
 * [第 194 期 - 暮色落霞](https://weekly.tw93.fun/posts/194-暮色落霞)
 * [第 193 期 - 猫的陪伴](https://weekly.tw93.fun/posts/193-猫的陪伴)
 * [第 192 期 - 青皮橘子](https://weekly.tw93.fun/posts/192-青皮橘子)
