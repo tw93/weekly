@@ -51,6 +51,6 @@ Anthropic CEO Dario Amodei 在 Claude opus 3.5 发布前写了一篇非常长的
 当你洗澡的时候用上无印良品这个刷子，你就习惯回不去了，很好用，配合上他家的搓澡泥。  
 <img src="https://gw.alipayobjects.com/zos/k/pm/GZnmaY7awAAGu3e.jpeg" width="600" />
 
-**最近非常喜欢这句话，船停在港口是安全的，但这并不是造船的的目。**  
+**最近非常喜欢这句话，船停在港口是安全的，但这并不是造船的目的。**  
 A ship is always safe at shore, but that is not what it's built for.  
 <img src="https://gw.alipayobjects.com/zos/k/cl/qdsI1G.png" width="600" />
