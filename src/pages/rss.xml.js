@@ -17,11 +17,7 @@ export function GET() {
     title: "潮流周刊",
     description: "记录工程师 Tw93 的不枯燥生活",
     site: "https://weekly.tw93.fun/",
-    customData: `<image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image>`,
-    follow_challenge: {
-      feed_id: "41147805276726275",
-      user_id: "42909600318350336",
-    },
+    customData: `<image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image><follow_challenge><feedId>41147805276726275</feedId><userId>42909600318350336</userId></follow_challenge>`,
     items: posts.map((item) => {
       const [issueNumber, issueTitle] = item.url.split("/posts/")[1].split("-");
       const title = `第${issueNumber}期 - ${issueTitle}`;
