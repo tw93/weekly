@@ -132,3 +132,8 @@ input:focus {
   padding-inline-end: 6px;
   padding-inline-start: 6px;
 }
+
+.link-secondary.overflow-hidden.text-ellipsis {
+  text-decoration-line: none;
+  word-spacing: -2px;
+}
