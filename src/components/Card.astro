@@ -10,24 +10,24 @@ const { pic, desc, date } = post.frontmatter;
   href={post.url}
   data-astro-prefetch
   data-image={pic}
-  class="pb-3 md:mt-5 mt-4 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 w-96 card-content preload-link"
+  class='pb-3 md:mt-5 mt-4 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 sm:w-96 w-full card-content preload-link'
 >
   <img
-    data-placeholder-background="linear-gradient(to bottom, var(--placeholder-gradient-start), var(--placeholder-gradient-end))"
+    data-placeholder-background='linear-gradient(to bottom, var(--placeholder-gradient-start), var(--placeholder-gradient-end))'
     data-src={`${pic}?x-oss-process=image/resize,w_640/format,webp`}
     data-alt={title}
-    class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
+    class='lozad block md:w-80 md:h-48 sm:w-96 w-full sm:h-52 h-56 rounded-t-md'
   />
   <div
-    class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3"
+    class='w-full flex justify-between items-center leading-tight pt-4 sm:pl-3 sm:pr-3 pl-1 pr-1'
   >
-    <div class="text-gray-800 dark:text-gray-200">{title}</div>
-    <div class="text-grey-darker text-sm text-gray-600 dark:text-gray-300">
+    <div class='text-gray-800 dark:text-gray-200'>{title}</div>
+    <div class='text-grey-darker text-sm text-gray-600 dark:text-gray-300'>
       {date}
     </div>
   </div>
   <p
-    class="text-gray-600 dark:text-gray-300 text-sm md:w-78 w-94 overflow-hidden pt-2.5 line-clamp-2 px-3 w-full h-12"
+    class='text-gray-600 dark:text-gray-300 text-sm md:w-78 w-94 overflow-hidden pt-2.5 line-clamp-2 sm:px-3 px-1 w-full h-12'
   >
     {desc}
   </p>
