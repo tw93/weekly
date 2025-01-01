@@ -1,4 +1,4 @@
-@import url('https://gw.alipayobjects.com/os/k/font/lxgwwenkaiscreenr.css');
+@import url("https://gw.alipayobjects.com/os/k/font/lxgwwenkaiscreenr.css");
 
 main {
   --color-btn-text: #24292f;
@@ -52,18 +52,18 @@ main {
 }
 
 main {
-  font-family: 'LXGW WenKai Screen R', sans-serif;
+  font-family: "LXGW WenKai Screen R", sans-serif;
   letter-spacing: 0.6px;
   color: var(--theme-text);
   background-color: var(--theme-bg);
 }
 
 main .pagination-loader-container {
-  background-image: url('https://github.com/images/modules/pulls/progressive-disclosure-line.svg');
+  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
 }
 
 main .gsc-loading-image {
-  background-image: url('https://github.githubassets.com/images/mona-loading-default.gif');
+  background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
 }
 
 main .gsc-left-header .color-text-secondary,
@@ -106,7 +106,7 @@ main .gsc-comment-box-textarea:focus,
   visibility: hidden;
 }
 .gsc-reactions-count:after {
-  content: '欢迎一起交流~';
+  content: "欢迎一起交流~";
   visibility: visible;
   font-size: 1.4rem;
   display: inline-block;

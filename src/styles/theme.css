@@ -1,7 +1,8 @@
 :root {
-  --font-fallback: LXGW WenKai Screen R, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --font-fallback: LXGW WenKai Screen R, Helvetica, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji;
   --font-body: var(--font-fallback);
-  --font-mono: 'SF Mono', Consolas, Monaco, 'Courier New', Courier, monospace;
+  --font-mono: "SF Mono", Consolas, Monaco, "Courier New", Courier, monospace;
   --theme-navbar-height: 6rem;
 }
 
@@ -19,7 +20,7 @@
   --pagefind-ui-tag: #eeeeee;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   color-scheme: dark;
   --theme-accent: #e8a15a;
   --theme-text: #e7e9ea;

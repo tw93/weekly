@@ -156,7 +156,7 @@ a > code {
 }
 
 a > code::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -371,7 +371,7 @@ h2.heading {
   cursor: zoom-in;
 }
 
-img.border{
+img.border {
   border-width: 36px;
   border-style: solid;
   border-image-source: url(https://gw.alipayobjects.com/zos/k/y1/lpOIMY.png);

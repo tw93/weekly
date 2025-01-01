@@ -1,5 +1,5 @@
 ---
-import { parseTitle } from '@/util';
+import { parseTitle } from "@/util";
 
 const { post } = Astro.props;
 const title = parseTitle(post.url);
@@ -18,11 +18,17 @@ const { pic, desc, date } = post.frontmatter;
     data-alt={title}
     class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
   />
-  <div class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3">
+  <div
+    class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3"
+  >
     <div class="text-gray-800 dark:text-gray-200">{title}</div>
-    <div class="text-grey-darker text-sm text-gray-600 dark:text-gray-300">{date}</div>
+    <div class="text-grey-darker text-sm text-gray-600 dark:text-gray-300">
+      {date}
+    </div>
   </div>
-  <p class="text-gray-600 dark:text-gray-300 text-sm md:w-78 w-94 overflow-hidden pt-2.5 line-clamp-2 px-3 w-full h-12">
+  <p
+    class="text-gray-600 dark:text-gray-300 text-sm md:w-78 w-94 overflow-hidden pt-2.5 line-clamp-2 px-3 w-full h-12"
+  >
     {desc}
   </p>
 </a>

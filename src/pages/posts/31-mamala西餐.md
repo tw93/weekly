@@ -1,8 +1,8 @@
-<img src="https://gw.alipayobjects.com/zos/k/6f/L3GWS7.jpg" width="800" />  
+<img src="https://gw.alipayobjects.com/zos/k/6f/L3GWS7.jpg" width="800" />
 
-<small>封面图摄于 mamala 家的牛排，挺不错的一家西餐厅，窗外风景极其不错，适合在有仪式感的日子去吃一次~ </small>  
+<small>封面图摄于 mamala 家的牛排，挺不错的一家西餐厅，窗外风景极其不错，适合在有仪式感的日子去吃一次~ </small>
 
-> **记录每周看到的前端潮流技术，筛选后用接地气方式发布于此，关注此专栏可以及时收到更新~**  
+> **记录每周看到的前端潮流技术，筛选后用接地气方式发布于此，关注此专栏可以及时收到更新~**
 
 ## 前端技术
 
@@ -27,30 +27,30 @@
 **rust-raspberrypi-OS-tutorials：树莓派教程**  
 <https://github.com/rust-embedded/rust-raspberrypi-OS-tutorials>  
 真心很潮流，有空很有必要去玩一玩这个东西。  
-<img src="https://cdn.fliggy.com/upic/ZzivqL.gif" width="800" />  
+<img src="https://cdn.fliggy.com/upic/ZzivqL.gif" width="800" />
 
 **playground-macos：用前端实现 macOS's GUI**  
 <https://github.com/Renovamen/playground-macos>  
 挺牛逼的，可访问 <https://portfolio.zxh.io/> 查看。  
-<img src="https://cdn.fliggy.com/upic/Dmuo5D.gif" width="800" />  
+<img src="https://cdn.fliggy.com/upic/Dmuo5D.gif" width="800" />
 
 **getx：Flutter 中的状态管理工具**  
 <https://github.com/jonataslaw/getx/blob/master/README.zh-cn.md>  
 GetX 是 Flutter 上的一个轻量且强大的解决方案：高性能的状态管理、智能的依赖注入和便捷的路由管理。  
-<img src="https://cdn.fliggy.com/upic/ORcYpo.jpg" width="800" />  
+<img src="https://cdn.fliggy.com/upic/ORcYpo.jpg" width="800" />
 
 **slidev：用 Markdown 来快速写 PPT**  
 <https://github.com/slidevjs/slidev>  
 写 ppt 很容易浪费太多事情，更好的内部表达方式应该是语雀，假如需要对外分享，但不想麻烦，可以试试 Anthony Fu 的新作品。  
-<img src="https://cdn.fliggy.com/upic/asxsQu.gif" width="800" />  
+<img src="https://cdn.fliggy.com/upic/asxsQu.gif" width="800" />
 
 **terminal-kit：命令行工具包**  
 <https://github.com/cronvel/terminal-kit>  
 可以用命令行工作写出类似这样的效果。  
-<img src="https://cdn.fliggy.com/upic/B5rzQI.gif" width="800" />  
+<img src="https://cdn.fliggy.com/upic/B5rzQI.gif" width="800" />
 
 **zx：一个更好的写脚本的工具**  
-<https://github.com/google/zx>  
+<https://github.com/google/zx>
 
 ```shell
 #!/usr/bin/env zx

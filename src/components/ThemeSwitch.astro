@@ -1,10 +1,22 @@
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-  <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+  <svg
+    class="sun-and-moon"
+    aria-hidden="true"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
     <mask class="moon" id="moon-mask">
       <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
       <circle cx="24" cy="10" r="6" fill="black"></circle>
     </mask>
-    <circle class="sun" cx="12" cy="12" r="6" fill="currentColor" mask="url(#moon-mask)"></circle>
+    <circle
+      class="sun"
+      cx="12"
+      cy="12"
+      r="6"
+      fill="currentColor"
+      mask="url(#moon-mask)"></circle>
     <g class="sun-beams" stroke="currentColor">
       <line x1="12" y1="1" x2="12" y2="3"></line>
       <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -54,29 +66,29 @@
     transition: transform 0.5s ease;
   }
 
-  [data-theme='dark'] .sun-and-moon > .sun {
+  [data-theme="dark"] .sun-and-moon > .sun {
     transform: scale(1.75);
   }
 
-  [data-theme='dark'] .sun-and-moon > .sun-beams {
+  [data-theme="dark"] .sun-and-moon > .sun-beams {
     opacity: 0;
   }
 
-  [data-theme='dark'] .sun-and-moon > .moon > circle {
+  [data-theme="dark"] .sun-and-moon > .moon > circle {
     transform: translateX(-7px);
     transition: transform 0.5s ease;
   }
 
-  [data-theme='dark'] .moon-circle {
+  [data-theme="dark"] .moon-circle {
     transform: translateX(-12px) scale(0.92);
   }
 
-  [data-theme='dark'] .moon-crater {
+  [data-theme="dark"] .moon-crater {
     transform: translateX(-7px);
   }
 
-  [data-theme='light'] .moon-circle,
-  [data-theme='light'] .moon-crater {
+  [data-theme="light"] .moon-circle,
+  [data-theme="light"] .moon-crater {
     opacity: 0;
   }
 
@@ -88,17 +100,22 @@
 </style>
 
 <script is:inline>
-  window.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const giscusScript = document.getElementById('giscus-script');
-    const GISCUS_DARK_THEME = 'https://gw.alipayobjects.com/os/k/weekly3/comment-dark.css';
-    const GISCUS_LIGHT_THEME = 'https://gw.alipayobjects.com/os/k/weekly3/comment.css';
+  window.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("theme-toggle");
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const giscusScript = document.getElementById("giscus-script");
+    const GISCUS_DARK_THEME =
+      "https://gw.alipayobjects.com/os/k/weekly3/comment-dark.css";
+    const GISCUS_LIGHT_THEME =
+      "https://gw.alipayobjects.com/os/k/weekly3/comment.css";
 
     const updateIframeTheme = (newTheme) => {
-      const iframe = document.querySelector('iframe.giscus-frame');
+      const iframe = document.querySelector("iframe.giscus-frame");
       if (iframe) {
-        iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: newTheme } } }, 'https://giscus.app');
+        iframe.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: newTheme } } },
+          "https://giscus.app",
+        );
         return true;
       }
       return false;
@@ -106,7 +123,7 @@
 
     const changeGiscusTheme = (newTheme) => {
       if (giscusScript) {
-        giscusScript.setAttribute('data-theme', newTheme);
+        giscusScript.setAttribute("data-theme", newTheme);
         if (!updateIframeTheme(newTheme)) {
           setTimeout(() => updateIframeTheme(newTheme), 200);
         }
@@ -114,21 +131,25 @@
     };
 
     const setTheme = (theme) => {
-      document.body.classList.toggle('dark', theme === 'dark');
-      changeGiscusTheme(theme === 'dark' ? GISCUS_DARK_THEME : GISCUS_LIGHT_THEME);
-      document.body.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
+      document.body.classList.toggle("dark", theme === "dark");
+      changeGiscusTheme(
+        theme === "dark" ? GISCUS_DARK_THEME : GISCUS_LIGHT_THEME,
+      );
+      document.body.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
     };
 
     const toggleTheme = () => {
-      const currentTheme = document.body.getAttribute('data-theme');
-      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+      const currentTheme = document.body.getAttribute("data-theme");
+      setTheme(currentTheme === "dark" ? "light" : "dark");
     };
 
-    const savedTheme = localStorage.getItem('theme');
-    setTheme(savedTheme || (prefersDarkScheme.matches ? 'dark' : 'light'));
+    const savedTheme = localStorage.getItem("theme");
+    setTheme(savedTheme || (prefersDarkScheme.matches ? "dark" : "light"));
 
-    themeToggle.addEventListener('click', toggleTheme);
-    prefersDarkScheme.addEventListener('change', (e) => setTheme(e.matches ? 'dark' : 'light'));
+    themeToggle.addEventListener("click", toggleTheme);
+    prefersDarkScheme.addEventListener("change", (e) =>
+      setTheme(e.matches ? "dark" : "light"),
+    );
   });
 </script>

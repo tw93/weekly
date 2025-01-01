@@ -1,24 +1,30 @@
 ---
-import ThemeSwitch from './ThemeSwitch.astro';
+import ThemeSwitch from "./ThemeSwitch.astro";
 ---
 
 <ThemeSwitch />
 
-<script type="text/javascript" src="https://gw.alipayobjects.com/os/k/h3/heti-addon.min.js"></script>
-<script type="text/javascript" src="https://gw.alipayobjects.com/os/k/3j/lozad.min.js"></script>
-<script type="text/javascript" src="https://gw.alipayobjects.com/os/k/x5/intense.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://gw.alipayobjects.com/os/k/h3/heti-addon.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://gw.alipayobjects.com/os/k/3j/lozad.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://gw.alipayobjects.com/os/k/x5/intense.min.js"></script>
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Optimization of letter spacing
-    const heti = new Heti('.heti');
+    const heti = new Heti(".heti");
     heti.autoSpacing();
 
     // Lazy loading of images
-    const observer = lozad('.lozad', {
+    const observer = lozad(".lozad", {
       loaded: (el) => {
-        el.alt = el.getAttribute('data-alt');
+        el.alt = el.getAttribute("data-alt");
       },
     });
     observer.observe();
@@ -26,12 +32,12 @@ import ThemeSwitch from './ThemeSwitch.astro';
     // Open external links in a new tab
     Array.from(document.links).forEach((link) => {
       if (link.hostname !== window.location.hostname) {
-        link.target = '_blank';
+        link.target = "_blank";
       }
     });
 
     // Image zoom for non-mobile devices
-    const zoomImgs = document.querySelectorAll('#write img');
+    const zoomImgs = document.querySelectorAll("#write img");
     if (zoomImgs.length > 0 && !/Android|iPhone/i.test(navigator.userAgent)) {
       Intense && Intense(zoomImgs);
     }
@@ -39,13 +45,16 @@ import ThemeSwitch from './ThemeSwitch.astro';
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DT01FBW30E" is:inline></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-DT01FBW30E"
+  is:inline></script>
 <script>
   // @ts-nocheck
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
   }
-  gtag('js', new Date());
-  gtag('config', 'G-DT01FBW30E');
+  gtag("js", new Date());
+  gtag("config", "G-DT01FBW30E");
 </script>
