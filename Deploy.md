@@ -20,7 +20,7 @@
 2. 确保 Fork 的代码已上传到 Github，进入 [Vercel](https://vercel.com/new) 选择 `Continue with GitHub`，将对应仓库导入
 3. 导入后，确认 FRAMEWORK PRESET 为 Astro（[截图](https://gw.alipayobjects.com/zos/k/ic/0BffKE.png)），若未选中，请选择 Astro，点击 Deploy，稍等片刻，等待部署完成
 4. 部署完成后，参考[截图](https://gw.alipayobjects.com/zos/k/e3/QLS7dG.png)位置，即为你的域名地址，点击即可访问，非常简单
-5. 评论系统使用的是我的 key，若需自用，请参考 [giscus](https://giscus.app/zh-CN) 自行配置
+5. **评论系统使用的是我的 key，若需自用，请参考 [giscus](https://giscus.app/zh-CN) 自行配置**
 6. 请务必将 `config.ts` 中的信息配置为你自己的信息，特别是 repo，防止出现不可预料的错误
 
 ### 最后

@@ -806,7 +806,6 @@ blockquote blockquote {
 
 .heti--annotation em {
   text-emphasis: filled circle;
-  text-emphasis-position: under;
   font-weight: 400;
 }
 
@@ -913,7 +912,6 @@ blockquote blockquote {
 
 .heti .heti-em {
   text-emphasis: filled circle;
-  text-emphasis-position: under;
 }
 
 .heti .heti-em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
