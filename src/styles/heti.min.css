@@ -805,14 +805,14 @@ blockquote blockquote {
 }
 
 .heti--annotation em {
-  -webkit-text-emphasis: filled circle;
-  -webkit-text-emphasis-position: under;
+  text-emphasis: filled circle;
+  text-emphasis-position: under;
   font-weight: 400;
 }
 
 .heti--annotation em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .heti--annotation em:not(:lang(zh)) {
-  -webkit-text-emphasis: none;
+  text-emphasis: none;
 }
 
 .heti--annotation .heti-meta {
@@ -912,13 +912,13 @@ blockquote blockquote {
 }
 
 .heti .heti-em {
-  -webkit-text-emphasis: filled circle;
-  -webkit-text-emphasis-position: under;
+  text-emphasis: filled circle;
+  text-emphasis-position: under;
 }
 
 .heti .heti-em:not(:lang(zh)):not(:lang(ja)):not(:lang(kr)),
 .heti .heti-em:not(:lang(zh)) {
-  -webkit-text-emphasis: none;
+  text-emphasis: none;
 }
 
 .heti .heti-ruby--inline {
@@ -1084,9 +1084,6 @@ span.emoji {
   -moz-box-orient: vertical;
   display: inline-block;
   vertical-align: baseline;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   width: 1em;
   height: 1em;
   background-size: 1em;
@@ -1103,15 +1100,12 @@ span.emoji-sizer {
 }
 
 span.emoji-outer {
-  display: -moz-inline-box;
   display: inline-block;
-  *display: inline;
   height: 1em;
   width: 1em;
 }
 
 span.emoji-inner {
-  display: -moz-inline-box;
   display: inline-block;
   text-indent: -9999px;
   width: 100%;
