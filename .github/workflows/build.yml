@@ -12,25 +12,25 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          python-version: 3.8
+          node-version: '18'
       - uses: actions/cache@v2
-        name: Configure pip caching
+        name: Configure npm caching
         with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-pip-
-      - name: Install Python dependencies
+            ${{ runner.os }}-node-
+      - name: Install Node.js dependencies
         run: |
-          python -m pip install -r requirements.txt
+          npm install
       - name: Update README
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |-
-          python build.py
+          node build.js
           cat README.md
       - name: Commit and push if changed
         run: |-

@@ -24,6 +24,7 @@
   "dependencies": {
     "@pagefind/default-ui": "^1.3.0",
     "astro": "^4.16.18",
+    "axios": "^1.7.9",
     "dayjs": "^1.11.13",
     "lozad": "^1.16.0",
     "motion": "^10.18.0",
