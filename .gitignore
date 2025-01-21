@@ -1,6 +1,7 @@
 # Build output
 .output/
 .astro/
+.astro
 dist/
 
 # Dependencies
