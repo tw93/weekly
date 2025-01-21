@@ -1,6 +1,5 @@
-const fs = require('fs').promises;
-const path = require('path');
-const axios = require('axios');
+import { promises as fs } from 'fs';
+import axios from 'axios';
 
 async function fetchCiTime(filePath) {
   const url = `https://api.github.com/repos/tw93/weekly/commits?path=${filePath}&page=1&per_page=1`;
@@ -10,7 +9,7 @@ async function fetchCiTime(filePath) {
 }
 
 async function main() {
-  const readmeContent = "# 潮流周刊\n\n> 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussiogitns/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~\n\n";
+  const readmeContent = "# 潮流周刊\n\n> 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~\n\n";
 
   const files = await fs.readdir('./src/pages/posts');
   const mdFiles = files
