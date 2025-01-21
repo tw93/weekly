@@ -24,7 +24,7 @@ export function GET() {
       return {
         link: item.url,
         title,
-        description: item.compiledContent(),
+        description: item.frontmatter.desc,
         pubDate: item.frontmatter.date,
       };
     }),
