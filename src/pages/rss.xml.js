@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
-
-export function GET() {
+import sanitizeHtml from "sanitize-html";
+export async function GET() {
   let allPosts = import.meta.glob("./posts/*.md", { eager: true });
   let posts = Object.values(allPosts);
 
@@ -18,15 +18,19 @@ export function GET() {
     description: "记录工程师 Tw93 的不枯燥生活",
     site: "https://weekly.tw93.fun/",
     customData: `<image><url>https://gw.alipayobjects.com/zos/k/qv/coffee-2-icon.png</url></image><follow_challenge><feedId>41147805276726275</feedId><userId>42909600318350336</userId></follow_challenge>`,
-    items: posts.map((item) => {
-      const [issueNumber, issueTitle] = item.url.split("/posts/")[1].split("-");
-      const title = `第${issueNumber}期 - ${issueTitle}`;
-      return {
-        link: item.url,
-        title,
-        description: item.frontmatter.desc,
-        pubDate: item.frontmatter.date,
-      };
-    }),
+    items: await Promise.all(
+      posts.map(async (item) => {
+        const [issueNumber, issueTitle] = item.url
+          .split("/posts/")[1]
+          .split("-");
+        const title = `第${issueNumber}期 - ${issueTitle}`;
+        return {
+          link: item.url,
+          title,
+          description: sanitizeHtml(await item.compiledContent()),
+          pubDate: item.frontmatter.date,
+        };
+      }),
+    ),
   });
 }
