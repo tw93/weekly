@@ -12,10 +12,10 @@ import { parseTitle, sortPosts, getIndex } from "@/util";
 export interface Props {
   frontmatter: {
     date: string;
-    pic: string;
-    desc: string;
+    image: string;
+    description: string;
     url: string;
-    twitterImg: string;
+    socialImage: string;
   };
   title: string;
 }
@@ -25,12 +25,12 @@ const currentPage = pageUrl.pathname;
 
 let title = parseTitle(currentPage);
 
-const { date, pic, desc, url, twitterImg } = Astro.props.frontmatter;
+const { date, image, description, url, socialImage } = Astro.props.frontmatter;
 const content = {
   title,
-  image: pic,
-  description: desc,
-  twitterImg,
+  image: image,
+  description,
+  socialImage,
 };
 const currentUrl = `${SITE.homePage}${currentPage}`;
 

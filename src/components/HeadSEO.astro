@@ -11,19 +11,19 @@ const {
   twitterId,
   homePage,
   title,
-  pic,
+  siteImage,
   description: siteDescription,
 } = SITE;
 const { content = {}, pageURL } = Astro.props;
 const {
   title: contentTitle,
-  twitterImg,
+  socialImage,
   description: contentDescription,
   image,
 } = content;
 
 const pageTitle = contentTitle ? `${title}${contentTitle}` : title;
-const imageSrc = twitterImg || pic;
+const imageSrc = socialImage || siteImage;
 const description = contentDescription || siteDescription;
 const preloadImage = image
   ? `${image}?x-oss-process=image/resize,w_3600/format,webp`

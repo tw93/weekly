@@ -35,17 +35,17 @@ function defaultLayoutPlugin() {
     const { frontmatter } = file.data.astro;
     frontmatter.layout = "@layouts/post.astro";
 
-    if (tree.children[0]?.value && !frontmatter.pic) {
+    if (tree.children[0]?.value && !frontmatter.image) {
       const imageElement = parse(tree.children[0].value).querySelector("img");
-      frontmatter.pic = imageElement.getAttribute("src");
+      frontmatter.image = imageElement.getAttribute("src");
     }
 
     if (tree.children[1]?.children[1]?.value) {
-      frontmatter.desc = tree.children[1].children[1].value;
+      frontmatter.description = tree.children[1].children[1].value;
     }
 
-    frontmatter.desc = frontmatter.desc || SITE.description;
-    frontmatter.pic = frontmatter.pic || SITE.pic;
+    frontmatter.description = frontmatter.description || SITE.description;
+    frontmatter.image = frontmatter.image || SITE.image;
 
     if (!frontmatter.date) {
       const postNumber = filePath.split("/posts/")[1].split("-")[0];
@@ -57,7 +57,7 @@ function defaultLayoutPlugin() {
 
     if (SITE.repo === WEEKLY_REPO_NAME) {
       const postNumber = filePath.split("/posts/")[1].split("-")[0];
-      frontmatter.twitterImg = getTwitterImage(postNumber);
+      frontmatter.socialImage = getTwitterImage(postNumber);
     }
   };
 }
