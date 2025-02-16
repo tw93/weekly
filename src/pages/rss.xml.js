@@ -1,5 +1,4 @@
 import rss from "@astrojs/rss";
-import sanitizeHtml from "sanitize-html";
 export async function GET() {
   let allPosts = import.meta.glob("./posts/*.md", { eager: true });
   let posts = Object.values(allPosts);
@@ -27,7 +26,7 @@ export async function GET() {
         return {
           link: item.url,
           title,
-          description: sanitizeHtml(await item.compiledContent()),
+          description: await item.compiledContent(),
           pubDate: item.frontmatter.date,
         };
       }),
