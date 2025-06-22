@@ -2,6 +2,7 @@
 
 > 记录工程师 Tw93 的不枯燥生活，欢迎订阅，也欢迎 [推荐](https://github.com/tw93/weekly/discussions/22) 你的好东西，Fork 自用可见 [开发文档](https://github.com/tw93/weekly/blob/main/Deploy.md)，期待你玩得开心~
 
+* [第 226 期 - 我爱南京](https://weekly.tw93.fun/posts/226-我爱南京)
 * [第 225 期 - 中国美院](https://weekly.tw93.fun/posts/225-中国美院)
 * [第 224 期 - 初见杨梅](https://weekly.tw93.fun/posts/224-初见杨梅)
 * [第 223 期 - 孤独身影](https://weekly.tw93.fun/posts/223-孤独身影)
