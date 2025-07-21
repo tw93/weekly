@@ -57,7 +57,7 @@ html {
 
 main {
   font-family: "TsangerJinKai02", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
   color: var(--theme-text);
   background-color: var(--theme-bg);
 }

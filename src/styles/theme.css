@@ -36,7 +36,7 @@
 body {
   background: var(--theme-bg);
   color: var(--theme-text);
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
 }
 
 .dark .shadow-md {
