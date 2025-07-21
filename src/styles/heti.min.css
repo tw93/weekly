@@ -1,6 +1,6 @@
 :root {
-  --text-font: "LXGW WenKai Screen R", sans-serif;
-  --code-text-font: "LXGW WenKai Screen R", sans-serif;
+  --text-font: "TsangerJinKai02", "TsangerJinKai02", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  --code-text-font: "SF Mono", sans-serif;
 }
 
 html {
@@ -40,8 +40,8 @@ a,
 .heti {
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
-  line-height: 1.74;
-  letter-spacing: 0.036em;
+  line-height: 1.8;
+  letter-spacing: 0.4px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
@@ -142,7 +142,7 @@ a,
 .heti blockquote p {
   margin-block-end: 0.4em;
   margin-block-start: 0.4em;
-  line-height: 1.74;
+  line-height: 1.8;
 }
 
 blockquote blockquote {
