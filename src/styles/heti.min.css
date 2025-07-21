@@ -7,7 +7,7 @@ html {
   font-size: 16px;
   font-display: swap;
   color: var(--text-color);
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body {
