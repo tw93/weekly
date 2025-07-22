@@ -54,17 +54,14 @@ h6 {
   line-height: 1;
 }
 
-h1,
-h2 {
-  max-width: 40ch;
-}
-
 :is(h2, h3):not(:first-child) {
-  margin-top: 3rem;
+  margin-top: 2.6rem;
+  margin-bottom: -0.6rem;
 }
 
 :is(h4, h5, h6):not(:first-child) {
   margin-top: 2rem;
+  margin-bottom: -0.4rem;
 }
 
 h1 {
@@ -376,4 +373,9 @@ img.border {
   border-image-source: url(https://gw.alipayobjects.com/zos/k/y1/lpOIMY.png);
   border-image-slice: 30;
   border-image-repeat: stretch;
+}
+
+.markdown-body img,
+.markdown-body video {
+  border-radius: 6px;
 }
