@@ -3,20 +3,10 @@
   --code-text-font: SF Mono, sans-serif;
 }
 
-@font-face {
-  font-family: 'STKaiti-Fallback';
-  src: local("STKaiti");
-  size-adjust: 110%;
-  ascent-override: 95%;
-  descent-override: 100%;
-  line-height-override: 1.6;
-}
-
 html {
   font-size: 16px;
   color: var(--text-color);
   -webkit-font-smoothing: subpixel-antialiased;
-  transition: font-family 0.2s ease;
 }
 
 body {
