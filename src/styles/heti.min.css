@@ -25,6 +25,14 @@ img {
   margin-top: 8px;
 }
 
+.heti p > img.lightense-target {
+  margin-top: 8px;
+}
+
+.heti p > img.lightense-target.lightense-open{
+  margin-top: 0;
+}
+
 pre,
 iframe {
   max-width: 900px;
