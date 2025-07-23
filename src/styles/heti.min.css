@@ -350,7 +350,7 @@ blockquote blockquote {
   padding-inline-end: 8px;
   border-width: 1px;
   border-style: solid;
-  border-color: #ccc;
+  border-color: #F2F3F4;
 }
 
 @media (prefers-color-scheme: dark) {

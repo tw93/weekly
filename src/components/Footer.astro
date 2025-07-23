@@ -12,7 +12,7 @@ import ThemeSwitch from "./ThemeSwitch.astro";
   src="https://gw.alipayobjects.com/os/k/3j/lozad.min.js"></script>
 <script
   type="text/javascript"
-  src="https://gw.alipayobjects.com/os/k/x5/intense.min.js"></script>
+  src="https://gw.alipayobjects.com/os/k/s3/lightense.min.js"></script>
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
@@ -38,8 +38,10 @@ import ThemeSwitch from "./ThemeSwitch.astro";
 
     // Image zoom for non-mobile devices
     const zoomImgs = document.querySelectorAll("#write img");
-    if (zoomImgs.length > 0 && !/Android|iPhone/i.test(navigator.userAgent)) {
-      Intense && Intense(zoomImgs);
+    if (zoomImgs.length > 0) {
+      Lightense && Lightense(zoomImgs,{
+         background: 'rgba(255, 255, 255, .8)',
+      });
     }
   });
 </script>
