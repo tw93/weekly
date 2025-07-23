@@ -25,12 +25,12 @@ img {
   margin-top: 8px;
 }
 
-.heti p > img.lightense-target {
+.lightense-target {
   margin-top: 8px;
 }
 
-.heti p > img.lightense-target.lightense-open{
-  margin-top: 0;
+table .lightense-target{
+  margin-top: 0px;
 }
 
 pre,
