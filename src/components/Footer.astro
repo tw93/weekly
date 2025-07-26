@@ -37,7 +37,7 @@ import ThemeSwitch from "./ThemeSwitch.astro";
     });
 
     // Image zoom
-    const zoomImgs = document.querySelectorAll("#write img");
+    const zoomImgs = document.querySelectorAll("#write>img, #write>p>img,#write>table>img");
     if (zoomImgs.length > 0) {
       Lightense && Lightense(zoomImgs,{
          background: 'rgba(255, 255, 255, .8)',
