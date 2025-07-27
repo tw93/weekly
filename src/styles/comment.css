@@ -56,18 +56,28 @@ html {
 }
 
 main {
-  font-family: "TsangerJinKai02", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-family:
+    "TsangerJinKai02",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji;
   letter-spacing: 0.5px;
   color: var(--theme-text);
   background-color: var(--theme-bg);
 }
 
 main .pagination-loader-container {
-  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
+  background-image: url("https://gw.alipayobjects.com/zos/k/7c/progressive-disclosure-line.svg");
 }
 
 main .gsc-loading-image {
-  background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
+  background-image: url("https://gw.alipayobjects.com/zos/k/xi/mona-loading-default.gif");
 }
 
 main .gsc-left-header .color-text-secondary,

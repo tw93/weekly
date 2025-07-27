@@ -1,20 +1,17 @@
 ---
-import { SITE } from "@/config";
-import AstroLogo from "./AstroLogo.astro";
-import HeaderRight from "./HeaderRight.astro";
+import { SITE } from '@/config';
+import AstroLogo from './AstroLogo.astro';
+import HeaderRight from './HeaderRight.astro';
 ---
 
 <header>
-  <nav
-    class="nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl sm:w-96 w-full ml-3"
-    title={SITE.title}
-  >
-    <div class="logo flex md:ml-0 ml-3.5">
-      <a href="/" class="logo-image">
+  <nav class='nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl sm:w-96 w-full ml-3' title={SITE.title}>
+    <div class='logo flex md:ml-0 ml-3.5'>
+      <a href='/' class='logo-image'>
         <AstroLogo size={40} />
       </a>
-      <a href="/">
-        <h1 class="text-gray-800 dark:text-gray-200">{SITE.title}</h1>
+      <a href='/'>
+        <h1 class='text-gray-800 dark:text-gray-200'>{SITE.title}</h1>
       </a>
     </div>
     <HeaderRight />
@@ -63,6 +60,7 @@ import HeaderRight from "./HeaderRight.astro";
   .logo h1 {
     font: inherit;
     margin: 0;
+    margin-left: -5px;
   }
 
   .nav-wrapper {

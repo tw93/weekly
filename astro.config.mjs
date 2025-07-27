@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import { parse } from "node-html-parser";
 import { SITE } from "./src/config";
-import rehypeCustomizeImageSrc from "./rehype-customize-image-src.js";
+import rehypeImage from "./rehype-image.js";
 
 const DEFAULT_FORMAT = "YYYY/MM/DD";
 const WEEKLY_REPO_NAME = "tw93/weekly";
@@ -67,6 +67,6 @@ export default defineConfig({
   integrations: [tailwind()],
   markdown: {
     remarkPlugins: [defaultLayoutPlugin],
-    rehypePlugins: [rehypeCustomizeImageSrc],
+    rehypePlugins: [rehypeImage],
   },
 });

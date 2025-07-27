@@ -1,49 +1,33 @@
 ---
-import { SITE } from "@/config";
+import { SITE } from '@/config';
 export interface Props {
   content: any;
   pageURL: URL | string;
 }
-const {
-  icon,
-  keywords,
-  author,
-  twitterId,
-  homePage,
-  title,
-  siteImage,
-  description: siteDescription,
-} = SITE;
+const { icon, keywords, author, twitterId, homePage, title, siteImage, description: siteDescription } = SITE;
 const { content = {}, pageURL } = Astro.props;
-const {
-  title: contentTitle,
-  socialImage,
-  description: contentDescription,
-  image,
-} = content;
+const { title: contentTitle, socialImage, description: contentDescription, image } = content;
 
 const pageTitle = contentTitle ? `${title}${contentTitle}` : title;
 const imageSrc = socialImage || siteImage;
 const description = contentDescription || siteDescription;
-const preloadImage = image
-  ? `${image}?x-oss-process=image/resize,w_3600/format,webp`
-  : false;
+const preloadImage = image ? `${image}?x-oss-process=image/resize,w_3600/format,webp` : false;
 ---
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content={imageSrc} />
-<meta name="twitter:site" content={homePage} />
-<meta property="twitter:url" content={pageURL} />
-<meta name="twitter:creator" content={`@${twitterId}`} />
-<meta property="twitter:description" content={description} />
-<meta name="keywords" content={keywords} />
-<meta name="author" content={author} />
-<meta name="description" content={description} />
-<meta property="og:type" content="website" />
-<meta property="og:title" content={pageTitle} />
-<meta property="og:image" content={icon} />
-<meta property="og:description" content={description} />
-<meta property="og:url" content={pageURL} />
-<meta property="og:site_name" content={pageTitle} />
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:image' content={imageSrc} />
+<meta name='twitter:site' content={homePage} />
+<meta property='twitter:url' content={pageURL} />
+<meta name='twitter:creator' content={`@${twitterId}`} />
+<meta property='twitter:description' content={description} />
+<meta name='keywords' content={keywords} />
+<meta name='author' content={author} />
+<meta name='description' content={description} />
+<meta property='og:type' content='website' />
+<meta property='og:title' content={pageTitle} />
+<meta property='og:image' content={icon} />
+<meta property='og:description' content={description} />
+<meta property='og:url' content={pageURL} />
+<meta property='og:site_name' content={pageTitle} />
 
-{preloadImage && <link rel="preload" href={preloadImage} as="image" />}
+{preloadImage && <link rel='preload' href={preloadImage} as='image' />}

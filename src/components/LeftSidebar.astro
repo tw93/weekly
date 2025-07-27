@@ -1,13 +1,13 @@
 ---
 const { currentPage } = Astro.props;
-import AstroLogo from "./Header/AstroLogo.astro";
-import { SITE } from "@/config";
-import { parseTitle, sortPosts } from "@/util";
+import AstroLogo from './Header/AstroLogo.astro';
+import { SITE } from '@/config';
+import { parseTitle, sortPosts } from '@/util';
 
 const posts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true }));
 const allPosts = sortPosts(posts);
 
-let currentPageMatch = currentPage.slice(1).replace(/\/$/, "");
+let currentPageMatch = currentPage.slice(1).replace(/\/$/, '');
 
 const sidebarSections = allPosts.reduce((sections, post, index) => {
   const route = {
@@ -15,34 +15,34 @@ const sidebarSections = allPosts.reduce((sections, post, index) => {
     link: post.url.slice(1),
   };
   if (index === 0) {
-    sections.push({ text: "", children: [] });
+    sections.push({ text: '', children: [] });
   }
   sections[sections.length - 1].children.push(route);
   return sections;
 }, []);
 ---
 
-<nav aria-labelledby="grid-left" class="pt-6 text-gray-800 dark:text-gray-200">
-  <div class="logo flex">
-    <a href="/" class="logo-image" data-astro-prefetch>
+<nav aria-labelledby='grid-left' class='pt-6 text-gray-800 dark:text-gray-200'>
+  <div class='logo flex'>
+    <a href='/' class='logo-image' data-astro-prefetch>
       <AstroLogo size={40} />
     </a>
-    <a href="/" data-astro-prefetch>
-      <h1 class="text-gray-800 dark:text-gray-200">{SITE.title}</h1>
+    <a href='/' data-astro-prefetch>
+      <h1 class='text-gray-800 dark:text-gray-200'>{SITE.title}</h1>
     </a>
   </div>
-  <ul class="nav-groups">
+  <ul class='nav-groups'>
     {
       sidebarSections.map((section) => (
         <li>
-          <div class="nav-group">
+          <div class='nav-group'>
             <ul>
               {section.children.map((child) => (
-                <li class="nav-link">
+                <li class='nav-link'>
                   <a
                     data-astro-prefetch
                     href={`/${child.link}`}
-                    aria-current={`${decodeURIComponent(currentPageMatch) === child.link ? "page" : "false"}`}
+                    aria-current={`${decodeURIComponent(currentPageMatch) === child.link ? 'page' : 'false'}`}
                   >
                     {child.title}
                   </a>
@@ -57,12 +57,12 @@ const sidebarSections = allPosts.reduce((sections, post, index) => {
 </nav>
 
 <script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navGroups = document.querySelector(".nav-groups");
+  document.addEventListener('DOMContentLoaded', () => {
+    const navGroups = document.querySelector('.nav-groups');
 
     if (!navGroups) return;
 
-    const savedScrollPosition = localStorage.getItem("sidebarScrollPosition");
+    const savedScrollPosition = localStorage.getItem('sidebarScrollPosition');
     if (savedScrollPosition !== null) {
       navGroups.scrollTop = parseInt(savedScrollPosition, 10);
     } else {
@@ -72,15 +72,15 @@ const sidebarSections = allPosts.reduce((sections, post, index) => {
       }
     }
 
-    navGroups.style.visibility = "visible";
+    navGroups.style.visibility = 'visible';
 
-    localStorage.removeItem("sidebarScrollPosition");
+    localStorage.removeItem('sidebarScrollPosition');
 
-    navGroups.addEventListener("click", (event) => {
-      const link = event.target.closest("a");
+    navGroups.addEventListener('click', (event) => {
+      const link = event.target.closest('a');
       if (link) {
         const scrollPosition = navGroups.scrollTop;
-        localStorage.setItem("sidebarScrollPosition", scrollPosition);
+        localStorage.setItem('sidebarScrollPosition', scrollPosition);
       }
     });
   });
@@ -135,17 +135,11 @@ const sidebarSections = allPosts.reduce((sections, post, index) => {
     color: var(--theme-accent);
   }
 
-  .nav-link a[aria-current="page"] {
+  .nav-link a[aria-current='page'] {
     color: var(--theme-accent);
     font-weight: bolder;
   }
 
-  @media (min-width: 50em) {
-    .nav-groups {
-      padding: 0;
-      margin-top: 0.7em;
-    }
-  }
   .logo {
     display: flex;
     overflow: hidden;
@@ -185,5 +179,13 @@ const sidebarSections = allPosts.reduce((sections, post, index) => {
   .logo h1 {
     font: inherit;
     margin: 0;
+    margin-left: -5px;
+  }
+
+  @media (min-width: 50em) {
+    .nav-groups {
+      padding: 0;
+      margin-top: 0.7em;
+    }
   }
 </style>

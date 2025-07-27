@@ -1,41 +1,29 @@
 ---
-import "@pagefind/default-ui/css/ui.css";
-import SearchIcon from "./SearchIcon.astro";
+import '@pagefind/default-ui/css/ui.css';
+import SearchIcon from './SearchIcon.astro';
 ---
 
-<site-search
-  id="search"
-  class="ms-auto relative md:inline-block hidden site-search"
->
-  <button
-    data-open-modal
-    disabled
-    class="flex items-center justify-center rounded-md gap-1 search-icon"
-    title="输入/进行搜索"
-  >
+<site-search id='search' class='ms-auto relative md:inline-block hidden site-search'>
+  <button data-open-modal disabled class='flex items-center justify-center rounded-md gap-1 search-icon' title='输入/进行搜索'>
     <SearchIcon />
   </button>
   <dialog
-    aria-label="search"
-    class="h-full max-h-full w-full max-w-full shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left"
+    aria-label='search'
+    class='h-full max-h-full w-full max-w-full shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0 text-left'
   >
-    <div class="dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6">
-      <button
-        data-close-modal
-        class="ms-auto cursor-pointer rounded-full px-4 py-2 close-icon"
-        >X</button
-      >
+    <div class='dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6'>
+      <button data-close-modal class='ms-auto cursor-pointer rounded-full px-4 py-2 close-icon'>X</button>
       {
         import.meta.env.DEV ? (
-          <div class="mx-auto text-center">
+          <div class='mx-auto text-center'>
             <p>
               Search is only available in production builds. <br />
               Try building and previewing the site to test it out locally.
             </p>
           </div>
         ) : (
-          <div class="search-container w-full">
-            <div id="pagefind__search" />
+          <div class='search-container w-full'>
+            <div id='pagefind__search' />
           </div>
         )
       }
@@ -44,84 +32,71 @@ import SearchIcon from "./SearchIcon.astro";
 </site-search>
 
 <script>
-  import { animate } from "motion";
+  import { animate } from 'motion';
   class SiteSearch extends HTMLElement {
     constructor() {
       super();
-      const openBtn = this.querySelector(
-        "button[data-open-modal]",
-      ) as HTMLButtonElement;
-      const closeBtn = this.querySelector(
-        "button[data-close-modal]",
-      ) as HTMLButtonElement;
-      const dialog = this.querySelector("dialog");
-      const dialogFrame = this.querySelector(".dialog-frame");
+      const openBtn = this.querySelector('button[data-open-modal]') as HTMLButtonElement;
+      const closeBtn = this.querySelector('button[data-close-modal]') as HTMLButtonElement;
+      const dialog = this.querySelector('dialog');
+      const dialogFrame = this.querySelector('.dialog-frame');
 
       if (openBtn && closeBtn && dialog && dialogFrame) {
         const onWindowClick = (event) => {
-          if (
-            document.body.contains(event.target) &&
-            !dialogFrame.contains(event.target)
-          )
-            closeModal();
+          if (document.body.contains(event.target) && !dialogFrame.contains(event.target)) closeModal();
         };
 
         const openModal = (event) => {
           dialog.showModal();
 
           animate(
-            "dialog",
+            'dialog',
             {
-              clipPath: [
-                "polygon(0 0, 100% 0, 100% -200%, -200% -200%)",
-                "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-              ],
+              clipPath: ['polygon(0 0, 100% 0, 100% -200%, -200% -200%)', 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'],
               opacity: [0, 1],
             },
-            { duration: 0.2 },
+            { duration: 0.2 }
           );
-          document.body.classList.add("overflow-hidden");
-          this.querySelector("input")?.focus();
+          document.body.classList.add('overflow-hidden');
+          this.querySelector('input')?.focus();
           event?.stopPropagation();
-          window.addEventListener("click", onWindowClick);
+          window.addEventListener('click', onWindowClick);
         };
 
         const closeModal = () => {
           dialog.close();
-          document.body.classList.remove("overflow-hidden");
-          window.removeEventListener("click", onWindowClick);
+          document.body.classList.remove('overflow-hidden');
+          window.removeEventListener('click', onWindowClick);
         };
 
-        openBtn.addEventListener("click", openModal);
+        openBtn.addEventListener('click', openModal);
         openBtn.disabled = false;
-        closeBtn.addEventListener("click", closeModal);
-        document.addEventListener("astro:after-swap", closeModal);
+        closeBtn.addEventListener('click', closeModal);
+        document.addEventListener('astro:after-swap', closeModal);
 
-        window.addEventListener("keydown", (e) => {
-          if (e.key === "/" && !dialog.open) {
+        window.addEventListener('keydown', (e) => {
+          if (e.key === '/' && !dialog.open) {
             openModal(event);
             e.preventDefault();
           }
         });
 
-        window.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener('DOMContentLoaded', () => {
           if (import.meta.env.DEV) return;
-          const onIdle =
-            window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
+          const onIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
           onIdle(async () => {
-            const { PagefindUI } = await import("@pagefind/default-ui");
+            const { PagefindUI } = await import('@pagefind/default-ui');
             new PagefindUI({
-              element: "#pagefind__search",
+              element: '#pagefind__search',
               baseUrl: import.meta.env.BASE_URL,
-              bundlePath:
-                import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
+              bundlePath: import.meta.env.BASE_URL.replace(/\/$/, '') + '/pagefind/',
               showImages: false,
               translations: {
-                placeholder: "搜索潮流内容",
-                zero_results: "没有找到 [SEARCH_TERM]",
-                many_results: "[COUNT] 条搜索命中 [SEARCH_TERM]",
-                clear_search: "清除",
-                load_more: "加载更多结果",
+                placeholder: '搜索潮流内容',
+                zero_results: '没有找到 [SEARCH_TERM]',
+                many_results: '[COUNT] 条搜索命中 [SEARCH_TERM]',
+                clear_search: '清除',
+                load_more: '加载更多结果',
               },
             });
           });
@@ -130,14 +105,15 @@ import SearchIcon from "./SearchIcon.astro";
     }
   }
 
-  customElements.define("site-search", SiteSearch);
+  customElements.define('site-search', SiteSearch);
 </script>
 
 <style is:global>
   body {
     --pagefind-ui-primary: #a67c52;
     --pagefind-ui-border-width: 1px;
-    --pagefind-ui-font: "TsangerJinKai02", "STKaiti", "KaiTi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --pagefind-ui-font: 'TsangerJinKai02', 'STKaiti', 'KaiTi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   }
 
   .site-search {
