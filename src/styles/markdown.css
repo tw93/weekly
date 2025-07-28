@@ -83,7 +83,7 @@ a,
 
 .heti > ol:first-child {
   margin-block-start: 5px !important;
-  padding-inline-start: calc(12px + 1em);
+  padding-inline-start: 28px;
 }
 
 .heti > ul:first-child {
@@ -111,8 +111,8 @@ a,
 .heti hr {
   width: 100%;
   height: 1px;
-  margin-block-start: 1.8em;
-  margin-block-end: 1.8em;
+  margin-block-start: 28px;
+  margin-block-end: 28px;
   margin-inline-start: auto;
   margin-inline-end: auto;
   border: 0;
@@ -120,8 +120,8 @@ a,
 }
 
 .heti p {
-  margin-block-start: 1.8em;
-  margin-block-end: 1.8em;
+  margin-block-start: 28px;
+  margin-block-end: 28px;
   text-align: left;
 }
 
@@ -138,8 +138,8 @@ a,
 }
 
 .heti blockquote {
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
+  margin-block-start: 13px;
+  margin-block-end: 28px;
   padding-inline-start: 16px;
   padding-inline-end: 16px;
   border-radius: 4px;
@@ -149,8 +149,8 @@ a,
 }
 
 .heti blockquote p {
-  margin-block-end: 0.4em;
-  margin-block-start: 0.4em;
+  margin-block-end: 6px;
+  margin-block-start: 6px;
   line-height: 1.7;
 }
 
@@ -167,8 +167,8 @@ blockquote blockquote {
 }
 
 .heti pre {
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
+  margin-block-start: 13px;
+  margin-block-end: 28px;
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-block-start: 12px;
@@ -216,47 +216,43 @@ blockquote blockquote {
   position: relative;
   margin: 0;
   line-height: 1.7;
-  margin-block-start: 1.8em;
-  margin-block-end: 0.8em;
+  margin-block-start: 28px;
+  margin-block-end: 13px;
   font-weight: bolder;
 }
 
 .heti h1 {
-  font-size: 2em;
+  font-size: 32px;
 }
 
 .heti h2 {
-  font-size: 1.5em;
+  font-size: 24px;
 }
 
 .heti h3 {
-  font-size: 1.25em;
-  margin-block-start: 0.6em;
-  margin-block-start: 0.6em;
+  font-size: 20px;
+  margin-block-start: 10px;
 }
 
 .heti h4 {
-  font-size: 1em;
-  margin-block-start: 0.6em;
-  margin-block-start: 0.6em;
+  font-size: 16px;
+  margin-block-start: 10px;
 }
 
 .heti h5 {
-  font-size: 1em;
-  margin-block-start: 0.6em;
-  margin-block-start: 0.6em;
+  font-size: 16px;
+  margin-block-start: 10px;
 }
 
 .heti h6 {
-  font-size: 1em;
-  margin-block-start: 0.6em;
-  margin-block-start: 0.6em;
+  font-size: 16px;
+  margin-block-start: 10px;
 }
 
 .heti h1,
 .heti h2,
 .heti h3 {
-  letter-spacing: 0.05em;
+  letter-spacing: 0.8px;
 }
 
 .heti h1 + h2,
@@ -264,22 +260,22 @@ blockquote blockquote {
 .heti h3 + h4,
 .heti h4 + h5,
 .heti h5 + h6 {
-  margin-block-start: 0.8em;
+  margin-block-start: 13px;
 }
 
 .heti ul,
 .heti ol,
 .heti dl {
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
+  margin-block-start: 13px;
+  margin-block-end: 28px;
 }
 
 .heti ul {
-  padding-inline-start: calc(24px + 0.5em);
+  padding-inline-start: 32px;
 }
 
 .heti ol {
-  padding-inline-start: calc(24px + 1em);
+  padding-inline-start: 40px;
 }
 
 .heti ul ul,
@@ -317,8 +313,8 @@ blockquote blockquote {
 .heti table {
   box-sizing: border-box;
   table-layout: fixed;
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
+  margin-block-start: 13px;
+  margin-block-end: 28px;
   margin-inline-start: auto;
   margin-inline-end: auto;
   border-collapse: collapse;
@@ -403,9 +399,9 @@ blockquote blockquote {
 }
 
 .heti code {
-  margin-inline-start: 0.25em;
-  margin-inline-end: 0.25em;
-  font-size: 1em;
+  margin-inline-start: 4px;
+  margin-inline-end: 4px;
+  font-size: 16px;
   font-family: var(--text-font);
 }
 
@@ -472,17 +468,17 @@ blockquote blockquote {
 }
 
 .heti rt {
-  font-size: 0.875em;
+  font-size: 14px;
   font-weight: 400;
 }
 
 .heti small {
-  font-size: 0.875em;
+  font-size: 14px;
 }
 
 .heti > p > small {
   display: inherit;
-  margin-top: -0.6em;
+  margin-top: -10px;
 }
 
 .heti strong {
@@ -492,9 +488,9 @@ blockquote blockquote {
 .heti sub,
 .heti sup {
   position: relative;
-  margin-inline-start: 0.25em;
-  margin-inline-end: 0.25em;
-  font-size: 0.75em;
+  margin-inline-start: 4px;
+  margin-inline-end: 4px;
+  font-size: 12px;
   font-family: var(--text-font);
   font-style: normal;
   line-height: 1;
@@ -502,11 +498,11 @@ blockquote blockquote {
 }
 
 .heti sub {
-  bottom: -0.25em;
+  bottom: -4px;
 }
 
 .heti sup {
-  top: -0.5em;
+  top: -8px;
 }
 
 .heti sup:target,
@@ -522,14 +518,14 @@ blockquote blockquote {
 }
 
 .heti summary {
-  padding-inline-start: 1em;
+  padding-inline-start: 16px;
   outline: 0;
   cursor: pointer;
 }
 
 .heti summary::-webkit-details-marker {
-  width: 0.6em;
-  margin-inline-end: 0.4em;
+  width: 10px;
+  margin-inline-end: 6px;
 }
 
 .heti u[title] {
@@ -633,7 +629,7 @@ blockquote blockquote {
 .heti--columns-48em,
 .heti comma {
   max-width: none;
-  column-gap: 2em;
+  column-gap: 32px;
 }
 
 .heti--columns-1 p,
@@ -650,9 +646,9 @@ blockquote blockquote {
 .heti--columns-44em p,
 .heti--columns-48em p,
 .heti comma p {
-  margin-block-start: 0.4em;
-  margin-block-end: 0.8em;
-  text-indent: 2em;
+  margin-block-start: 6px;
+  margin-block-end: 13px;
+  text-indent: 32px;
 }
 
 .heti--columns-1 {
@@ -672,46 +668,46 @@ blockquote blockquote {
 }
 
 .heti--columns-16em {
-  column-width: 16em;
+  column-width: 256px;
 }
 
 .heti--columns-20em {
-  column-width: 20em;
+  column-width: 320px;
 }
 
 .heti--columns-24em {
-  column-width: 24em;
+  column-width: 384px;
 }
 
 .heti--columns-28em {
-  column-width: 28em;
+  column-width: 448px;
 }
 
 .heti--columns-32em {
-  column-width: 32em;
+  column-width: 512px;
 }
 
 .heti--columns-36em {
-  column-width: 36em;
+  column-width: 576px;
 }
 
 .heti--columns-40em {
-  column-width: 40em;
+  column-width: 640px;
 }
 
 .heti--columns-44em {
-  column-width: 44em;
+  column-width: 704px;
 }
 
 .heti--columns-48em {
-  column-width: 48em;
+  column-width: 768px;
 }
 
 .heti--vertical {
   max-width: none;
-  max-height: 42em;
+  max-height: 672px;
   writing-mode: vertical-rl;
-  letter-spacing: 0.125em;
+  letter-spacing: 2px;
 }
 
 ::marker {
@@ -785,7 +781,7 @@ blockquote blockquote {
     line-height: inherit;
     text-indent: 0;
     display: inline;
-    margin-block-start: 0.3em;
+    margin-block-start: 5px;
     margin-inline-start: 8px;
   }
 }
@@ -798,7 +794,7 @@ blockquote blockquote {
 }
 
 .heti--ancient p {
-  text-indent: 2em;
+  text-indent: 32px;
 }
 
 .heti--poetry p {
@@ -810,7 +806,7 @@ blockquote blockquote {
   margin-block-start: 0;
   margin-block-end: 0;
   line-height: 2.25;
-  text-indent: 2em;
+  text-indent: 32px;
 }
 
 .heti--annotation em {
@@ -824,8 +820,8 @@ blockquote blockquote {
 }
 
 .heti--annotation .heti-meta {
-  margin-block-start: 0.8em;
-  margin-block-end: 1.8em;
+  margin-block-start: 13px;
+  margin-block-end: 28px;
 }
 
 .heti .heti-meta {
@@ -846,7 +842,7 @@ blockquote blockquote {
 .heti .heti-x-large {
   font-size: 20px;
   line-height: 30px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.8px;
 }
 
 .heti .heti-small {
@@ -884,7 +880,7 @@ blockquote blockquote {
 }
 
 .heti .heti-fn {
-  margin-block-start: 4em;
+  margin-block-start: 64px;
   border-block-start: 1px solid;
   border-block-start-color: #ccc;
   font-size: 14px;
@@ -899,7 +895,7 @@ blockquote blockquote {
 }
 
 .heti .heti-fn ol {
-  margin-block-start: 0.8em;
+  margin-block-start: 13px;
   margin-block-end: 0;
 }
 
@@ -931,12 +927,12 @@ blockquote blockquote {
 .heti .heti-ruby--inline {
   display: inline-flex;
   flex-direction: column-reverse;
-  height: 1.5em;
+  height: 24px;
 }
 
 .heti .heti-ruby--inline rt {
   display: inline;
-  margin-bottom: -0.25em;
+  margin-bottom: -4px;
   line-height: 1;
   text-align: center;
 }
@@ -951,11 +947,11 @@ blockquote blockquote {
 }
 
 .heti .heti-spacing-start {
-  margin-inline-end: 0.25em;
+  margin-inline-end: 4px;
 }
 
 .heti .heti-spacing-end {
-  margin-inline-start: 0.25em;
+  margin-inline-start: 4px;
 }
 
 .heti heti-adjacent {
@@ -963,11 +959,11 @@ blockquote blockquote {
 }
 
 .heti .heti-adjacent-half {
-  margin-inline-end: -0.5em;
+  margin-inline-end: -8px;
 }
 
 .heti .heti-adjacent-quarter {
-  margin-inline-end: -0.25em;
+  margin-inline-end: -4px;
 }
 
 .heti ul.cb {
@@ -981,10 +977,10 @@ blockquote blockquote {
 
 .heti ul.cb input[type="checkbox"] {
   position: relative;
-  font-size: 1rem;
-  width: 1rem;
-  height: 1rem;
-  top: 0.1rem;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  top: 2px;
   cursor: pointer;
 }
 
@@ -1083,7 +1079,7 @@ code.language-mermaid {
 
 mjx-container[display="block"] {
   display: block;
-  margin: 1em 0;
+  margin: 16px 0;
 }
 
 span.emoji {
@@ -1091,9 +1087,9 @@ span.emoji {
   -moz-box-orient: vertical;
   display: inline-block;
   vertical-align: baseline;
-  width: 1em;
-  height: 1em;
-  background-size: 1em;
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
   background-repeat: no-repeat;
   text-indent: -9999px;
   background-position: 50%, 50%;
@@ -1101,15 +1097,15 @@ span.emoji {
 }
 
 span.emoji-sizer {
-  line-height: 0.81em;
-  font-size: 1em;
+  line-height: 13px;
+  font-size: 16px;
   margin: -2px 0;
 }
 
 span.emoji-outer {
   display: inline-block;
-  height: 1em;
-  width: 1em;
+  height: 16px;
+  width: 16px;
 }
 
 span.emoji-inner {
@@ -1121,8 +1117,8 @@ span.emoji-inner {
 }
 
 img.emoji {
-  width: 1em;
-  height: 1em;
+  width: 16px;
+  height: 16px;
 }
 
 .language-markmap {
@@ -1134,7 +1130,7 @@ img.emoji {
   width: 100%;
   height: var(--markmap-height);
   font-family: var(--text-font) !important;
-  font-size: 0.8em !important;
+  font-size: 13px !important;
 }
 
 img[loading="lazy"] {

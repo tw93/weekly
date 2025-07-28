@@ -31,16 +31,16 @@ import HeaderRight from './HeaderRight.astro';
 
   .logo {
     display: flex;
-    font-size: 2rem;
+    font-size: 32px;
     flex-shrink: 0;
     font-weight: 600;
     line-height: 1;
-    gap: 0.25em;
+    gap: 4px;
   }
 
   .logo a {
-    padding: 0.5em 0.25em;
-    margin: -0.5em -0.25em;
+    padding: 8px 4px;
+    margin: -8px -4px;
     text-decoration: none;
     font-weight: bolder;
     display: block;
@@ -54,24 +54,24 @@ import HeaderRight from './HeaderRight.astro';
   }
 
   .logo .logo-image {
-    margin-top: -0.7em;
+    margin-top: -14px;
   }
 
   .logo h1 {
     font: inherit;
     margin: 0;
-    margin-left: -5px;
+    margin-left: -2px;
   }
 
   .nav-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1em;
+    gap: 16px;
     margin: 10px 0 5px;
   }
 
-  @media (max-width: 50em) {
+  @media (max-width: 800px) {
     .nav-wrapper {
       margin: 5px 0;
     }
@@ -87,7 +87,7 @@ import HeaderRight from './HeaderRight.astro';
     position: relative;
     z-index: 10;
     flex-grow: 1;
-    padding-right: 0.7rem;
+    padding-right: 11px;
     display: flex;
     max-width: 200px;
   }
@@ -101,7 +101,7 @@ import HeaderRight from './HeaderRight.astro';
     flex-grow: 1;
   }
 
-  @media (min-width: 50em) {
+  @media (min-width: 800px) {
     .search-item {
       max-width: 400px;
     }
@@ -111,15 +111,15 @@ import HeaderRight from './HeaderRight.astro';
 <style is:global>
   @media (min-width: 1412px) {
     .xl\:max-w-7xl {
-      max-width: 83.6rem;
+      max-width: 1338px;
     }
   }
 
   @media (min-width: 1080px) .lg\:max-w-5xl {
-    max-width: 62.4rem;
+    max-width: 998px;
   }
 
   @media (min-width: 768px) .md\:max-w-2xl {
-    max-width: 41.2rem;
+    max-width: 659px;
   }
 </style>

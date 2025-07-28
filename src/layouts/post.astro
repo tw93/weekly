@@ -1,5 +1,5 @@
 ---
-import "../styles/heti.min.css";
+import "../styles/markdown.css";
 import HeadCommon from "../components/HeadCommon.astro";
 import HeadSEO from "../components/HeadSEO.astro";
 import Footer from "../components/Footer.astro";
@@ -55,8 +55,8 @@ let prevUrl =
     <style>
       body {
         width: 100%;
-        --gutter: 0.5rem;
-        --doc-padding: 2rem;
+        --gutter: 8px;
+        --doc-padding: 32px;
       }
 
       .layout {
@@ -71,7 +71,7 @@ let prevUrl =
       .heti h1.content-title:first-child {
         margin-block-start: 12px !important;
         margin-bottom: 16px;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.32px;
       }
 
       .grid-sidebar {
@@ -90,7 +90,7 @@ let prevUrl =
       }
 
       #grid-main {
-        padding: 0.8rem var(--gutter) 4rem var(--gutter);
+        padding: 13px var(--gutter) 64px var(--gutter);
         grid-column: 2;
         display: flex;
         flex-direction: column;
@@ -101,28 +101,28 @@ let prevUrl =
         display: none;
       }
 
-      @media (min-width: 50em) {
+      @media (min-width: 800px) {
         .layout {
           overflow: initial;
-          grid-template-columns: 18rem minmax(0, var(--max-width));
+          grid-template-columns: 288px minmax(0, var(--max-width));
           gap: 0;
         }
 
         #grid-main {
-          padding: 0.8rem 2rem 4rem 2rem;
+          padding: 13px 32px 64px 32px;
         }
 
         #grid-left {
           display: flex;
-          padding-left: 2rem;
+          padding-left: 32px;
           position: sticky;
           grid-column: 1;
         }
       }
 
-      @media (min-width: 72em) {
+      @media (min-width: 1152px) {
         .layout {
-          grid-template-columns: 20rem minmax(0, var(--max-width)) 13rem;
+          grid-template-columns: 320px minmax(0, var(--max-width)) 208px;
           padding-left: 0;
           padding-right: 0;
           margin: 0 auto;
@@ -140,14 +140,14 @@ let prevUrl =
 
       .logo {
         display: none;
-        margin-top: -0.1em;
+        margin-top: -2px;
       }
 
-      @media (max-width: 50em) {
+      @media (max-width: 800px) {
         .logo {
           display: block;
           color: #fff;
-          margin-left: -0.2em;
+          margin-left: -3px;
         }
 
         .logo:active {
@@ -157,14 +157,14 @@ let prevUrl =
         }
 
         #grid-main {
-          margin-top: -6.7px;
-          padding: 0.8rem 0.5rem var(--doc-padding) 0.5rem;
+          margin-top: -7px;
+          padding: 13px 8px var(--doc-padding) 8px;
         }
 
         .heti h1.content-title:first-child {
           margin-block-start: 12px !important;
           margin-bottom: 16px;
-          font-size: 1.8rem;
+          font-size: 28px;
         }
 
         .heti h1.content-title:first-child>span{
@@ -273,7 +273,7 @@ let prevUrl =
           data-reactions-enabled="1"
           data-emit-metadata="0"
           data-input-position="bottom"
-          data-theme="https://gw.alipayobjects.com/os/k/82/comment.css"
+          data-theme="https://gw.alipayobjects.com/os/k/kr/comment.css"
           data-lang="zh-CN"
           crossorigin="anonymous"
           async></script>

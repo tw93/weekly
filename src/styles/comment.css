@@ -88,9 +88,9 @@ main .gsc-comment-box-textarea {
   border-color: var(--color-border-default);
 }
 .form-control {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  font-size: 0.9rem;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 14px;
 }
 main .gsc-comment-box-textarea:focus,
 #__next .form-control:focus {
@@ -108,12 +108,12 @@ main .gsc-comment-box-textarea:focus,
 }
 
 .gsc-comment {
-  font-size: 0.9rem;
+  font-size: 14px;
   line-height: 1.7;
 }
 
 .gsc-comment-content {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .gsc-reactions-count {
@@ -122,15 +122,15 @@ main .gsc-comment-box-textarea:focus,
 .gsc-reactions-count:after {
   content: "欢迎一起交流~";
   visibility: visible;
-  font-size: 1.4rem;
+  font-size: 22px;
   display: inline-block;
-  margin-bottom: 1rem;
-  margin-left: -4rem;
+  margin-bottom: 16px;
+  margin-left: -64px;
 }
 
 .gsc-reply-content {
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 #__next .rounded-md {
   border-radius: 4px;
@@ -140,7 +140,7 @@ input:focus {
   outline: none;
 }
 .gsc-social-reaction-summary-item {
-  font-size: 0.85rem;
+  font-size: 14px;
   border-radius: 8px;
   line-height: 26px;
   padding-inline-end: 6px;
