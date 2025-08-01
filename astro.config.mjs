@@ -48,7 +48,7 @@ function defaultLayoutPlugin() {
     frontmatter.image = frontmatter.image || SITE.image;
 
     if (!frontmatter.date) {
-      const postNumber = filePath.split("/posts/")[1].split("-")[0];
+      const postNumber = filePath.split(/[\/\\]posts[\/\\]/)[1]?.split("-")[0];
       frontmatter.date =
         SITE.repo === WEEKLY_REPO_NAME
           ? getWeeklyDate(postNumber)
@@ -56,7 +56,7 @@ function defaultLayoutPlugin() {
     }
 
     if (SITE.repo === WEEKLY_REPO_NAME) {
-      const postNumber = filePath.split("/posts/")[1].split("-")[0];
+      const postNumber = filePath.split(/[\/\\]posts[\/\\]/)[1]?.split("-")[0];
       frontmatter.socialImage = getTwitterImage(postNumber);
     }
   };
