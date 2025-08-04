@@ -372,9 +372,12 @@ img.border {
   border-image-source: url(https://gw.alipayobjects.com/zos/k/y1/lpOIMY.png);
   border-image-slice: 30;
   border-image-repeat: stretch;
+  border-radius: 8px;
+  clip-path: inset(0 round 6px);
 }
+
 
 .markdown-body img,
 .markdown-body video {
-  border-radius: 6px;
+  border-radius: 8px;
 }
