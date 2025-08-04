@@ -11,11 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
+
       - uses: actions/cache@v3
         name: Configure npm caching
         with:
@@ -23,21 +28,32 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install Node.js dependencies
-        run: |
-          npm install
+        run: npm install
+
       - name: Update README
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |-
+        run: |
           node build.js
           cat README.md
+
       - name: Commit and push if changed
-        run: |-
-          git diff
-          git config --global user.email "tw93@qq.com"
-          git config --global user.name "Tw93-bot"
-          git pull
+        run: |
+          # 设置分支名称变量
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+
+          git config user.email "tw93@qq.com"
+          git config user.name "Tw93-bot"
+
+          # 添加所有变更
           git add -A
-          git commit -m "Updated content" || exit 0
-          git push
+
+          # 检查是否有变更
+          if git diff-index --quiet HEAD --; then
+            echo "No changes detected"
+          else
+            git commit -m "Updated content"
+            git push origin "HEAD:$BRANCH_NAME"
+          fi
