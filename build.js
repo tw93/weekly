@@ -34,12 +34,15 @@ async function main() {
     const url = `https://weekly.tw93.fun/posts/${oldTitle}`;
     const title = `第 ${num} 期 - ${shortTitle}`;
 
-    // Read markdown file to extract cover image
+    // Read markdown file to extract cover image and description
     const mdContent = await fs.readFile(`./src/pages/posts/${name}`, "utf8");
     const imgMatch = mdContent.match(/<img\s+src="([^"]+)"/);
     const pic = imgMatch ? imgMatch[1] : "";
+    
+    const descMatch = mdContent.match(/<small>(.*?)<\/small>/s);
+    const description = descMatch ? descMatch[1].trim() : "";
 
-    posts.push({ num, title: shortTitle, url, pic });
+    posts.push({ num, title: shortTitle, url, pic, description });
     readmeContent2 += `* [${title}](${url})\n`;
 
     if (i < 5) {
