@@ -51,7 +51,7 @@ async function main() {
   await Promise.all([
     fs.writeFile("README.md", readmeContent + readmeContent2),
     fs.writeFile("RECENT.md", recentContent),
-    fs.writeFile("posts.json", JSON.stringify(posts, null, 2)),
+    fs.writeFile("public/posts.json", JSON.stringify(posts, null, 2)),
   ]);
 }
 
