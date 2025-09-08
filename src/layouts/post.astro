@@ -1,8 +1,6 @@
 ---
 import "../styles/markdown.css";
-import HeadCommon from "../components/HeadCommon.astro";
-import HeadSEO from "../components/HeadSEO.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "./BaseLayout.astro";
 import AstroLogo from "../components/Header/AstroLogo.astro";
 import LeftSidebar from "../components/LeftSidebar.astro";
 import Search from "../components/Header/Search.astro";
@@ -17,12 +15,10 @@ export interface Props {
     url: string;
     socialImage: string;
   };
-  title: string;
 }
 
 const pageUrl = new URL(Astro.request.url);
 const currentPage = pageUrl.pathname;
-
 let title = parseTitle(currentPage);
 
 const { date, image, description, url, socialImage } = Astro.props.frontmatter;
@@ -38,258 +34,242 @@ const currentUrl = `${SITE.homePage}${currentPage}`;
 const posts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true }));
 const allPosts = sortPosts(posts);
 const postIndex = getIndex(currentPage);
-let nextUrl =
-  postIndex > 2 ? allPosts[allPosts.length - postIndex + 1].url : "";
-let prevUrl =
-  postIndex < allPosts.length
-    ? allPosts[allPosts.length - postIndex - 1].url
-    : "";
+let nextUrl = postIndex > 2 ? allPosts[allPosts.length - postIndex + 1].url : "";
+let prevUrl = postIndex < allPosts.length ? allPosts[allPosts.length - postIndex - 1].url : "";
 ---
 
-<html lang="ch">
-  <head>
-    <HeadCommon />
-    <HeadSEO content={content} pageURL={currentUrl} />
-    <meta name="generator" content={Astro.generator} />
-    <title>{SITE.title}{title}</title>
-    <style>
-      body {
-        width: 100%;
-        --gutter: 8px;
-        --doc-padding: 32px;
+<BaseLayout 
+  title={`${SITE.title}${title}`}
+  content={content}
+  pageURL={currentUrl}
+>
+  <!-- Post-specific styles -->
+  <style slot="head">
+    body {
+      width: 100%;
+      --gutter: 8px;
+      --doc-padding: 32px;
+    }
+
+    .layout {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns:
+        minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
+        minmax(var(--gutter), 1fr);
+      overflow-x: hidden;
+    }
+
+    .heti h1.content-title:first-child {
+      margin-block-start: 12px !important;
+      margin-bottom: 16px;
+      letter-spacing: 0.32px;
+    }
+
+    .grid-sidebar {
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      padding: 0;
+      margin-left: -5px;
+    }
+
+    #grid-left {
+      position: fixed;
+      background-color: var(--theme-bg);
+      z-index: 10;
+      display: none;
+    }
+
+    #grid-main {
+      padding: 13px var(--gutter) 64px var(--gutter);
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #grid-right {
+      display: none;
+    }
+
+    @media (min-width: 800px) {
+      .layout {
+        overflow: initial;
+        grid-template-columns: 288px minmax(0, var(--max-width));
+        gap: 0;
       }
 
+      #grid-main {
+        padding: 13px 32px 64px 32px;
+      }
+
+      #grid-left {
+        display: flex;
+        padding-left: 32px;
+        position: sticky;
+        grid-column: 1;
+      }
+    }
+
+    @media (min-width: 1152px) {
       .layout {
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns:
-          minmax(var(--gutter), 1fr) minmax(0, var(--max-width))
-          minmax(var(--gutter), 1fr);
-        overflow-x: hidden;
+        grid-template-columns: 320px minmax(0, var(--max-width)) 208px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+      }
+
+      #grid-right {
+        grid-column: 3;
+        display: flex;
+      }
+    }
+
+    .gsc-left-header .color-text-secondary {
+      display: none;
+    }
+
+    .logo {
+      display: none;
+      margin-top: -2px;
+    }
+
+    @media (max-width: 800px) {
+      .logo {
+        display: block;
+        color: #fff;
+        margin-left: -3px;
+      }
+
+      .logo:active {
+        text-decoration: none;
+        border-block-end: none;
+        padding-block-end: unset;
+      }
+
+      #grid-main {
+        margin-top: -7px;
+        padding: 13px 8px var(--doc-padding) 8px;
       }
 
       .heti h1.content-title:first-child {
         margin-block-start: 12px !important;
         margin-bottom: 16px;
-        letter-spacing: 0.32px;
+        font-size: 28px;
       }
 
-      .grid-sidebar {
-        height: 100vh;
-        position: sticky;
-        top: 0;
-        padding: 0;
-        margin-left: -5px;
+      .heti h1.content-title:first-child>span{
+        margin-top: 4px;
       }
+    }
 
-      #grid-left {
-        position: fixed;
-        background-color: var(--theme-bg);
-        z-index: 10;
-        display: none;
-      }
+    .post-footer a {
+      color: var(--theme-accent);
+    }
 
-      #grid-main {
-        padding: 13px var(--gutter) 64px var(--gutter);
-        grid-column: 2;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
+    .post-footer a:hover {
+      border-block-end: none;
+    }
 
-      #grid-right {
-        display: none;
-      }
+    .heti .pay-button {
+      color: var(--theme-bg);
+      background-color: var(--theme-text);
+      padding-block-end: 9px;
+    }
 
-      @media (min-width: 800px) {
-        .layout {
-          overflow: initial;
-          grid-template-columns: 288px minmax(0, var(--max-width));
-          gap: 0;
-        }
+    .heti .pay-button:hover {
+      border-block-end: none;
+      padding-block-end: 9px;
+    }
+  </style>
 
-        #grid-main {
-          padding: 13px 32px 64px 32px;
-        }
-
-        #grid-left {
-          display: flex;
-          padding-left: 32px;
-          position: sticky;
-          grid-column: 1;
-        }
-      }
-
-      @media (min-width: 1152px) {
-        .layout {
-          grid-template-columns: 320px minmax(0, var(--max-width)) 208px;
-          padding-left: 0;
-          padding-right: 0;
-          margin: 0 auto;
-        }
-
-        #grid-right {
-          grid-column: 3;
-          display: flex;
-        }
-      }
-
-      .gsc-left-header .color-text-secondary {
-        display: none;
-      }
-
-      .logo {
-        display: none;
-        margin-top: -2px;
-      }
-
-      @media (max-width: 800px) {
-        .logo {
-          display: block;
-          color: #fff;
-          margin-left: -3px;
-        }
-
-        .logo:active {
-          text-decoration: none;
-          border-block-end: none;
-          padding-block-end: unset;
-        }
-
-        #grid-main {
-          margin-top: -7px;
-          padding: 13px 8px var(--doc-padding) 8px;
-        }
-
-        .heti h1.content-title:first-child {
-          margin-block-start: 12px !important;
-          margin-bottom: 16px;
-          font-size: 28px;
-        }
-
-        .heti h1.content-title:first-child>span{
-          margin-top: 4px;
-        }
-      }
-
-      .post-footer a {
-        color: var(--theme-accent);
-      }
-
-      .post-footer a:hover {
-        border-block-end: none;
-      }
-
-      .heti .pay-button {
-        color: var(--theme-bg);
-        background-color: var(--theme-text);
-        padding-block-end: 9px;
-      }
-
-      .heti .pay-button:hover {
-        border-block-end: none;
-        padding-block-end: 9px;
-      }
-    </style>
-  </head>
-  <body>
-    <main class="layout">
-      <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
-        <LeftSidebar currentPage={currentPage} />
-      </aside>
-      <div id="grid-main">
-        <div
-          class="markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
-          id="write"
+  <!-- Post layout -->
+  <main class="layout">
+    <aside id="grid-left" class="grid-sidebar" title="Site Navigation">
+      <LeftSidebar currentPage={currentPage} />
+    </aside>
+    <div id="grid-main">
+      <div
+        class="markdown-body heti md:mx-auto md:pb-20 pb-14 xl:max-w-7xl w-full lg:max-w-5xl md:max-w-2xl md:pl-3.5"
+        id="write"
+      >
+        <h1
+          class="content-title flex align-middle text-gray-800 dark:text-gray-200"
         >
-          <h1
-            class="content-title flex align-middle text-gray-800 dark:text-gray-200"
+          <a class="logo inline-block md:hidden visible" href="/"
+            ><AstroLogo size={40} />
+          </a>
+          <span data-pagefind-meta="title">{title}</span>
+          <Search />
+        </h1>
+        <slot />
+        <div class="flex align-middle justify-center mt-4">
+          <a
+            class="inline-block items-center rounded px-5 py-3 text-sm font-medium pay-button"
+            href="https://miaoyan.app/cats.html?name=潮流周刊"
+            target="_blank"
+            rel="noreferrer">196 位好友在喂猫 ❤️</a
           >
-            <a class="logo inline-block md:hidden visible" href="/"
-              ><AstroLogo size={40} />
-            </a>
-            <span data-pagefind-meta="title">{title}</span>
-            <Search />
-          </h1>
-          <slot />
-          <div class="flex align-middle justify-center mt-4">
-            <a
-              class="inline-block items-center rounded px-5 py-3 text-sm font-medium pay-button"
-              href="https://miaoyan.app/cats.html?name=潮流周刊"
+        </div>
+        <hr />
+        <div
+          class="flex justify-between md:flex-row flex-col mt-2 post-footer"
+        >
+          <div class="text-gray-800 dark:text-gray-200 flex-1">
+            发布日期：<a
+              href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
               target="_blank"
-              rel="noreferrer">196 位好友在喂猫 ❤️</a
+              data-pagefind-sort="date"
+              title="Edit">{date}</a
             >
           </div>
-          <hr />
-          <div
-            class="flex justify-between md:flex-row flex-col mt-2 post-footer"
-          >
-            <div class="text-gray-800 dark:text-gray-200 flex-1">
-              发布日期：<a
-                href={`https://github.com/${SITE.repo}/tree/main/src/pages${url}.md`}
-                target="_blank"
-                data-pagefind-sort="date"
-                title="Edit">{date}</a
-              >
-            </div>
-            <div class="md:mt-0 mt-4 flex-1 text-right">
-              {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
-              {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
-              <a href="/">去首页 |</a>
-              <a
-                href={`https://twitter.com/${SITE.twitterId}`}
-                target="_blank"
-                title="Follow">Twitter</a
-              >
-              <a
-                href={`https://github.com/${SITE.githubId}/weekly`}
-                title="Star"
-                target="_blank"
-                class="lg:inline-block hidden"
-              >
-                | Github</a
-              >
-              <a
-                href="/rss.xml"
-                title="Subscribe"
-                target="_blank"
-                class="xl:inline-block hidden"
-              >
-                | RSS</a
-              >
-            </div>
+          <div class="md:mt-0 mt-4 flex-1 text-right">
+            {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
+            {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
+            <a href="/">去首页 |</a>
+            <a
+              href={`https://twitter.com/${SITE.twitterId}`}
+              target="_blank"
+              title="Follow">Twitter</a
+            >
+            <a
+              href={`https://github.com/${SITE.githubId}/weekly`}
+              title="Star"
+              target="_blank"
+              class="lg:inline-block hidden"
+            >
+              | Github</a
+            >
+            <a
+              href="/rss.xml"
+              title="Subscribe"
+              target="_blank"
+              class="xl:inline-block hidden"
+            >
+              | RSS</a
+            >
           </div>
         </div>
-        <script
-          is:inline
-          id="giscus-script"
-          src="https://giscus.app/client.js"
-          data-repo={SITE.repo}
-          data-repo-id="R_kgDOG4TsQA"
-          data-category="General"
-          data-category-id="DIC_kwDOG4TsQM4CR4bV"
-          data-mapping="title"
-          data-strict="0"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="bottom"
-          data-theme="https://gw.alipayobjects.com/os/k/kr/comment.css"
-          data-lang="zh-CN"
-          crossorigin="anonymous"
-          async></script>
       </div>
-    </main>
-    <Footer />
-    <script is:inline>
-      window.addEventListener("DOMContentLoaded", () => {
-        const images = document.querySelectorAll("#write img");
-        images.forEach((img, index) => {
-          if (index > 1) {
-            img.setAttribute("loading", "lazy");
-            img.setAttribute("decoding", "async");
-          }
-        });
-      });
-    </script>
-  </body>
-</html>
+      <script
+        is:inline
+        id="giscus-script"
+        src="https://giscus.app/client.js"
+        data-repo={SITE.repo}
+        data-repo-id="R_kgDOG4TsQA"
+        data-category="General"
+        data-category-id="DIC_kwDOG4TsQM4CR4bV"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="https://gw.alipayobjects.com/os/k/kr/comment.css"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async></script>
+    </div>
+  </main>
+
+</BaseLayout>

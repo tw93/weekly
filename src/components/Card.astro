@@ -1,6 +1,17 @@
 ---
 import { parseTitle } from '@/util';
 
+export interface Props {
+  post: {
+    url: string;
+    frontmatter: {
+      image: string;
+      description: string;
+      date: string;
+    };
+  };
+}
+
 const { post } = Astro.props;
 const title = parseTitle(post.url);
 const { image, description, date } = post.frontmatter;
@@ -10,21 +21,21 @@ const { image, description, date } = post.frontmatter;
   href={post.url}
   data-astro-prefetch
   data-image={image}
-  class='pb-3 md:mt-5 mt-4 md:mr-4 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 sm:w-96 w-full card-content preload-link'
+  class="pb-3 md:mt-5 mt-4 md:mr-4 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 sm:w-96 w-full card-content preload-link"
 >
   <img
-    data-placeholder-background='linear-gradient(to bottom, var(--placeholder-gradient-start), var(--placeholder-gradient-end))'
+    data-placeholder-background="linear-gradient(to bottom, var(--placeholder-gradient-start), var(--placeholder-gradient-end))"
     data-src={`${image}?x-oss-process=image/resize,w_640/format,webp`}
     data-alt={title}
-    class='lozad block md:w-80 md:h-48 sm:w-96 w-full sm:h-52 h-56 rounded-t-md'
+    class="lozad block md:w-80 md:h-48 sm:w-96 w-full sm:h-52 h-56 rounded-t-md"
   />
-  <div class='w-full flex justify-between items-center leading-tight pt-3 px-3'>
-    <div class='text-gray-800 dark:text-gray-200 font-semibold md:text-base text-lg'>{title}</div>
-    <div class='text-grey-darker text-gray-600 dark:text-gray-300 md:text-sm text-base'>
+  <div class="w-full flex justify-between items-center leading-tight pt-3 px-3">
+    <div class="text-gray-800 dark:text-gray-200 font-semibold md:text-base text-lg">{title}</div>
+    <div class="text-grey-darker text-gray-600 dark:text-gray-300 md:text-sm text-base">
       {date}
     </div>
   </div>
-  <p class='text-gray-600 dark:text-gray-300 md:w-78 w-94 overflow-hidden pt-2 line-clamp-2 px-3 w-full md:h-12 h-14 md:text-sm text-base'>
+  <p class="text-gray-600 dark:text-gray-300 md:w-78 w-94 overflow-hidden pt-2 line-clamp-2 px-3 w-full md:h-12 h-14 md:text-sm text-base">
     {description}
   </p>
 </a>

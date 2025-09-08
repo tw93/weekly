@@ -1,0 +1,53 @@
+---
+import HeadCommon from '../components/HeadCommon.astro';
+import HeadSEO from '../components/HeadSEO.astro';
+import Footer from '../components/Footer.astro';
+import ClientScripts from '../components/ClientScripts.astro';
+import { SITE } from '@/config';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  socialImage?: string;
+  pageURL?: string;
+  content?: any;
+  includeScripts?: boolean;
+}
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  image,
+  socialImage,
+  pageURL = SITE.homePage,
+  content = {},
+  includeScripts = true
+} = Astro.props;
+
+// Merge provided SEO data with content object
+const seoContent = {
+  title: content.title || (title !== SITE.title ? title.replace(SITE.title, '') : ''),
+  description: content.description || description,
+  image: content.image || image,
+  socialImage: content.socialImage || socialImage,
+  ...content
+};
+---
+
+<html lang='ch'>
+  <head>
+    <HeadCommon />
+    <HeadSEO content={seoContent} pageURL={pageURL} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+
+  <body>
+    <slot />
+    <Footer />
+    {includeScripts && <ClientScripts />}
+    <slot name="scripts" />
+  </body>
+</html>
