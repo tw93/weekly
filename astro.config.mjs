@@ -1,11 +1,20 @@
 import fs from "fs";
 import dayjs from "dayjs";
 import tailwind from "@astrojs/tailwind";
+import remarkBreaks from "remark-breaks";
 
 import { defineConfig } from "astro/config";
 import { parse } from "node-html-parser";
 import { SITE } from "./src/config";
 import rehypeImage from "./rehype-image.js";
+
+// Markdown 配置 - 控制换行行为
+const markdownConfig = {
+  hardBreaks: true, // 设置为 true 启用硬换行 (类似 CMARK_OPT_HARDBREAKS)
+  gfm: true,
+  smartypants: true,
+  allowDangerousHtml: true
+};
 
 const DEFAULT_FORMAT = "YYYY/MM/DD";
 const WEEKLY_REPO_NAME = "tw93/weekly";
@@ -66,7 +75,17 @@ export default defineConfig({
   prefetch: true,
   integrations: [tailwind()],
   markdown: {
-    remarkPlugins: [defaultLayoutPlugin],
+    remarkPlugins: [
+      defaultLayoutPlugin,
+      // 根据配置决定是否启用硬换行
+      ...(markdownConfig.hardBreaks ? [remarkBreaks] : [])
+    ],
     rehypePlugins: [rehypeImage],
+    remarkRehype: {
+      handlers: {},
+      allowDangerousHtml: markdownConfig.allowDangerousHtml
+    },
+    gfm: markdownConfig.gfm,
+    smartypants: markdownConfig.smartypants
   },
 });
